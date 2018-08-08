@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^1.4.2",
+    "antd": "^3.8.0",
     "axios": "^0.16.2",
     "grid-styled": "^5.0.2",
     "react": "^16.0.0",
@@ -20,6 +21,7 @@
     "react-hot-loader": "^4.0.0-beta.21",
     "react-router": "^4.2.0",
     "react-static": "^5",
+    "react-svg": "^5.0.14",
     "styled-components": "^3.3.3"
   },
   "devDependencies": {
