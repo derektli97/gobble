@@ -1,4 +1,13 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const movePage = keyframes`
+  0%{
+    transform: translate(-100vw, 0)
+  }
+  100%{
+    transform: translate(100vw, 0)
+  }
+`;
 
 export const Background = styled.div`
   background: linear-gradient(#91a9ca, #fdf4e9);
@@ -16,3 +25,12 @@ export const Subtitle = styled.p`
   font-weight: 300;
 `;
 
+export const Cloud = styled.img`
+  display: flex;
+  position: fixed;
+  zIndex: 0;
+  left: 0;
+  animation-name: ${movePage};
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+`;
