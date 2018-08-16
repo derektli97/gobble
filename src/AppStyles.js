@@ -1,9 +1,5 @@
 import styled from "styled-components";
 
-export const Title = styled.p`
-  display: flex;
-`;
-
 export const Background = styled.div`
   background: linear-gradient(#91a9ca, #fdf4e9);
   height: 100%;

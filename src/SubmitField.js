@@ -7,7 +7,12 @@ const SubmitField = () => (
   <Margin>
     <Flex flexDirection="row">
       <Input placeholder="Sign up for email updates!" />
-      <Button type="primary">Submit</Button>
+      <Button
+        style={{ backgroundColor: "#FF7C93", borderColor: "#FF7C93" }}
+        type="primary"
+      >
+        Submit
+      </Button>
     </Flex>
   </Margin>
 );
