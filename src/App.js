@@ -32,7 +32,7 @@ const App = () => (
         <SubmitField />
         <Subtitle>
           Interested in{" "}
-          <a href="mailto:officialtamuhack@gmail.com">&nbsp;sponsoring</a>?
+          <a href="mailto:sponsor@tamuhack.com">&nbsp;sponsoring</a>?
         </Subtitle>
       </Flex>
       <Flex
