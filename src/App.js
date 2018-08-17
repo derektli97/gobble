@@ -25,7 +25,7 @@ const styles = {
     },
     infoAlignment: "initial",
     logoSize: "65px",
-    inputWidth: "100%"
+    width: "100%"
   },
   mobileView: {
     cloud2: {
@@ -36,7 +36,7 @@ const styles = {
     },
     infoAlignment: "center",
     logoSize: "50px",
-    inputWidth: "200px"
+    width: "200px"
   }
 };
 
@@ -65,7 +65,7 @@ class App extends React.Component{
 
     const isWebView = this.state.width > mobileThreshold;
     const stylesObj = isWebView ? styles.webView : styles.mobileView;
-    const { cloud2, cloud4, infoAlignment, logoSize, inputWidth } = stylesObj;
+    const { cloud2, cloud4, infoAlignment, logoSize, width } = stylesObj;
 
     return(
       <Background>
@@ -90,10 +90,10 @@ class App extends React.Component{
                 style={{ height: logoSize, marginBottom: "20px"}}
               />
             </Flex>
-            <Subtitle isWebView={isWebView} style={{ paddingBottom: "5vh" }}>January 26-27, 2019 • Texas A&M University</Subtitle>
-            <Subtitle isWebView={isWebView} >Registration opens October 24th, 2018</Subtitle>
-            <SubmitField fontSize="13px" width={inputWidth} />
-            <Subtitle isWebView={isWebView} style={{ paddingTop: "3vh"}}>
+            <Subtitle {...{isWebView}} style={{ paddingBottom: "5vh" }}>January 26-27, 2019 • Texas A&M University</Subtitle>
+            <Subtitle {...{isWebView}} >Registration opens October 24th, 2018</Subtitle>
+            <SubmitField fontSize="13px" {...{width}} />
+            <Subtitle {...{isWebView}} style={{ paddingTop: "3vh"}}>
               Interested in{" "}
               <a href="mailto:officialtamuhack@gmail.com">&nbsp;sponsoring</a>?
             </Subtitle>
