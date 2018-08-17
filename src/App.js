@@ -7,7 +7,7 @@ import SubmitField from "./SubmitField.js";
 import { Background, Subtitle, Cloud, StaticCloud } from "./AppStyles.js";
 import "./app.css";
 
-const mobileThreshold = 720;
+const mobileThreshold = 900;
 
 /*
   cloud1 refers to Cloud or StaticCloud Element that uses /assets/cloud_01.svg
@@ -22,7 +22,10 @@ const styles = {
     },
     cloud4: {
       height: "3vh"
-    }
+    },
+    infoAlignment: "initial",
+    logoSize: "65px",
+    width: "100%"
   },
   mobileView: {
     cloud2: {
@@ -30,7 +33,10 @@ const styles = {
     },
     cloud4: {
       height: "5vh"
-    }
+    },
+    infoAlignment: "center",
+    logoSize: "50px",
+    width: "200px"
   }
 };
 
@@ -59,33 +65,35 @@ class App extends React.Component{
 
     const isWebView = this.state.width > mobileThreshold;
     const stylesObj = isWebView ? styles.webView : styles.mobileView;
-    const { cloud2, cloud4 } = stylesObj;
+    const { cloud2, cloud4, infoAlignment, logoSize, width } = stylesObj;
 
     return(
       <Background>
         <Flex
-          css={{width: "100vw", height: "100vh", overflow: "hidden", zIndex: "2" }}
+          css={{width: "100vw", height: "100vh", overflow: "hidden", zIndex: "2"}}
+          justifyContent={infoAlignment}
         >
           <Flex
             flexDirection="column"
             justifyContent="center"
+            alignItems={infoAlignment}
             css={{ padding: "20px",
               zIndex: "2",
               minWidth: "400px",
-              paddingLeft: "5vw"
+              paddingLeft: "8vw"
             }}
           >
             <Flex>
               <img
                 alt=""
                 src={require("./assets/tamuhack_logo_col.svg")}
-                style={{ height: "53px", marginBottom: "20px" }}
+                style={{ height: logoSize, marginBottom: "20px"}}
               />
             </Flex>
-            <Subtitle style={{ paddingBottom: "2vh" }}>January 26-27, 2019 • Texas A&M University</Subtitle>
-            <Subtitle>Registration opens October 24th, 2018</Subtitle>
-            <SubmitField fontSize="13px" width="200px"/>
-            <Subtitle style={{ paddingTop: "3vh" }}>
+            <Subtitle {...{isWebView}} style={{ paddingBottom: "5vh" }}>January 26-27, 2019 • Texas A&M University</Subtitle>
+            <Subtitle {...{isWebView}} >Registration opens October 24th, 2018</Subtitle>
+            <SubmitField fontSize="13px" {...{width}} />
+            <Subtitle {...{isWebView}} style={{ paddingTop: "3vh"}}>
               Interested in{" "}
               <a href="mailto:officialtamuhack@gmail.com">&nbsp;sponsoring</a>?
             </Subtitle>
