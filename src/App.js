@@ -30,7 +30,8 @@ const styles = {
     },
     cloud4: {
       height: "5vh"
-    }
+    },
+    infoAlignment: "center"
   }
 };
 
@@ -59,27 +60,28 @@ class App extends React.Component{
 
     const isWebView = this.state.width > mobileThreshold;
     const stylesObj = isWebView ? styles.webView : styles.mobileView;
-    const { cloud2, cloud4 } = stylesObj;
+    const { cloud2, cloud4, infoAlignment } = stylesObj;
 
     return(
       <Background>
         <Flex
-          css={{width: "100vw", height: "100vh", overflow: "hidden", zIndex: "2" }}
+          css={{width: "100vw", height: "100vh", overflow: "hidden", zIndex: "2", justifyContent: infoAlignment}}
         >
           <Flex
             flexDirection="column"
             justifyContent="center"
+            alignItems={infoAlignment}
             css={{ padding: "20px",
               zIndex: "2",
               minWidth: "400px",
-              paddingLeft: "5vw"
+              paddingLeft: "8vw"
             }}
           >
             <Flex>
               <img
                 alt=""
                 src={require("./assets/tamuhack_logo_col.svg")}
-                style={{ height: "53px", marginBottom: "20px" }}
+                style={{ height: "53px", marginBottom: "20px"}}
               />
             </Flex>
             <Subtitle style={{ paddingBottom: "2vh" }}>January 26-27, 2019 • Texas A&M University</Subtitle>
