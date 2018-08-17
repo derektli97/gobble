@@ -7,7 +7,7 @@ import SubmitField from "./SubmitField.js";
 import { Background, Subtitle, Cloud, StaticCloud } from "./AppStyles.js";
 import "./app.css";
 
-const mobileThreshold = 720;
+const mobileThreshold = 1080;
 
 /*
   cloud1 refers to Cloud or StaticCloud Element that uses /assets/cloud_01.svg
