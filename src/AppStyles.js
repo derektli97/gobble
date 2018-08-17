@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
-const movePage = keyframes`
+const moveCloud = keyframes`
   0%{
     transform: translate(-50vw, 0)
   }
@@ -22,7 +22,8 @@ export const Subtitle = styled.p`
   margin-left: 0px;
   display: flex;
   font-weight: 300;
-  fontSize: 15px;
+  alignItems: center;
+  font-size: ${props => (props.isWebView === true) ? "18px" : "13px"};
 `;
 
 export const StaticCloud = styled.img`
@@ -36,7 +37,7 @@ export const Cloud = styled.img`
   position: fixed;
   zIndex: 0;
   left: 0;
-  animation-name: ${movePage};
+  animation-name: ${moveCloud};
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 `;

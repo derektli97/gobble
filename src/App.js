@@ -22,7 +22,10 @@ const styles = {
     },
     cloud4: {
       height: "3vh"
-    }
+    },
+    infoAlignment: "initial",
+    logoSize: "65px",
+    inputWidth: "100%"
   },
   mobileView: {
     cloud2: {
@@ -31,7 +34,9 @@ const styles = {
     cloud4: {
       height: "5vh"
     },
-    infoAlignment: "center"
+    infoAlignment: "center",
+    logoSize: "50px",
+    inputWidth: "200px"
   }
 };
 
@@ -60,12 +65,13 @@ class App extends React.Component{
 
     const isWebView = this.state.width > mobileThreshold;
     const stylesObj = isWebView ? styles.webView : styles.mobileView;
-    const { cloud2, cloud4, infoAlignment } = stylesObj;
+    const { cloud2, cloud4, infoAlignment, logoSize, inputWidth } = stylesObj;
 
     return(
       <Background>
         <Flex
-          css={{width: "100vw", height: "100vh", overflow: "hidden", zIndex: "2", justifyContent: infoAlignment}}
+          css={{width: "100vw", height: "100vh", overflow: "hidden", zIndex: "2"}}
+          justifyContent={infoAlignment}
         >
           <Flex
             flexDirection="column"
@@ -81,13 +87,13 @@ class App extends React.Component{
               <img
                 alt=""
                 src={require("./assets/tamuhack_logo_col.svg")}
-                style={{ height: "53px", marginBottom: "20px"}}
+                style={{ height: logoSize, marginBottom: "20px"}}
               />
             </Flex>
-            <Subtitle style={{ paddingBottom: "2vh" }}>January 26-27, 2019 • Texas A&M University</Subtitle>
-            <Subtitle>Registration opens October 24th, 2018</Subtitle>
-            <SubmitField fontSize="13px" width="200px"/>
-            <Subtitle style={{ paddingTop: "3vh" }}>
+            <Subtitle isWebView={isWebView} style={{ paddingBottom: "5vh" }}>January 26-27, 2019 • Texas A&M University</Subtitle>
+            <Subtitle isWebView={isWebView} >Registration opens October 24th, 2018</Subtitle>
+            <SubmitField fontSize="13px" width={inputWidth} />
+            <Subtitle isWebView={isWebView} style={{ paddingTop: "3vh"}}>
               Interested in{" "}
               <a href="mailto:officialtamuhack@gmail.com">&nbsp;sponsoring</a>?
             </Subtitle>
