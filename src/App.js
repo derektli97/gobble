@@ -4,15 +4,65 @@ import { Flex } from "grid-styled";
 
 import "antd/dist/antd.css";
 import SubmitField from "./SubmitField.js";
-import { Background, Subtitle, Cloud } from "./AppStyles.js";
+import { Background, Subtitle, Cloud, StaticCloud } from "./AppStyles.js";
 import "./app.css";
+
+const mobileThreshold = 720;
+
+/*
+  cloud1 refers to Cloud or StaticCloud Element that uses /assets/cloud_01.svg
+  cloud2 refers to Cloud or StaticCLoud Element that uses /assets/cloud_02.svg
+  etc...
+*/
+
+const styles = {
+  webView: {
+    cloud2: {
+      height: "4vh"
+    },
+    cloud4: {
+      height: "3vh"
+    }
+  },
+  mobileView: {
+    cloud2: {
+      height: "6vh"
+    },
+    cloud4: {
+      height: "5vh"
+    }
+  }
+};
 
 class App extends React.Component{
 
+  constructor(props) {
+    super(props);
+    this.state = { width: 0, height: 0 };
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener("resize", this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions() {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
+  }
+
   render(){
+
+    const isWebView = this.state.width > mobileThreshold;
+    const stylesObj = isWebView ? styles.webView : styles.mobileView;
+    const { cloud2, cloud4 } = stylesObj;
+
     return(
       <Background>
-
         <Flex
           css={{width: "100vw", height: "100vh", overflow: "hidden", zIndex: "2" }}
         >
@@ -21,68 +71,75 @@ class App extends React.Component{
             justifyContent="center"
             css={{ padding: "20px",
               zIndex: "2",
-              minWidth: "400px"
+              minWidth: "400px",
+              paddingLeft: "5vw"
             }}
           >
             <Flex>
               <img
                 alt=""
                 src={require("./assets/tamuhack_logo_col.svg")}
-                style={{ height: "50px" }}
+                style={{ height: "53px", marginBottom: "20px" }}
               />
             </Flex>
-            <Subtitle>January 26-27, 2019 • Texas A&M University</Subtitle>
+            <Subtitle style={{ paddingBottom: "2vh" }}>January 26-27, 2019 • Texas A&M University</Subtitle>
             <Subtitle>Registration opens October 24th, 2018</Subtitle>
-            <SubmitField />
-            <Subtitle>
+            <SubmitField fontSize="13px" width="200px"/>
+            <Subtitle style={{ paddingTop: "3vh" }}>
               Interested in{" "}
               <a href="mailto:officialtamuhack@gmail.com">&nbsp;sponsoring</a>?
             </Subtitle>
           </Flex>
 
-          <Flex
-            justifyContent="flex-end"
-            alignItems="flex-end"
-            css={{
-              position: "absolute",
-              height: "100vh",
-              width: "100vw",
-              zIndex: "1",
-              paddingLeft: "350px",
-            }}
-          >
-            <img
-              alt=""
-              src={require("./assets/academic_building.svg")}
-              style={{ minHeight: "300px", maxHeight: "600px", height: "60vw"}}
-            />
-          </Flex>
+          { isWebView &&
+              <Flex
+                justifyContent="flex-end"
+                alignItems="flex-end"
+                css={{
+                  position: "absolute",
+                  height: "100vh",
+                  width: "100vw",
+                  zIndex: "1"
+                }}
+              >
+                <img
+                  alt=""
+                  src={require("./assets/cut_academic_building.svg")}
+                  style={{maxHeight: "650px", height: "50vw"}}
+                />
+              </Flex>
+          }
 
-          <div css={{overflow: "hidden"}}>
-            <Cloud
-              alt=""
-              src={require("./assets/cloud_01.svg")}
-              style={{  top: "15vh",
-                        animationDuration: "19s",
-                        height: "11vh"}}
-            />
+          <StaticCloud
+            alt=""
+            src={require("./assets/cloud_03.svg")}
+            style={{  top: "20vh",
+                      left: "-7vw",
+                      height: "11vh"}}
+          />
 
-            <Cloud
-              alt=""
-              src={require("./assets/cloud_02.svg")}
-              style={{ top: "50vh",
-                       animationDuration: "29s",
-                       height: "4vh"}}
-            />
+          <StaticCloud
+            alt=""
+            src={require("./assets/cloud_01.svg")}
+            style={{  top: "80vh",
+                      height: "20vh"}}
+          />
 
-            <Cloud
-              alt=""
-              src={require("./assets/cloud_03.svg")}
-              style={{  top: "85vh",
-                        animationDuration: "13s",
-                        height: "15vh"}}
-            />
-          </div>
+          <Cloud
+            alt=""
+            src={require("./assets/cloud_02.svg")}
+            style={{ top: "47vh",
+                     animationDuration: "25s",
+                     height: cloud2.height}}
+          />
+
+          <Cloud
+            alt=""
+            src={require("./assets/cloud_04.svg")}
+            style={{ top: "10vh",
+                     animationDuration: "41s",
+                     height: cloud4.height}}
+          />
 
         </Flex>
       </Background>
