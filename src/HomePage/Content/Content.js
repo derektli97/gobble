@@ -24,7 +24,10 @@ class Content extends React.Component {
           <img
             alt=""
             src={require("../../assets/tamuhack_logo_col.svg")}
-            style={{ height: "53px", marginBottom: "20px" }}
+            style={{
+              height: isWebView ? "65px" : "50px",
+              marginBottom: "20px"
+            }}
           />
         </Flex>
         <Subtitle {...{ isWebView }} style={{ paddingBottom: "2vh" }}>
@@ -33,7 +36,7 @@ class Content extends React.Component {
         <Subtitle {...{ isWebView }}>
           Registration opens October 24th, 2018
         </Subtitle>
-        <SubmitField fontSize="13px" width="200px" />
+        <SubmitField fontSize="13px" {...{ isWebView }} />
         <Subtitle {...{ isWebView }} style={{ paddingTop: "3vh" }}>
           Interested in{" "}
           <a href="mailto:officialtamuhack@gmail.com">&nbsp;sponsoring</a>?

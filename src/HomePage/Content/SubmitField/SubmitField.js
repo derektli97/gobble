@@ -9,8 +9,7 @@ const SubmitField = props => (
       <Input
         style={{
           fontSize: props.fontSize,
-          width: props.width,
-          marginRight: "10px"
+          width: props.isWebView ? "100%" : "200px",
         }}
         placeholder="Sign up for email updates!"
       />
