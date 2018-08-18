@@ -13,6 +13,7 @@ class HomePage extends React.Component {
     return (
       <Background>
         <Flex
+          justifyContent={isWebView ? "initial" : "center"}
           css={{
             width: "100vw",
             height: "100vh",
@@ -20,7 +21,7 @@ class HomePage extends React.Component {
             zIndex: "2"
           }}
         >
-          <Content />
+          <Content {...{ isWebView }} />
           <Building {...{ isWebView }} />
           <Clouds {...{ isWebView }} />
         </Flex>

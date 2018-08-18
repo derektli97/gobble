@@ -5,6 +5,6 @@ export const Subtitle = styled.p`
   margin-left: 0px;
   display: flex;
   font-weight: 300;
-  fontSize: 15px;
+  alignItems: center;
+  font-size: ${props => (props.isWebView === true) ? "18px" : "13px"};
 `;
-
