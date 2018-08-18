@@ -1,9 +1,7 @@
 import React from "react";
 import { hot } from "react-hot-loader";
-import { Flex } from "grid-styled";
 
 import "antd/dist/antd.css";
-import SubmitField from "./SubmitField.js";
 import HomePage from "./HomePage/HomePage.js";
 import "./app.css";
 
@@ -12,7 +10,7 @@ const mobileThreshold = 720;
 class App extends React.Component{
   constructor(props) {
     super(props);
-    this.state = { width: 0, height: 0 };
+    this.state = { width: 0 };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
@@ -26,7 +24,7 @@ class App extends React.Component{
   }
 
   updateWindowDimensions() {
-    this.setState({ width: window.innerWidth, height: window.innerHeight });
+    this.setState({ width: window.innerWidth });
   }
 
   render(){
