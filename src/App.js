@@ -5,9 +5,9 @@ import "antd/dist/antd.css";
 import HomePage from "./HomePage/HomePage.js";
 import "./app.css";
 
-const mobileThreshold = 720;
+const mobileThreshold = 900;
 
-class App extends React.Component{
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { width: 0 };
@@ -27,11 +27,9 @@ class App extends React.Component{
     this.setState({ width: window.innerWidth });
   }
 
-  render(){
+  render() {
     const isWebView = this.state.width > mobileThreshold;
-    return(
-      <HomePage {...{isWebView}} />
-    );
+    return <HomePage {...{ isWebView }} />;
   }
 }
 
