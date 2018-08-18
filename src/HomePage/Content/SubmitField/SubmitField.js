@@ -3,10 +3,16 @@ import { Flex } from "grid-styled";
 import { Input, Button } from "antd";
 import { Margin } from "./SubmitFieldStyles.js";
 
-const SubmitField = (props) => (
+const SubmitField = props => (
   <Margin>
     <Flex flexDirection="row">
-      <Input style={{ fontSize: props.fontSize, width: props.width}} placeholder="Sign up for email updates!" />
+      <Input
+        style={{
+          fontSize: props.fontSize,
+          width: props.isWebView ? "100%" : "200px",
+        }}
+        placeholder="Sign up for email updates!"
+      />
       <Button
         style={{ backgroundColor: "#FF7C93", borderColor: "#FF7C93" }}
         type="primary"
