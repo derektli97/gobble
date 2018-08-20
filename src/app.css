@@ -6,3 +6,6 @@ body {
   padding: 0;
 }
 
+.ant-row.ant-form-item {
+  margin-right: 5px !important;
+}

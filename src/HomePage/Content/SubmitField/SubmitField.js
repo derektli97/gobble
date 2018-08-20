@@ -4,11 +4,26 @@ import { Form, Input, Button } from "antd";
 const FormItem = Form.Item;
 
 class SubmitField extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { loading: false };
+  }
+
   handleSubmit = e => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
+      console.log(`here: ${values.email}`);
       if (!err) {
         console.log("Received values of form: ", values);
+
+        // Encode form data in the body.
+        const formData = new FormData();
+        formData.append("email", values.email);
+
+        fetch("http://localhost:8080/email-signup", {
+          method: "post",
+          body: formData
+        }).then(response => response.json());
       }
     });
   };
@@ -35,7 +50,7 @@ class SubmitField extends React.Component {
             <Input
               style={{
                 fontSize,
-                width: isWebView ? "300px" : "200px",
+                width: isWebView ? "300px" : "200px"
               }}
               placeholder="Sign up for email updates!"
             />
