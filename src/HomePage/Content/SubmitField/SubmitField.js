@@ -7,15 +7,20 @@ class SubmitField extends React.Component {
   state = { loadingState: "neutral" };
 
   handleSubmit = e => {
+    // Prevent a redirect.
     e.preventDefault();
+    // Validate that a correct email is being sent, then send it.
     this.props.form.validateFields((err, values) => {
       if (!err) {
         const formData = new FormData();
         formData.append("email", values.email);
+        // Set a loading state before doing anything else.
         this.setState({ loadingState: "loading" }, () => {
+          // Send a post to our backend.
           fetch("https://quack.tamuhack.org/email-signup", {
             method: "post",
             body: formData
+            // Regardless of the speed of the request, we wait atleast 1.5 seconds.
           }).then(result => {
             setTimeout(() => {
               this.setState({ loadingState: "done" });
@@ -28,8 +33,11 @@ class SubmitField extends React.Component {
 
   render() {
     console.log(this.state.loadingState);
-    const { getFieldDecorator } = this.props.form;
-    const { isWebView, fontSize } = this.props;
+    const {
+      isWebView,
+      fontSize,
+      form: { getFieldDecorator }
+    } = this.props;
     const { loadingState } = this.state;
 
     return (
@@ -68,7 +76,7 @@ class SubmitField extends React.Component {
               backgroundColor:
                 loadingState === "done" ? "transparent" : "#FF7C93",
               borderColor: "#FF7C93",
-              borderWidth: loadingState === "loading" ? "0" : "2px",
+              borderWidth: loadingState === "loading" ? "0" : "2px"
             }}
           >
             {loadingState === "neutral" ? (
