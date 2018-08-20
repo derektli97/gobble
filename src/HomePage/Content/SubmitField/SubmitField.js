@@ -4,10 +4,7 @@ import { Form, Input, Button } from "antd";
 const FormItem = Form.Item;
 
 class SubmitField extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { loading: false };
-  }
+  state = { loading: "no" };
 
   handleSubmit = e => {
     e.preventDefault();
@@ -20,10 +17,16 @@ class SubmitField extends React.Component {
         const formData = new FormData();
         formData.append("email", values.email);
 
-        fetch("http://localhost:8080/email-signup", {
-          method: "post",
-          body: formData
-        }).then(response => response.json());
+        this.setState({ loading: "yes" }, () =>
+          fetch("https://quack.tamuhack.org/email-signup", {
+            method: "post",
+            body: formData
+          }).then(
+            this.setState({
+              loading: "done"
+            })
+          )
+        );
       }
     });
   };
@@ -48,6 +51,7 @@ class SubmitField extends React.Component {
             ]
           })(
             <Input
+              disabled={this.state.loading === "done"}
               style={{
                 fontSize,
                 width: isWebView ? "300px" : "200px"
@@ -60,9 +64,10 @@ class SubmitField extends React.Component {
           <Button
             type="primary"
             htmlType="submit"
+            loading={this.state.loading === "yes"}
             style={{ backgroundColor: "#FF7C93", borderColor: "#FF7C93" }}
           >
-            Submit
+            {this.state.loading !== "done" ? "Submit" : "Yay!"}
           </Button>
         </FormItem>
       </Form>
