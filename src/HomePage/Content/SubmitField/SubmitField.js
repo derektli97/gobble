@@ -1,39 +1,36 @@
 import React from "react";
-import { Form, Input, Button } from "antd";
+import { Icon, Form, Input, Button } from "antd";
 
 const FormItem = Form.Item;
 
 class SubmitField extends React.Component {
-  state = { loading: "no" };
+  state = { loadingState: "neutral" };
 
   handleSubmit = e => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
-      console.log(`here: ${values.email}`);
       if (!err) {
-        console.log("Received values of form: ", values);
-
-        // Encode form data in the body.
         const formData = new FormData();
         formData.append("email", values.email);
-
-        this.setState({ loading: "yes" }, () =>
+        this.setState({ loadingState: "loading" }, () => {
           fetch("https://quack.tamuhack.org/email-signup", {
             method: "post",
             body: formData
-          }).then(
-            this.setState({
-              loading: "done"
-            })
-          )
-        );
+          }).then(result => {
+            setTimeout(() => {
+              this.setState({ loadingState: "done" });
+            }, 1500);
+          });
+        });
       }
     });
   };
 
   render() {
+    console.log(this.state.loadingState);
     const { getFieldDecorator } = this.props.form;
     const { isWebView, fontSize } = this.props;
+    const { loadingState } = this.state;
 
     return (
       <Form layout="inline" onSubmit={this.handleSubmit}>
@@ -51,7 +48,7 @@ class SubmitField extends React.Component {
             ]
           })(
             <Input
-              disabled={this.state.loading === "done"}
+              disabled={loadingState === "done"}
               style={{
                 fontSize,
                 width: isWebView ? "300px" : "200px"
@@ -64,10 +61,23 @@ class SubmitField extends React.Component {
           <Button
             type="primary"
             htmlType="submit"
-            loading={this.state.loading === "yes"}
-            style={{ backgroundColor: "#FF7C93", borderColor: "#FF7C93" }}
+            disabled={loadingState === "done"}
+            loading={loadingState === "loading"}
+            style={{
+              width: "78px",
+              backgroundColor:
+                loadingState === "done" ? "transparent" : "#FF7C93",
+              borderColor: "#FF7C93",
+              borderWidth: loadingState === "loading" ? "0" : "2px",
+            }}
           >
-            {this.state.loading !== "done" ? "Submit" : "Yay!"}
+            {loadingState === "neutral" ? (
+              "Submit"
+            ) : loadingState === "loading" ? (
+              ""
+            ) : (
+              <Icon type="check" style={{ color: "#FF7C93" }} />
+            )}
           </Button>
         </FormItem>
       </Form>
