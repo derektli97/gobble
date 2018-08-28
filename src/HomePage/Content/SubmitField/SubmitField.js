@@ -21,7 +21,7 @@ class SubmitField extends React.Component {
             method: "post",
             body: formData
             // Regardless of the speed of the request, we wait atleast 1.5 seconds.
-          }).then(result => {
+          }).then(() => {
             setTimeout(() => {
               this.setState({ loadingState: "done" });
             }, 1500);
