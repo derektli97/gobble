@@ -51,8 +51,9 @@ class Content extends React.Component {
           </Subtitle>
           <SubmitField fontSize="13px" {...{ isWebView }} />
           <Subtitle {...{ isWebView }} style={{ paddingTop: "3vh" }}>
-            Interested in{" "}
-            <a href="mailto:sponsor@tamuhack.com">&nbsp;sponsoring</a>?
+            Interested in
+            <span>&nbsp;</span>
+            <a href="mailto:sponsor@tamuhack.com">sponsoring</a>?
           </Subtitle>
         </Flex>
       </React.Fragment>
