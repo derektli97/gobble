@@ -7,7 +7,7 @@ import Content from "./Content/Content.js";
 import Building from "./Building/Building.js";
 
 class HomePage extends React.Component {
-  render() {
+  render () {
     const { isWebView } = this.props;
 
     return (

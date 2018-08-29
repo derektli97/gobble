@@ -21,7 +21,7 @@ class SubmitField extends React.Component {
             method: "post",
             body: formData
             // Regardless of the speed of the request, we wait atleast 1.5 seconds.
-          }).then(result => {
+          }).then(() => {
             setTimeout(() => {
               this.setState({ loadingState: "done" });
             }, 1500);
@@ -31,7 +31,7 @@ class SubmitField extends React.Component {
     });
   };
 
-  render() {
+  render () {
     const {
       isWebView,
       fontSize,
@@ -40,17 +40,17 @@ class SubmitField extends React.Component {
     const { loadingState } = this.state;
 
     return (
-      <Form layout="inline" onSubmit={this.handleSubmit}>
+      <Form layout='inline' onSubmit={this.handleSubmit}>
         <FormItem>
           {getFieldDecorator("email", {
             rules: [
               {
                 type: "email",
-                message: "The input is not valid E-mail!"
+                message: "The input is not a valid email!"
               },
               {
                 required: true,
-                message: "Please input your E-mail!"
+                message: "Please input your email!"
               }
             ]
           })(
@@ -60,14 +60,14 @@ class SubmitField extends React.Component {
                 fontSize,
                 width: isWebView ? "300px" : "200px"
               }}
-              placeholder="Sign up for email updates!"
+              placeholder='Sign up for email updates!'
             />
           )}
         </FormItem>
         <FormItem>
           <Button
-            type="primary"
-            htmlType="submit"
+            type='primary'
+            htmlType='submit'
             disabled={loadingState === "done"}
             loading={loadingState === "loading"}
             style={{
@@ -83,7 +83,7 @@ class SubmitField extends React.Component {
             ) : loadingState === "loading" ? (
               ""
             ) : (
-              <Icon type="check" style={{ color: "#FF7C93" }} />
+              <Icon type='check' style={{ color: "#FF7C93" }} />
             )}
           </Button>
         </FormItem>

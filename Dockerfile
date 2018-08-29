@@ -3,8 +3,8 @@ RUN mkdir /tamuhack
 WORKDIR /tamuhack
 COPY . .
 
-RUN npm install --quiet
-RUN npm run build
+RUN yarn install --quiet
+RUN yarn run build
 
 FROM nginx:alpine
-COPY --from=builder tamuhack/dist/ /usr/share/nginx/html/
+COPY --from=builder tamuhack/build/ /usr/share/nginx/html/

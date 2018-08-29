@@ -1,5 +1,4 @@
 import React from "react";
-import { hot } from "react-hot-loader";
 
 import "antd/dist/antd.css";
 import HomePage from "./HomePage/HomePage.js";
@@ -8,29 +7,29 @@ import "./app.css";
 const mobileThreshold = 900;
 
 class App extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
     this.state = { width: 0 };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
-  componentDidMount() {
+  componentDidMount () {
     this.updateWindowDimensions();
     window.addEventListener("resize", this.updateWindowDimensions);
   }
 
-  componentWillUnmount() {
+  componentWillUnmount () {
     window.removeEventListener("resize", this.updateWindowDimensions);
   }
 
-  updateWindowDimensions() {
+  updateWindowDimensions () {
     this.setState({ width: window.innerWidth });
   }
 
-  render() {
+  render () {
     const isWebView = this.state.width > mobileThreshold;
     return <HomePage {...{ isWebView }} />;
   }
 }
 
-export default hot(module)(App);
+export default App;
