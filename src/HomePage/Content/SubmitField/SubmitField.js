@@ -46,7 +46,7 @@ class SubmitField extends React.Component {
             rules: [
               {
                 type: "email",
-                message: "The input is not valid email!"
+                message: "The input is not a valid email!"
               },
               {
                 required: true,
