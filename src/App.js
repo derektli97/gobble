@@ -2,6 +2,7 @@ import React from "react";
 
 import "antd/dist/antd.css";
 import HomePage from "./HomePage/HomePage.js";
+import SponsorPage from "./SponsorPage/SponsorPage.js";
 import "./app.css";
 
 const mobileThreshold = 900;
@@ -28,7 +29,12 @@ class App extends React.Component {
 
   render () {
     const isWebView = this.state.width > mobileThreshold;
-    return <HomePage {...{ isWebView }} />;
+    return (
+      <React.Fragment>
+        <HomePage {...{ isWebView }} />
+        <SponsorPage {...{ isWebView }} />
+      </React.Fragment>
+    );
   }
 }
 
