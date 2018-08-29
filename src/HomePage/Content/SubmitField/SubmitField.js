@@ -31,7 +31,7 @@ class SubmitField extends React.Component {
     });
   };
 
-  render() {
+  render () {
     const {
       isWebView,
       fontSize,
@@ -40,7 +40,7 @@ class SubmitField extends React.Component {
     const { loadingState } = this.state;
 
     return (
-      <Form layout="inline" onSubmit={this.handleSubmit}>
+      <Form layout='inline' onSubmit={this.handleSubmit}>
         <FormItem>
           {getFieldDecorator("email", {
             rules: [
@@ -60,14 +60,14 @@ class SubmitField extends React.Component {
                 fontSize,
                 width: isWebView ? "300px" : "200px"
               }}
-              placeholder="Sign up for email updates!"
+              placeholder='Sign up for email updates!'
             />
           )}
         </FormItem>
         <FormItem>
           <Button
-            type="primary"
-            htmlType="submit"
+            type='primary'
+            htmlType='submit'
             disabled={loadingState === "done"}
             loading={loadingState === "loading"}
             style={{
@@ -83,7 +83,7 @@ class SubmitField extends React.Component {
             ) : loadingState === "loading" ? (
               ""
             ) : (
-              <Icon type="check" style={{ color: "#FF7C93" }} />
+              <Icon type='check' style={{ color: "#FF7C93" }} />
             )}
           </Button>
         </FormItem>

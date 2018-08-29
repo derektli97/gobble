@@ -3,7 +3,7 @@ import React from "react";
 import { Cloud, StaticCloud } from "./CloudsStyles.js";
 
 class Clouds extends React.Component {
-  render() {
+  render () {
     const { isWebView } = this.props;
     const cloudTwoHeight = isWebView ? "4vh" : "6vh";
     const cloudFourHeight = isWebView ? "3vh" : "5vh";
@@ -11,7 +11,7 @@ class Clouds extends React.Component {
     return (
       <React.Fragment>
         <StaticCloud
-          alt=""
+          alt=''
           src={require("../../assets/cloud_03.svg")}
           style={{
             top: "20vh",
@@ -20,7 +20,7 @@ class Clouds extends React.Component {
           }}
         />
         <StaticCloud
-          alt=""
+          alt=''
           src={require("../../assets/cloud_01.svg")}
           style={{
             top: "80vh",
@@ -28,7 +28,7 @@ class Clouds extends React.Component {
           }}
         />
         <Cloud
-          alt=""
+          alt=''
           src={require("../../assets/cloud_02.svg")}
           style={{
             top: "47vh",
@@ -37,7 +37,7 @@ class Clouds extends React.Component {
           }}
         />
         <Cloud
-          alt=""
+          alt=''
           src={require("../../assets/cloud_04.svg")}
           style={{
             top: "10vh",

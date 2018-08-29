@@ -2,14 +2,14 @@ import React from "react";
 import { Flex } from "grid-styled";
 
 class Building extends React.Component {
-  render() {
+  render () {
     const { isWebView } = this.props;
     return (
       <React.Fragment>
         {isWebView && (
           <Flex
-            justifyContent="flex-end"
-            alignItems="flex-end"
+            justifyContent='flex-end'
+            alignItems='flex-end'
             css={{
               position: "absolute",
               height: "100vh",
@@ -18,7 +18,7 @@ class Building extends React.Component {
             }}
           >
             <img
-              alt=""
+              alt=''
               src={require("../../assets/cut_academic_building.svg")}
               style={{ maxHeight: "900px", height: "40vw" }}
             />

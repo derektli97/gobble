@@ -7,23 +7,23 @@ import SubmitField from "./SubmitField/SubmitField.js";
 class Content extends React.Component {
   state = { fun: false };
 
-  imgClick() {
+  imgClick () {
     this.setState({ fun: true });
   }
 
-  render() {
+  render () {
     const { isWebView } = this.props;
 
     return (
       <React.Fragment>
         {this.state.fun && (
           <Flex css={{ height: "100px", position: "absolute", zIndex: "100" }}>
-            <img alt="" src={require("../../assets/goodmorning.svg")} />
+            <img alt='' src={require("../../assets/goodmorning.svg")} />
           </Flex>
         )}
         <Flex
-          flexDirection="column"
-          justifyContent="center"
+          flexDirection='column'
+          justifyContent='center'
           alignItems={isWebView ? "initial" : "center"}
           css={{
             padding: "20px",
@@ -34,7 +34,7 @@ class Content extends React.Component {
         >
           <Flex>
             <img
-              alt=""
+              alt=''
               src={require("../../assets/tamuhack_logo_col.svg")}
               style={{
                 height: isWebView ? "65px" : "50px",
@@ -49,11 +49,11 @@ class Content extends React.Component {
           <Subtitle {...{ isWebView }}>
             Registration opens October 24th, 2018
           </Subtitle>
-          <SubmitField fontSize="13px" {...{ isWebView }} />
+          <SubmitField fontSize='13px' {...{ isWebView }} />
           <Subtitle {...{ isWebView }} style={{ paddingTop: "3vh" }}>
             Interested in
             <span>&nbsp;</span>
-            <a href="mailto:sponsor@tamuhack.com">sponsoring</a>?
+            <a href='mailto:sponsor@tamuhack.com'>sponsoring</a>?
           </Subtitle>
         </Flex>
       </React.Fragment>
