@@ -4,14 +4,14 @@ import "antd/dist/antd.css";
 import HomePage from "./HomePage/HomePage.js";
 import SponsorPage from "./SponsorPage/SponsorPage.js";
 import "./app.css";
-
+import { Element } from "react-scroll";
 const mobileThreshold = 900;
 
 class App extends React.Component {
   constructor (props) {
     super(props);
-    // NOTE: showHomePage is a temporary feature flag.
-    this.state = { width: 0, showHomePage: false };
+    // NOTE: showSponsorPage is a temporary feature flag.
+    this.state = { width: 0, showSponsorPage: false };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
@@ -32,10 +32,16 @@ class App extends React.Component {
     const isWebView = this.state.width > mobileThreshold;
     return (
       <React.Fragment>
-        <HomePage {...{ isWebView }} />
-        { this.state.showHomePage &&
-        <SponsorPage {...{ isWebView }} />
-        }
+
+        <Element name='HomePage'>
+          <HomePage {...{ isWebView }} />
+        </Element>
+
+        <Element name='SponsorPage'>
+          { this.state.showSponsorPage &&
+          <SponsorPage {...{ isWebView }} />
+          }
+        </Element>
       </React.Fragment>
     );
   }
