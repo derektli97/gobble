@@ -12,11 +12,9 @@ class SponsorPage extends React.Component {
           width: "100vw",
           height: "100vh",
           overflow: "hidden",
-          zIndex: "-10",
-          background: "black"
         }}
       >
-          hello
+          test page
       </Flex>
     );
   }
