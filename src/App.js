@@ -2,6 +2,7 @@ import React from "react";
 
 import "antd/dist/antd.css";
 import HomePage from "./HomePage/HomePage.js";
+import SponsorPage from "./SponsorPage/SponsorPage.js";
 import "./app.css";
 
 const mobileThreshold = 900;
@@ -9,7 +10,8 @@ const mobileThreshold = 900;
 class App extends React.Component {
   constructor (props) {
     super(props);
-    this.state = { width: 0 };
+    // NOTE: showHomePage is a temporary feature flag.
+    this.state = { width: 0, showHomePage: false };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
@@ -28,7 +30,14 @@ class App extends React.Component {
 
   render () {
     const isWebView = this.state.width > mobileThreshold;
-    return <HomePage {...{ isWebView }} />;
+    return (
+      <React.Fragment>
+        <HomePage {...{ isWebView }} />
+        { this.state.showHomePage &&
+        <SponsorPage {...{ isWebView }} />
+        }
+      </React.Fragment>
+    );
   }
 }
 

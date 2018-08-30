@@ -15,6 +15,7 @@ class HomePage extends React.Component {
         <Flex
           justifyContent={isWebView ? "initial" : "center"}
           css={{
+            position: "relative",
             width: "100vw",
             height: "100vh",
             overflow: "hidden",

@@ -11,13 +11,13 @@ const moveCloud = keyframes`
 
 export const StaticCloud = styled.img`
   display: flex;
-  position: fixed;
+  position: absolute;
   zindex: 0;
 `;
 
 export const Cloud = styled.img`
   display: flex;
-  position: fixed;
+  position: absolute;
   zindex: 0;
   left: 0;
   animation-name: ${moveCloud};
