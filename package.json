@@ -2,7 +2,7 @@
   "name": "gobble",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://tamuhack.org",
+  "homepage": "https://tamuhack.com",
   "dependencies": {
     "antd": "^3.8.4",
     "autoprefixer": "7.1.6",
