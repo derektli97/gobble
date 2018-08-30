@@ -10,7 +10,8 @@ const mobileThreshold = 900;
 class App extends React.Component {
   constructor (props) {
     super(props);
-    this.state = { width: 0 };
+    // NOTE: showHomePage is a temporary feature flag.
+    this.state = { width: 0, showHomePage: false };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
@@ -32,7 +33,9 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <HomePage {...{ isWebView }} />
+        { this.state.showHomePage &&
         <SponsorPage {...{ isWebView }} />
+        }
       </React.Fragment>
     );
   }
