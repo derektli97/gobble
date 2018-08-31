@@ -9,7 +9,6 @@ class SubmitField extends React.Component {
   handleSubmit = e => {
     // Prevent a redirect.
     e.preventDefault();
-    // Validate that a correct email is being sent, then send it.
     this.props.form.validateFields((err, values) => {
       if (!err) {
         const formData = new FormData();
@@ -17,7 +16,7 @@ class SubmitField extends React.Component {
         // Set a loading state before doing anything else.
         this.setState({ loadingState: "loading" }, () => {
           // Send a post to our backend.
-          fetch("https://quack.tamuhack.org/email-signup", {
+          fetch("https://quack.tamuhack.com/email-signup", {
             method: "post",
             body: formData
             // Regardless of the speed of the request, we wait atleast 1.5 seconds.
@@ -43,14 +42,19 @@ class SubmitField extends React.Component {
       <Form layout='inline' onSubmit={this.handleSubmit}>
         <FormItem>
           {getFieldDecorator("email", {
+            validateFirst: true,
             rules: [
               {
                 type: "email",
-                message: "The input is not a valid email!"
+                message: "The input is not a valid '.edu' email!"
               },
               {
                 required: true,
                 message: "Please input your email!"
+              },
+              {
+                pattern: "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.+-]+\\.edu$",
+                message: "Highschooler? Email howdy@tamuhack.com"
               }
             ]
           })(
