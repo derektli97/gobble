@@ -9,7 +9,6 @@ import NavBar from "./Navbar/Navbar.js";
 class HomePage extends React.Component {
   render () {
     const { isWebView } = this.props;
-
     return (
       <Background>
         <NavBar {...{ isWebView }} />

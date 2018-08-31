@@ -13,7 +13,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 class NavBar extends React.Component {
   constructor (props) {
     super(props);
-
     this.toggle = this.toggle.bind(this);
     this.state = {
       isOpen: false
@@ -25,38 +24,48 @@ class NavBar extends React.Component {
     });
   }
   render () {
+    const { isWebView } = this.props;
+
+    const styles = {
+      NavLinkStyle: {
+        fontSize: "18px",
+        paddingLeft: this.props.isWebView ? "2vw" : "7vw",
+        color: "#666"
+      }
+    };
+    const { NavLinkStyle } = styles;
     return (
       <React.Fragment>
-        <Navbar fixed='top' light color='light' expand='md' style={{ paddingRight: "16vw", zIndex: 2 }}>
+        <Navbar fixed='top' light color='light' expand='md' style={{ paddingRight: isWebView ? "14vw" : "20px", zIndex: 2 }}>
           <Link to='HomePage' smooth duration={500} >
             <NavbarBrand>
               <img
                 alt=''
-                src={require("../../assets/THLogo.svg")}
+                src={require("../../assets/th.svg")}
                 style={{
                   height: "30px",
-                  paddingLeft: "4vh"
+                  paddingLeft: "7vw"
                 }}
               />
             </NavbarBrand>
           </Link>
           <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
+          <Collapse isOpen={this.state.isOpen} navbar style={{ paddingLeft: 0, paddingTop: "15px" }}>
             <Nav className='ml-auto' navbar>
               <NavItem>
-                <NavLink>About</NavLink>
+                <NavLink style={NavLinkStyle} onClick={this.toggle}>About</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink>FAQ</NavLink>
+                <NavLink style={NavLinkStyle} onClick={this.toggle}>FAQ</NavLink>
               </NavItem>
 
               <Link to='SponsorPage' smooth duration={500} >
                 <NavItem>
-                  <NavLink>Sponsors</NavLink>
+                  <NavLink style={NavLinkStyle} onClick={this.toggle}>Sponsors</NavLink>
                 </NavItem>
               </Link>
               <NavItem>
-                <NavLink>Contact</NavLink>
+                <NavLink style={NavLinkStyle} onClick={this.toggle}>Contact</NavLink>
               </NavItem>
             </Nav>
           </Collapse>

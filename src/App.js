@@ -11,7 +11,7 @@ class App extends React.Component {
   constructor (props) {
     super(props);
     // NOTE: showSponsorPage is a temporary feature flag.
-    this.state = { width: 0, showSponsorPage: false };
+    this.state = { width: 0, showSponsorPage: true };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
