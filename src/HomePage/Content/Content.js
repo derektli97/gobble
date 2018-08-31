@@ -3,6 +3,7 @@ import { Flex } from "grid-styled";
 
 import { Subtitle } from "./ContentStyles.js";
 import SubmitField from "./SubmitField/SubmitField.js";
+import pdf from "../../assets/sponsor_doc.pdf";
 
 class Content extends React.Component {
   state = { fun: false };
@@ -53,7 +54,7 @@ class Content extends React.Component {
           <Subtitle {...{ isWebView }} style={{ paddingTop: "3vh" }}>
             Interested in
             <span>&nbsp;</span>
-            <a href='mailto:sponsor@tamuhack.com'>sponsoring</a>?
+            <a href={pdf} target='_blank'>sponsoring</a>?
           </Subtitle>
         </Flex>
       </React.Fragment>
