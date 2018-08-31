@@ -10,11 +10,9 @@ class SubmitField extends React.Component {
     // Prevent a redirect.
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
-      // If there's no error, and email contains 'edu'
-      const email = values.email;
-      if (!err && email.includes(".edu")) {
+      if (!err) {
         const formData = new FormData();
-        formData.append("email", email);
+        formData.append("email", values.email);
         // Set a loading state before doing anything else.
         this.setState({ loadingState: "loading" }, () => {
           // Send a post to our backend.
