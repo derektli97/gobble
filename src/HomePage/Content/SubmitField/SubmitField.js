@@ -46,7 +46,7 @@ class SubmitField extends React.Component {
             rules: [
               {
                 type: "email",
-                message: "The input is not a valid email!"
+                message: "The input is not a valid '.edu' email!"
               },
               {
                 required: true,
@@ -54,7 +54,7 @@ class SubmitField extends React.Component {
               },
               {
                 pattern: "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.+-]+\\.edu$",
-                message: "Input email must contain '.edu'!"
+                message: "Highschooler? Email howdy@tamuhack.com"
               }
             ]
           })(
