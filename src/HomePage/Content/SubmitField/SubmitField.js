@@ -62,7 +62,8 @@ class SubmitField extends React.Component {
               disabled={loadingState === "done"}
               style={{
                 fontSize,
-                width: isWebView ? "300px" : "200px"
+                width: isWebView ? "300px" : "200px",
+                marginLeft: "10px"
               }}
               placeholder='Sign up for email updates!'
             />
@@ -75,7 +76,8 @@ class SubmitField extends React.Component {
             disabled={loadingState === "done"}
             loading={loadingState === "loading"}
             style={{
-              width: "78px",
+              height: "31px",
+              marginRight: "10px",
               backgroundColor:
                 loadingState === "done" ? "transparent" : "#FF7C93",
               borderColor: "#FF7C93",

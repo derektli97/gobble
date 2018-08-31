@@ -40,6 +40,8 @@ class Content extends React.Component {
               src={require("../../assets/tamuhack_logo_col.svg")}
               style={{
                 height: isWebView ? "65px" : "50px",
+                marginLeft: "10px",
+                marginRight: "10px",
                 marginBottom: "20px"
               }}
               onClick={() => this.imgClick()}
@@ -57,7 +59,7 @@ class Content extends React.Component {
             <span>&nbsp;</span>
             <a href={pdf} target='_blank'>sponsoring</a>?
           </Subtitle>
-          <Flex style={{ marginTop: "10vh", justifyContent: "space-between", width: "180px" }}>
+          <Flex style={{ marginTop: "10vh", marginLeft: "5px", marginRight: "5px", justifyContent: "space-between", width: "180px" }}>
             <a href='https://www.facebook.com/tamuhack'>
               <Icon
                 alt='Facebook Icon'
