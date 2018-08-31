@@ -12,7 +12,8 @@ class SubmitField extends React.Component {
     this.props.form.validateFields((err, values) => {
       // If there's no error, and email contains 'edu'
       const email = values.email;
-      if (!err && email.contains(".edu")) {
+      console.log(email);
+      if (!err && email.includes(".edu")) {
         const formData = new FormData();
         formData.append("email", email);
         // Set a loading state before doing anything else.
@@ -44,6 +45,7 @@ class SubmitField extends React.Component {
       <Form layout='inline' onSubmit={this.handleSubmit}>
         <FormItem>
           {getFieldDecorator("email", {
+            validateFirst: true,
             rules: [
               {
                 type: "email",
@@ -52,6 +54,10 @@ class SubmitField extends React.Component {
               {
                 required: true,
                 message: "Please input your email!"
+              },
+              {
+                pattern: "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.+-]+\\.edu$",
+                message: "Input email must contain '.edu'!"
               }
             ]
           })(
