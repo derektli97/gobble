@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex } from "grid-styled";
 
-import { Subtitle } from "./ContentStyles.js";
+import { Subtitle, Icon } from "./ContentStyles.js";
 import SubmitField from "./SubmitField/SubmitField.js";
 import pdf from "../../assets/sponsor_doc.pdf";
 
@@ -30,7 +30,8 @@ class Content extends React.Component {
             padding: "20px",
             zIndex: "2",
             minWidth: "400px",
-            paddingLeft: "8vw"
+            paddingLeft: isWebView ? "8vw" : "20px",
+            marginTop: isWebView ? "13vh" : "18vh"
           }}
         >
           <Flex>
@@ -56,6 +57,26 @@ class Content extends React.Component {
             <span>&nbsp;</span>
             <a href={pdf} target='_blank'>sponsoring</a>?
           </Subtitle>
+          <Flex style={{ marginTop: "10vh", justifyContent: "space-between", width: "180px" }}>
+            <a href='https://www.facebook.com/tamuhack'>
+              <Icon
+                alt='Facebook Icon'
+                src={require("../../assets/social-media-logos/facebook-f.svg")}
+              />
+            </a>
+            <a href='https://www.twitter.com/tamuhack'>
+              <Icon
+                alt='Facebook Icon'
+                src={require("../../assets/social-media-logos/twitter.svg")}
+              />
+            </a>
+            <a href='https://www.instagram.com/tamuhack'>
+              <Icon
+                alt='Facebook Icon'
+                src={require("../../assets/social-media-logos/instagram.svg")}
+              />
+            </a>
+          </Flex>
         </Flex>
       </React.Fragment>
     );
