@@ -12,7 +12,6 @@ class SubmitField extends React.Component {
     this.props.form.validateFields((err, values) => {
       // If there's no error, and email contains 'edu'
       const email = values.email;
-      console.log(email);
       if (!err && email.includes(".edu")) {
         const formData = new FormData();
         formData.append("email", email);
