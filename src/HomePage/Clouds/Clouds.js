@@ -32,7 +32,7 @@ class Clouds extends React.Component {
           src={require("../../assets/cloud_02.svg")}
           style={{
             top: "47vh",
-            animationDuration: "25s",
+            animationDuration: "50s",
             height: cloudTwoHeight
           }}
         />
@@ -41,7 +41,7 @@ class Clouds extends React.Component {
           src={require("../../assets/cloud_04.svg")}
           style={{
             top: "10vh",
-            animationDuration: "41s",
+            animationDuration: "82s",
             height: cloudFourHeight
           }}
         />
