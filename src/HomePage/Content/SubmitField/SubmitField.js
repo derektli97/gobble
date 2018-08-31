@@ -9,15 +9,16 @@ class SubmitField extends React.Component {
   handleSubmit = e => {
     // Prevent a redirect.
     e.preventDefault();
-    // Validate that a correct email is being sent, then send it.
     this.props.form.validateFields((err, values) => {
-      if (!err) {
+      // If there's no error, and email contains 'edu'
+      const email = values.email;
+      if (!err && email.contains(".edu")) {
         const formData = new FormData();
-        formData.append("email", values.email);
+        formData.append("email", email);
         // Set a loading state before doing anything else.
         this.setState({ loadingState: "loading" }, () => {
           // Send a post to our backend.
-          fetch("https://quack.tamuhack.org/email-signup", {
+          fetch("https://quack.tamuhack.com/email-signup", {
             method: "post",
             body: formData
             // Regardless of the speed of the request, we wait atleast 1.5 seconds.
