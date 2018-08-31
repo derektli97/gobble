@@ -53,7 +53,7 @@ class Content extends React.Component {
           <Subtitle {...{ isWebView }} style={{ paddingTop: "3vh" }}>
             Interested in
             <span>&nbsp;</span>
-            <a href='mailto:sponsor@tamuhack.com'>sponsoring</a>?
+            <a href='https://drive.google.com/file/d/1yCI20irZs1_jPjW_j3CCpqI0tvOcyKkr/view?usp=sharing' target='_blank'>sponsoring</a>?
           </Subtitle>
         </Flex>
       </React.Fragment>
