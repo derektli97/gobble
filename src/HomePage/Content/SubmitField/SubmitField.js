@@ -40,21 +40,21 @@ class SubmitField extends React.Component {
 
     return (
       <Form layout='inline' onSubmit={this.handleSubmit}>
-        <FormItem>
+        <FormItem style={{ marginLeft: "10px" }}>
           {getFieldDecorator("email", {
             validateFirst: true,
             rules: [
               {
                 type: "email",
-                message: "The input is not a valid '.edu' email!"
+                message: "Not a valid '.edu' email"
               },
               {
                 required: true,
-                message: "Please input your email!"
+                message: "Please input your email"
               },
               {
                 pattern: "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.+-]+\\.edu$",
-                message: "Highschooler? Email howdy@tamuhack.com"
+                message: "Not a valid '.edu' email"
               }
             ]
           })(
@@ -62,8 +62,7 @@ class SubmitField extends React.Component {
               disabled={loadingState === "done"}
               style={{
                 fontSize,
-                width: isWebView ? "300px" : "200px",
-                marginLeft: "10px"
+                width: isWebView ? "300px" : "200px"
               }}
               placeholder='Sign up for email updates!'
             />
