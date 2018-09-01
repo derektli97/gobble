@@ -19,9 +19,11 @@ class NavBar extends React.Component {
     };
   }
   toggle () {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
+    if (!this.props.isWebView) {
+      this.setState({
+        isOpen: !this.state.isOpen
+      });
+    }
   }
   render () {
     const { isWebView } = this.props;
@@ -33,6 +35,7 @@ class NavBar extends React.Component {
         color: "#666"
       }
     };
+
     const { NavLinkStyle } = styles;
     return (
       <React.Fragment>
