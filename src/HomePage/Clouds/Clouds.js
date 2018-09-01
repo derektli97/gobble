@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Cloud, StaticCloud } from "./CloudsStyles.js";
+import { CloudMoveLeft, CloudMoveRight, StaticCloud } from "./CloudsStyles.js";
 
 class Clouds extends React.Component {
   render () {
@@ -27,21 +27,21 @@ class Clouds extends React.Component {
             height: "20vh"
           }}
         />
-        <Cloud
+        <CloudMoveRight
           alt=''
           src={require("../../assets/cloud_02.svg")}
           style={{
             top: "47vh",
-            animationDuration: "25s",
+            animationDuration: "60s",
             height: cloudTwoHeight
           }}
         />
-        <Cloud
+        <CloudMoveLeft
           alt=''
           src={require("../../assets/cloud_04.svg")}
           style={{
             top: "10vh",
-            animationDuration: "41s",
+            animationDuration: "40s",
             height: cloudFourHeight
           }}
         />
