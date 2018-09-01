@@ -5,6 +5,7 @@ import HomePage from "./HomePage/HomePage.js";
 import SponsorPage from "./SponsorPage/SponsorPage.js";
 import "./app.css";
 import { Element } from "react-scroll";
+
 const mobileThreshold = 900;
 
 class App extends React.Component {

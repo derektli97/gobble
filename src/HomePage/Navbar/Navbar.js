@@ -27,7 +27,6 @@ class NavBar extends React.Component {
   }
   render () {
     const { isWebView } = this.props;
-
     const styles = {
       NavLinkStyle: {
         fontSize: "18px",
