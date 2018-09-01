@@ -3,6 +3,7 @@ import React from "react";
 import "antd/dist/antd.css";
 import HomePage from "./HomePage/HomePage.js";
 import SponsorPage from "./SponsorPage/SponsorPage.js";
+import AboutPage from "./AboutPage/AboutPage.js";
 import "./app.css";
 import { Element } from "react-scroll";
 
@@ -12,7 +13,7 @@ class App extends React.Component {
   constructor (props) {
     super(props);
     // NOTE: showSponsorPage is a temporary feature flag.
-    this.state = { width: 0, showSponsorPage: false };
+    this.state = { width: 0, showSponsorPage: false, showAboutPage: false };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
@@ -41,6 +42,12 @@ class App extends React.Component {
         <Element name='SponsorPage'>
           { this.state.showSponsorPage &&
           <SponsorPage {...{ isWebView }} />
+          }
+        </Element>
+
+        <Element name='AboutPage'>
+          { this.state.showAboutPage &&
+          <AboutPage {...{ isWebView }} />
           }
         </Element>
       </React.Fragment>
