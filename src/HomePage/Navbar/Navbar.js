@@ -54,7 +54,7 @@ class NavBar extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar style={{ paddingLeft: 0, paddingTop: "15px" }}>
             <Nav className='ml-auto' navbar>
-              <Link to='HomePage' smooth duration={500} >
+              <Link to='AboutPage' smooth duration={500} >
                 <NavItem>
                   <NavLink style={NavLinkStyle} onClick={this.toggle}>About</NavLink>
                 </NavItem>
