@@ -18,7 +18,7 @@ class BottomContent extends React.Component {
         <img
           alt=''
           src={require("../../../assets/bitmoji-graphic.png")}
-          style={{ height: "23vw" }}
+          style={{ width: "594px", height: "407px", maxWidth: "594px" }}
         />
         <div>
           <AboutSubtitle {...{ isWebView }} >Our team</AboutSubtitle>
