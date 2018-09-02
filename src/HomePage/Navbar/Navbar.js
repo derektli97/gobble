@@ -61,7 +61,7 @@ class NavBar extends React.Component {
                 <NavLink style={NavLinkStyle} onClick={this.toggle}>FAQ</NavLink>
               </NavItem>
 
-              <Link to='SponsorPage' smooth duration={500} >
+              <Link to='SponsorPage' smooth duration={500} offset={-50} >
                 <NavItem>
                   <NavLink style={NavLinkStyle} onClick={this.toggle}>Sponsors</NavLink>
                 </NavItem>
