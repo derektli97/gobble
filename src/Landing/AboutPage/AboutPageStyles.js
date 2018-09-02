@@ -11,21 +11,19 @@ export const Background = styled.div`
 export const AboutTitle = styled.p`
   margin: 10px;
   display: flex;
-  font-weight: 300;
   alignItems: center;
   font-size: ${props => (props.isWebView === true) ? "35px" : "30px"};
-  font-weight: bold;
+  font-weight: 600;
   padding-bottom: 20px;
 `;
 
 export const AboutSubtitle = styled.p`
   margin: 10px;
   display: flex;
-  font-weight: 300;
   alignItems: center;
   max-width: 400px;
   font-size: ${props => (props.isWebView === true) ? "25px" : "20px"};
-  font-weight: bold;
+  font-weight: 600;
   padding-bottom: 20px;
   line-height: 1.25;
 `;
@@ -33,7 +31,7 @@ export const AboutSubtitle = styled.p`
 export const AboutParagraph = styled.p`
   margin: 10px;
   display: flex;
-  font-weight: 300;
+  font-weight: regular;
   alignItems: center;
   max-width: 450px;
   font-size: ${props => (props.isWebView === true) ? "16px" : "13px"};

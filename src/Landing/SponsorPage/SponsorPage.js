@@ -21,7 +21,8 @@ class SponsorPage extends React.Component {
                 Sponsors
               </SponsorTitle>
             </SponsorTitleRow>
-            <Flex style={{ justifyContent: "center" }}>
+            <hr style={{ width: isWebView ? "180px" : "100px", border: "solid 2px #3F688D" }} />
+            <Flex style={{ justifyContent: "center", color: "#3F688D" }}>
             (And more to come soon 😀)
             </Flex>
           </Flex>
@@ -35,11 +36,14 @@ class SponsorPage extends React.Component {
               <SponsorLogo {...{ isWebView }} src={require("../../assets/SponsorLogos/google.png")} />
             </SponsorRow>
           </SponsorContainer>
-          <SponsorTitleRow {...{ isWebView }}>
-            <SponsorTitle {...{ isWebView }}>
+          <Flex style={{ justifyContent: "center", fontSize: "14px", flexDirection: "column" }}>
+            <SponsorTitleRow {...{ isWebView }} style={{ marginBottom: "0px" }}>
+              <SponsorTitle {...{ isWebView }}>
               Previous Sponsors
-            </SponsorTitle>
-          </SponsorTitleRow>
+              </SponsorTitle>
+            </SponsorTitleRow>
+            <hr style={{ width: isWebView ? "350px" : "180px", border: "solid 2px #3F688D" }} />
+          </Flex>
           <SponsorContainer>
             <SponsorRow {...{ isWebView }}>
               <SponsorLogoBig {...{ isWebView }} src={require("../../assets/SponsorLogos/AA.svg")} />
