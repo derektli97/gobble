@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex } from "grid-styled";
 
-import { Subtitle, Icon } from "./ContentStyles.js";
+import { JayMoveRight, Subtitle, Icon } from "./ContentStyles.js";
 import SubmitField from "./SubmitField/SubmitField.js";
 
 class Content extends React.Component {
@@ -17,9 +17,15 @@ class Content extends React.Component {
     return (
       <React.Fragment>
         {this.state.fun && (
-          <Flex css={{ height: "100px", position: "absolute", zIndex: "100" }}>
-            <img alt='' src={require("../../../assets/goodmorning.svg")} />
-          </Flex>
+          <JayMoveRight
+            alt=''
+            src={require("../../../assets/goodmorning.svg")}
+            style={{
+              top: "20vh",
+              animationDuration: "20s",
+              height: "150px"
+            }}
+          />
         )}
         <Flex
           flexDirection='column'
