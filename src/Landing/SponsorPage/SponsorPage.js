@@ -18,13 +18,10 @@ class SponsorPage extends React.Component {
           <Flex style={{ justifyContent: "center", fontSize: "14px", flexDirection: "column" }}>
             <SponsorTitleRow {...{ isWebView }} style={{ marginBottom: "0px" }}>
               <SponsorTitle {...{ isWebView }}>
-                Sponsors
+                Sponsors Sneak Peek
               </SponsorTitle>
             </SponsorTitleRow>
-            <hr style={{ width: isWebView ? "180px" : "100px", border: "solid 2px #3F688D" }} />
-            <Flex style={{ justifyContent: "center", color: "#3F688D" }}>
-            (And more to come soon 😀)
-            </Flex>
+            {/* <hr style={{ width: isWebView ? "180px" : "100px", border: "solid 2px #3F688D" }} /> */}
           </Flex>
           <SponsorContainer>
             <SponsorRow {...{ isWebView }} >
@@ -42,7 +39,7 @@ class SponsorPage extends React.Component {
               Previous Sponsors
               </SponsorTitle>
             </SponsorTitleRow>
-            <hr style={{ width: isWebView ? "350px" : "180px", border: "solid 2px #3F688D" }} />
+            {/* <hr style={{ width: isWebView ? "350px" : "180px", border: "solid 2px #3F688D" }} /> */}
           </Flex>
           <SponsorContainer>
             <SponsorRow {...{ isWebView }}>

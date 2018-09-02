@@ -51,11 +51,11 @@ export const SponsorTitleRow = styled.div`
   width: 100%;
   text-align: middle;
   display: flex;
-  justify-content: space-around;
+  justify-content: felx-start;
   align-items: center;
   padding-top: 20px;
   padding-bottom: 0px;
-  margin-bottom: ${props => (props.isWebView) ? "60px" : "10px"};
+  margin-bottom: ${props => (props.isWebView) ? "80px" : "10px"};
   margin-top: ${props => (props.isWebView) ? "40px" : "20px"};
 `;
 
