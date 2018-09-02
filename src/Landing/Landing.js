@@ -11,8 +11,7 @@ const mobileThreshold = 900;
 class Landing extends React.Component {
   constructor (props) {
     super(props);
-    // NOTE: showSponsorPage is a temporary feature flag.
-    this.state = { width: 0, showAboutPage: false };
+    this.state = { width: 0 };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
@@ -38,9 +37,7 @@ class Landing extends React.Component {
         </Element>
 
         <Element name='AboutPage'>
-          { this.state.showAboutPage &&
           <AboutPage {...{ isWebView }} />
-          }
         </Element>
 
         <Element name='SponsorPage'>
