@@ -32,6 +32,7 @@ class SponsorPage extends React.Component {
             </SponsorRow>
             <SponsorRow {...{ isWebView }}>
               <SponsorLogo {...{ isWebView }} src={require("../../assets/SponsorLogos/exxonmobile.png")} />
+              <SponsorLogo {...{ isWebView }} src={require("../../assets/SponsorLogos/google.png")} />
             </SponsorRow>
           </SponsorContainer>
           <SponsorTitleRow {...{ isWebView }}>
