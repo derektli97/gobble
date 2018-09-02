@@ -5,6 +5,7 @@ import "antd/dist/antd.css";
 import HomePage from "./HomePage/HomePage.js";
 import SponsorPage from "./SponsorPage/SponsorPage.js";
 import AboutPage from "./AboutPage/AboutPage.js";
+import Footer from "./Footer/Footer.js";
 
 import "./landing.css";
 
@@ -48,6 +49,12 @@ class Landing extends React.Component {
         <Element name='SponsorPage'>
           { this.state.showSponsorPage &&
           <SponsorPage {...{ isWebView }} />
+          }
+        </Element>
+
+        <Element name='Footer'>
+          { this.state.showFooter &&
+          <Footer {...{ isWebView }} />
           }
         </Element>
       </React.Fragment>
