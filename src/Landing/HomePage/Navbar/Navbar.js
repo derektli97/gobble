@@ -69,6 +69,9 @@ class NavBar extends React.Component {
                 </NavItem>
               </Link>
               <NavItem>
+                <NavLink style={NavLinkStyle} onClick={this.toggle}>Events</NavLink>
+              </NavItem>
+              <NavItem>
                 <NavLink style={NavLinkStyle} onClick={this.toggle}>Contact</NavLink>
               </NavItem>
             </Nav>
