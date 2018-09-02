@@ -8,6 +8,8 @@ import {
   NavItem,
   NavLink } from "reactstrap";
 import { Link } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class NavBar extends React.Component {
@@ -62,15 +64,16 @@ class NavBar extends React.Component {
               <NavItem>
                 <NavLink style={NavLinkStyle} onClick={this.toggle}>FAQ</NavLink>
               </NavItem>
-
               <Link to='SponsorPage' smooth duration={500} >
                 <NavItem>
                   <NavLink style={NavLinkStyle} onClick={this.toggle}>Sponsors</NavLink>
                 </NavItem>
               </Link>
-              <NavItem>
-                <NavLink style={NavLinkStyle} onClick={this.toggle}>Events</NavLink>
-              </NavItem>
+              <RouterLink to='/events'>
+                <NavItem>
+                  <NavLink style={NavLinkStyle} onClick={this.toggle}>Events</NavLink>
+                </NavItem>
+              </RouterLink>
               <NavItem>
                 <NavLink style={NavLinkStyle} onClick={this.toggle}>Contact</NavLink>
               </NavItem>
