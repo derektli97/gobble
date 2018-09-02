@@ -14,7 +14,7 @@ class Landing extends React.Component {
   constructor (props) {
     super(props);
     // NOTE: showSponsorPage is a temporary feature flag.
-    this.state = { width: 0, showSponsorPage: false, showAboutPage: false, showEventsPage: false };
+    this.state = { width: 0, showSponsorPage: false, showAboutPage: false };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
