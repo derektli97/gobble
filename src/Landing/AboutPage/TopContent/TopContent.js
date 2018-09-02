@@ -25,7 +25,7 @@ class TopContent extends React.Component {
         <img
           alt=''
           src={require("../../../assets/reveille-about-01.svg")}
-          style={{ width: "350px", "height": "350px", maxWidth: "350px" }}
+          style={{ width: "3200px", "height": "320px", maxWidth: "320px" }}
         />
       </Flex>
     );
