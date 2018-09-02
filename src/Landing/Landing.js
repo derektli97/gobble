@@ -5,6 +5,7 @@ import "antd/dist/antd.css";
 import HomePage from "./HomePage/HomePage.js";
 import SponsorPage from "./SponsorPage/SponsorPage.js";
 import AboutPage from "./AboutPage/AboutPage.js";
+import Footer from "./Footer/Footer.js";
 
 const mobileThreshold = 900;
 
@@ -43,6 +44,8 @@ class Landing extends React.Component {
         <Element name='SponsorPage'>
           <SponsorPage {...{ isWebView }} />
         </Element>
+
+        <Footer {...{ isWebView }} />
       </React.Fragment>
     );
   }
