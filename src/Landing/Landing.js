@@ -6,8 +6,6 @@ import HomePage from "./HomePage/HomePage.js";
 import SponsorPage from "./SponsorPage/SponsorPage.js";
 import AboutPage from "./AboutPage/AboutPage.js";
 
-import "./landing.css";
-
 const mobileThreshold = 900;
 
 class Landing extends React.Component {
