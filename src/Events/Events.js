@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex } from "grid-styled";
 
-class EventsPage extends React.Component {
+class Events extends React.Component {
   render () {
     const { isWebView } = this.props;
 
@@ -20,4 +20,4 @@ class EventsPage extends React.Component {
   }
 }
 
-export default EventsPage;
+export default Events;

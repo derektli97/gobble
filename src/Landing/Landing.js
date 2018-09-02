@@ -6,11 +6,11 @@ import HomePage from "./HomePage/HomePage.js";
 import SponsorPage from "./SponsorPage/SponsorPage.js";
 import AboutPage from "./AboutPage/AboutPage.js";
 
-import "./app.css";
+import "./landing.css";
 
 const mobileThreshold = 900;
 
-class App extends React.Component {
+class Landing extends React.Component {
   constructor (props) {
     super(props);
     // NOTE: showSponsorPage is a temporary feature flag.
@@ -55,4 +55,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Landing;

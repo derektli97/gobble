@@ -43,7 +43,7 @@ class NavBar extends React.Component {
             <NavbarBrand>
               <img
                 alt=''
-                src={require("../../assets/th.svg")}
+                src={require("../../../assets/th.svg")}
                 style={{
                   height: "30px",
                   paddingLeft: "7vw"
@@ -78,7 +78,7 @@ class NavBar extends React.Component {
             (
               <img
                 alt=''
-                src={require("../../assets/MLHLogo.svg")}
+                src={require("../../../assets/MLHLogo.svg")}
                 style={{
                   position: "fixed",
                   zIndex: "2",
