@@ -1,18 +1,20 @@
 import React from "react";
+import { Element } from "react-scroll";
 
 import "antd/dist/antd.css";
 import HomePage from "./HomePage/HomePage.js";
 import SponsorPage from "./SponsorPage/SponsorPage.js";
-import "./app.css";
-import { Element } from "react-scroll";
+import AboutPage from "./AboutPage/AboutPage.js";
+
+import "./landing.css";
 
 const mobileThreshold = 900;
 
-class App extends React.Component {
+class Landing extends React.Component {
   constructor (props) {
     super(props);
     // NOTE: showSponsorPage is a temporary feature flag.
-    this.state = { width: 0, showSponsorPage: true };
+    this.state = { width: 0, showSponsorPage: false, showAboutPage: false };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
@@ -33,9 +35,14 @@ class App extends React.Component {
     const isWebView = this.state.width > mobileThreshold;
     return (
       <React.Fragment>
-
         <Element name='HomePage'>
           <HomePage {...{ isWebView }} />
+        </Element>
+
+        <Element name='AboutPage'>
+          { this.state.showAboutPage &&
+          <AboutPage {...{ isWebView }} />
+          }
         </Element>
 
         <Element name='SponsorPage'>
@@ -48,4 +55,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Landing;

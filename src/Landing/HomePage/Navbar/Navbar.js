@@ -43,7 +43,7 @@ class NavBar extends React.Component {
             <NavbarBrand>
               <img
                 alt=''
-                src={require("../../assets/th.svg")}
+                src={require("../../../assets/th.svg")}
                 style={{
                   height: "30px",
                   paddingLeft: "7vw"
@@ -54,9 +54,11 @@ class NavBar extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar style={{ paddingLeft: 0, paddingTop: "15px" }}>
             <Nav className='ml-auto' navbar>
-              <NavItem>
-                <NavLink style={NavLinkStyle} onClick={this.toggle}>About</NavLink>
-              </NavItem>
+              <Link to='AboutPage' smooth duration={500} >
+                <NavItem>
+                  <NavLink style={NavLinkStyle} onClick={this.toggle}>About</NavLink>
+                </NavItem>
+              </Link>
               <NavItem>
                 <NavLink style={NavLinkStyle} onClick={this.toggle}>FAQ</NavLink>
               </NavItem>
@@ -76,7 +78,7 @@ class NavBar extends React.Component {
             (
               <img
                 alt=''
-                src={require("../../assets/MLHLogo.svg")}
+                src={require("../../../assets/MLHLogo.svg")}
                 style={{
                   position: "fixed",
                   zIndex: "2",
