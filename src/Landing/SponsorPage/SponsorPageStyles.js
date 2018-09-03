@@ -60,9 +60,9 @@ export const SponsorTitleRow = styled.div`
 `;
 
 export const SponsorTitle = styled.div`
-  font-size: ${props => (props.isWebView) ? "40px" : "20px"};
+  font-size: ${props => (props.isWebView) ? "35px" : "30px"};
   font-weight: 600;
-  color: #3F688D;
+  color: black;
   margin: ${props => (props.isWebView) ? "40px" : "0px"};
-  margin-bottom: 0px;
+  margin-bottom: 20px;
 `;

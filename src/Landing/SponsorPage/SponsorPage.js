@@ -18,7 +18,7 @@ class SponsorPage extends React.Component {
           <Flex style={{ justifyContent: "center", fontSize: "14px", flexDirection: "column" }}>
             <SponsorTitleRow {...{ isWebView }} style={{ marginBottom: "0px" }}>
               <SponsorTitle {...{ isWebView }}>
-                Sponsors Sneak Peek
+                <p style={{ fontSize: (isWebView) ? "30px" : "25px" }}>|</p>&nbsp;Sponsors Sneak Peek
               </SponsorTitle>
             </SponsorTitleRow>
             {/* <hr style={{ width: isWebView ? "180px" : "100px", border: "solid 2px #3F688D" }} /> */}
@@ -36,7 +36,7 @@ class SponsorPage extends React.Component {
           <Flex style={{ justifyContent: "center", fontSize: "14px", flexDirection: "column" }}>
             <SponsorTitleRow {...{ isWebView }} style={{ marginBottom: "0px" }}>
               <SponsorTitle {...{ isWebView }}>
-              Previous Sponsors
+                <p style={{ fontSize: (isWebView) ? "30px" : "25px" }}>|</p>&nbsp;Previous Sponsors
               </SponsorTitle>
             </SponsorTitleRow>
             {/* <hr style={{ width: isWebView ? "350px" : "180px", border: "solid 2px #3F688D" }} /> */}
