@@ -22,7 +22,7 @@ class BottomContent extends React.Component {
         />
         <div>
           <AboutSubtitle {...{ isWebView }} >Our team</AboutSubtitle>
-          <AboutParagraph {...{ isWebView }} >The TAMUhack team consists of 16 members all dedicated to helping you turn your ideas into reality. We're a diverse group of computer science, computer engineering, electrical engineering, and mechanical engineering majors who brought our passions together to bring you a space for creative expression and collabration!</AboutParagraph>
+          <AboutParagraph {...{ isWebView }} >The TAMUhack team consists of 16 members all dedicated to helping you turn your ideas into reality. We're a diverse group of computer science, computer engineering, electrical engineering, and mechanical engineering majors who brought our passions together to bring you a space for creative expression and collaboration!</AboutParagraph>
         </div>
       </Flex>
     );
