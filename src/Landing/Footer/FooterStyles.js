@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FooterBar = styled.footer`
-    position: "relative";
+    position: "absolute";
     height: ${props => (props.isWebView) ? "60px" : "38px"};
     backgroundColor: "#FFF8F9";
     alignItems: "flex-start";

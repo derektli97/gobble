@@ -9,6 +9,7 @@ class Footer extends React.Component {
       <Flex
         css={{
           position: "relative",
+          width: "100vw",
           height: (isWebView) ? "60px" : "38px",
           backgroundColor: "#FFF8F9",
           alignItems: "flex-start",

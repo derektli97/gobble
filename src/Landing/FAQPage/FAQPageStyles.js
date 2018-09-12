@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 export const Background = styled.div`
-  position: absolute;
   background: white;
   height: 100%;
   width: 100vw;
   margin: 0px;
-  padding: 0px;
+  padding-bottom: 250px;
 `;
 
 export const QuestionContainer = styled.div`
@@ -22,7 +21,7 @@ export const Question = styled.p`
   padding: 7px;
   font-size: 17px;
   margin: 2px;
-
+  position: relative;
   &:hover {
    cursor: pointer;
    font-weight: 600;
@@ -32,12 +31,11 @@ export const Question = styled.p`
 
 export const Title = styled.p`
   font-size: 40px;
-  padding-top: 21vh;
+  padding-top: 21%;
   font-weight: 600;
 `;
 
 export const QuestionTitle = styled.p`
-  position: relative:
   flex-wrap: wrap;
   width: 40vw;
   margin-top: 30px;
@@ -46,7 +44,6 @@ export const QuestionTitle = styled.p`
 `;
 
 export const QuestionBody = styled.p`
-  position: relative:
   flex-wrap: wrap;
   width: 40vw;
   max-width: 550px;

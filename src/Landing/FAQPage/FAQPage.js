@@ -14,7 +14,7 @@ class FAQPage extends React.Component {
     console.log(this.state.active);
     return (
       <Background style={{ marginTop: "50px", justifyContent: "space-around" }}>
-        <QuestionContainer>
+        <QuestionContainer >
           {this.questions}
         </QuestionContainer>
         <div style={{ marginLeft: "45vw" }}>
