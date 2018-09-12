@@ -6,13 +6,14 @@ import HomePage from "./HomePage/HomePage.js";
 import SponsorPage from "./SponsorPage/SponsorPage.js";
 import AboutPage from "./AboutPage/AboutPage.js";
 import Footer from "./Footer/Footer.js";
+import FAQPage from "./FAQPage/FAQPage.js";
 
 const mobileThreshold = 900;
 
 class Landing extends React.Component {
   constructor (props) {
     super(props);
-    this.state = { width: 0 };
+    this.state = { width: 0, showFaqPage: true };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
@@ -44,7 +45,9 @@ class Landing extends React.Component {
         <Element name='SponsorPage'>
           <SponsorPage {...{ isWebView }} />
         </Element>
-
+        <Element name='FAQPage'>
+          <FAQPage {...{ isWebView }} />
+        </Element>
         <Footer {...{ isWebView }} />
       </React.Fragment>
     );
