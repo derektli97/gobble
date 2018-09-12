@@ -2,18 +2,19 @@ import React from "react";
 import { Background, QuestionContainer, Question, Title, QuestionTitle, QuestionBody } from "./FAQPageStyles.js";
 import faqData from "./FAQQA.json";
 class FAQPage extends React.Component {
-  state = { active: 0 };
+  state = { activeQuestionIndex: 0 };
+  faqDataKeys = Object.keys(faqData);
   componentDidMount () {
-    this.questions = Object.keys(faqData).map((question, index) =>
-      <Question key={index} onClick={() => { this.setState({ active: index }); }}>
+    this.questions = this.faqDataKeys.map((question, index) =>
+      <Question key={index} onClick={() => { this.setState({ activeQuestionIndex: index }); }}>
         {question}
       </Question>
     );
   }
   render () {
-    console.log(this.state.active);
+    console.log(this.state.activeQuestionIndex);
     return (
-      <Background style={{ marginTop: "50px", justifyContent: "space-around" }}>
+      <Background style={{ marginTop: "50px", justifyContent: "space-around", alignSelf: "center" }}>
         <QuestionContainer >
           {this.questions}
         </QuestionContainer>
@@ -22,11 +23,11 @@ class FAQPage extends React.Component {
             FAQ
           </Title>
           <QuestionTitle>
-            {Object.keys(faqData)[this.state.active]}
+            {this.faqDataKeys[this.state.activeQuestionIndex]}
           </QuestionTitle>
           <QuestionBody>
-            {faqData[Object.keys(faqData)[this.state.active]].split("\n").map((item, key) => {
-              if (this.state.active === 0) {
+            {faqData[this.faqDataKeys[this.state.activeQuestionIndex]].split("\n").map((item, key) => {
+              if (this.state.activeQuestionIndex === 0) {
                 return (
                   <p key={key}>{item} <br /> <br />
                     <p style={{ borderLeft: "12px solid #ddd", paddingLeft: "25px", maxWidth: "480px", fontSize: "16px" }}>

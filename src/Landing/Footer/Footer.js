@@ -15,8 +15,7 @@ class Footer extends React.Component {
           alignItems: "flex-start",
           overflow: "hidden",
           justifyContent: "space-between",
-          paddingTop: (isWebView) ? "20px" : "5px",
-          marginTop: "40px"
+          paddingTop: (isWebView) ? "20px" : "5px"
         }}
       >
         <Flex css={{ width: (isWebView) ? "300px" : "100px", paddingLeft: (isWebView) ? "100px" : "30px", justifyContent: "space-evenly" }}>

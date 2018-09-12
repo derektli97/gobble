@@ -2,17 +2,18 @@ import styled from "styled-components";
 
 export const Background = styled.div`
   background: white;
-  height: 100%;
+  height: 100vh;
   width: 100vw;
   margin: 0px;
   padding-bottom: 250px;
+  max-height: 100vh;
 `;
 
 export const QuestionContainer = styled.div`
   display: flex;
   position: absolute;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
   padding-left: 15vw;
   justify-content: center;
 `;
