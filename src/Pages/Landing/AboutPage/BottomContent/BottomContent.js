@@ -1,6 +1,7 @@
 import React from "react";
 import { Flex } from "grid-styled";
-import { AboutSubtitle, AboutParagraph } from "../AboutPageStyles.js";
+
+import { AboutSubtitle, AboutParagraph } from "Pages/Landing/AboutPage/AboutPageStyles";
 
 class BottomContent extends React.Component {
   render () {
@@ -17,7 +18,7 @@ class BottomContent extends React.Component {
       >
         <img
           alt=''
-          src={require("../../../assets/bitmoji-graphic.png")}
+          src={require("assets/bitmoji-graphic.png")}
           style={{ height: (isWebView) ? "30vw" : "55vw" }}
         />
         <div>

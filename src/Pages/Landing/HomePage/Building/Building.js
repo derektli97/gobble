@@ -19,7 +19,7 @@ class Building extends React.Component {
           >
             <img
               alt=''
-              src={require("../../../assets/cut_academic_building.svg")}
+              src={require("assets/cut_academic_building.svg")}
               style={{ maxHeight: "900px", height: "40vw" }}
             />
           </Flex>

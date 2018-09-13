@@ -1,5 +1,9 @@
 import React from "react";
-import EventsCard from "./EventsCard/EventsCard.js";
+import { Flex } from "grid-styled";
+
+import EventsCard from "Pages/Events/EventsCard/EventsCard";
+import NavBar from "CommonComponents/Navbar/Navbar";
+import { Background } from "Pages/Events/EventsStyles";
 
 class Events extends React.Component {
   // Tamuhack events are stored in a js object.
@@ -31,14 +35,25 @@ class Events extends React.Component {
   render () {
     const { isLoaded } = this.state;
     return (
-      <div>
-        { isLoaded
-          ? this.state.events
-            .filter(this.isValidEvent)
-            .map(this.parseEventCard)
-          : <p> Loading ...</p>
-        }
-      </div>
+      <Background>
+        <Flex
+          css={{
+            position: "relative",
+            width: "100vw",
+            height: "100vh",
+            overflow: "hidden",
+            zIndex: "1"
+          }}
+        >
+          <NavBar simple='true' />
+          { isLoaded
+            ? this.state.events
+              .filter(this.isValidEvent)
+              .map(this.parseEventCard)
+            : <p style={{ margin: "100px" }}> Loading ...</p>
+          }
+        </Flex>
+      </Background>
     );
   }
 }

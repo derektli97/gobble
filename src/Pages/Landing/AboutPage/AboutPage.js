@@ -1,8 +1,9 @@
 import React from "react";
 import { Flex } from "grid-styled";
-import { Background } from "./AboutPageStyles.js";
-import TopContent from "./TopContent/TopContent.js";
-import BottomContent from "./BottomContent/BottomContent.js";
+
+import { Background } from "Pages/Landing/AboutPage/AboutPageStyles";
+import TopContent from "Pages/Landing/AboutPage/TopContent/TopContent";
+import BottomContent from "Pages/Landing/AboutPage/BottomContent/BottomContent";
 
 class AboutPage extends React.Component {
   render () {

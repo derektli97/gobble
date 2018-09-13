@@ -1,6 +1,15 @@
 import React from "react";
-import { Background, QuestionContainer, Question, Title, QuestionTitle, QuestionBody } from "./FAQPageStyles.js";
+
+import {
+  Background,
+  QuestionContainer,
+  Question,
+  Title,
+  QuestionTitle,
+  QuestionBody
+} from "Pages/Landing/FAQPage/FAQPageStyles.js";
 import faqData from "./FAQQA.json";
+
 class FAQPage extends React.Component {
   state = { activeQuestionIndex: 0 };
   faqDataKeys = Object.keys(faqData);

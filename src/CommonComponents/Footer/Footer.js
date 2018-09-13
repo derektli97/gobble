@@ -1,6 +1,6 @@
 import React from "react";
 import { Flex } from "grid-styled";
-import { FooterIcon, Copyright } from "./FooterStyles.js";
+import { FooterIcon, Copyright } from "./FooterStyles";
 
 class Footer extends React.Component {
   render () {

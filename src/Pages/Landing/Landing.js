@@ -1,12 +1,12 @@
 import React from "react";
 import { Element } from "react-scroll";
-
 import "antd/dist/antd.css";
-import HomePage from "./HomePage/HomePage.js";
-import SponsorPage from "./SponsorPage/SponsorPage.js";
-import AboutPage from "./AboutPage/AboutPage.js";
-import Footer from "./Footer/Footer.js";
-import FAQPage from "./FAQPage/FAQPage.js";
+
+import HomePage from "Pages/Landing/HomePage/HomePage";
+import SponsorPage from "Pages/Landing/SponsorPage/SponsorPage";
+import AboutPage from "Pages/Landing/AboutPage/AboutPage";
+import FAQPage from "Pages/Landing/FAQPage/FAQPage";
+import Footer from "CommonComponents/Footer/Footer";
 
 const mobileThreshold = 900;
 
@@ -37,11 +37,9 @@ class Landing extends React.Component {
         <Element name='HomePage'>
           <HomePage {...{ isWebView }} />
         </Element>
-
         <Element name='AboutPage'>
           <AboutPage {...{ isWebView }} />
         </Element>
-
         <Element name='SponsorPage'>
           <SponsorPage {...{ isWebView }} />
         </Element>
