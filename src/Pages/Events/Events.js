@@ -1,8 +1,9 @@
 import React from "react";
-import EventsCard from "./EventsCard/EventsCard.js";
-import NavBar from "CommonComponents/Navbar/Navbar.js";
-import { Background } from "Pages/Events/EventsStyles.js";
 import { Flex } from "grid-styled";
+
+import EventsCard from "Pages/Events/EventsCard/EventsCard";
+import NavBar from "CommonComponents/Navbar/Navbar";
+import { Background } from "Pages/Events/EventsStyles";
 
 class Events extends React.Component {
   // Tamuhack events are stored in a js object.

@@ -1,11 +1,11 @@
 import React from "react";
 import { Element } from "react-scroll";
-
 import "antd/dist/antd.css";
-import HomePage from "./HomePage/HomePage.js";
-import SponsorPage from "./SponsorPage/SponsorPage.js";
-import AboutPage from "./AboutPage/AboutPage.js";
-import Footer from "CommonComponents/Footer/Footer.js";
+
+import HomePage from "Pages/Landing/HomePage/HomePage";
+import SponsorPage from "Pages/Landing/SponsorPage/SponsorPage";
+import AboutPage from "Pages/Landing/AboutPage/AboutPage";
+import Footer from "CommonComponents/Footer/Footer";
 
 const mobileThreshold = 900;
 

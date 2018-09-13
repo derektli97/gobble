@@ -1,8 +1,8 @@
 import React from "react";
 import { Flex } from "grid-styled";
 
-import { JayMoveRight, Subtitle, Icon } from "./ContentStyles.js";
-import SubmitField from "./SubmitField/SubmitField.js";
+import { JayMoveRight, Subtitle, Icon } from "Pages/Landing/HomePage/Content/ContentStyles";
+import SubmitField from "./SubmitField/SubmitField";
 
 class Content extends React.Component {
   state = { fun: false };

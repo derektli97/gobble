@@ -1,6 +1,16 @@
 import React from "react";
 import { Flex } from "grid-styled";
-import { SponsorContainer, SponsorLogo, SponsorTitleRow, SponsorTitle, SponsorRow, Background, SponsorLogoBig } from "./SponsorPageStyles.js";
+
+import {
+  SponsorContainer,
+  SponsorLogo,
+  SponsorTitleRow,
+  SponsorTitle,
+  SponsorRow,
+  Background,
+  SponsorLogoBig
+} from "./SponsorPageStyles.js";
+
 class SponsorPage extends React.Component {
   render () {
     const { isWebView } = this.props;

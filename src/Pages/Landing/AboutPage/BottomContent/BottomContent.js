@@ -1,6 +1,7 @@
 import React from "react";
 import { Flex } from "grid-styled";
-import { AboutSubtitle, AboutParagraph } from "../AboutPageStyles.js";
+
+import { AboutSubtitle, AboutParagraph } from "Pages/Landing/AboutPage/AboutPageStyles";
 
 class BottomContent extends React.Component {
   render () {

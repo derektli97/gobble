@@ -1,6 +1,6 @@
 import React from "react";
 
-import { CloudMoveLeft, CloudMoveRight, StaticCloud } from "./CloudsStyles.js";
+import { CloudMoveLeft, CloudMoveRight, StaticCloud } from "Pages/Landing/HomePage/Clouds/CloudsStyles";
 
 class Clouds extends React.Component {
   render () {
