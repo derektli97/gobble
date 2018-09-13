@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Landing from "Pages/Landing/Landing";
 import Events from "Pages/Events/Events";
 
-class AppRouter extends React.Component {
+class PageRouter extends React.Component {
   render () {
     return (
       <BrowserRouter>
@@ -16,4 +16,4 @@ class AppRouter extends React.Component {
   }
 }
 
-export default AppRouter;
+export default PageRouter;
