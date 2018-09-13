@@ -4,7 +4,7 @@ import { Background } from "./HomePageStyles.js";
 import Clouds from "./Clouds/Clouds.js";
 import Content from "./Content/Content.js";
 import Building from "./Building/Building.js";
-import NavBar from "./Navbar/Navbar.js";
+import NavBar from "CommonComponents/Navbar/Navbar.js";
 
 class HomePage extends React.Component {
   render () {

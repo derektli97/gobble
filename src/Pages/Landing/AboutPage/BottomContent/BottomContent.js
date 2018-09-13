@@ -17,7 +17,7 @@ class BottomContent extends React.Component {
       >
         <img
           alt=''
-          src={require("../../../assets/bitmoji-graphic.png")}
+          src={require("assets/bitmoji-graphic.png")}
           style={{ height: (isWebView) ? "30vw" : "55vw" }}
         />
         <div>

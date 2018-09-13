@@ -19,7 +19,7 @@ class Content extends React.Component {
         {this.state.fun && (
           <JayMoveRight
             alt=''
-            src={require("../../../assets/goodmorning.svg")}
+            src={require("assets/goodmorning.svg")}
             style={{
               top: "20vh",
               animationDuration: "20s",
@@ -42,7 +42,7 @@ class Content extends React.Component {
           <Flex>
             <img
               alt=''
-              src={require("../../../assets/tamuhack_logo_col.svg")}
+              src={require("assets/tamuhack_logo_col.svg")}
               style={{
                 height: isWebView ? "65px" : "50px",
                 marginLeft: "10px",
@@ -68,19 +68,19 @@ class Content extends React.Component {
             <a href='https://www.facebook.com/tamuhack'>
               <Icon
                 alt='Facebook Icon'
-                src={require("../../../assets/social-media-logos/facebook-f.svg")}
+                src={require("assets/social-media-logos/facebook-f.svg")}
               />
             </a>
             <a href='https://www.twitter.com/tamuhack'>
               <Icon
                 alt='Facebook Icon'
-                src={require("../../../assets/social-media-logos/twitter.svg")}
+                src={require("assets/social-media-logos/twitter.svg")}
               />
             </a>
             <a href='https://www.instagram.com/tamuhack'>
               <Icon
                 alt='Facebook Icon'
-                src={require("../../../assets/social-media-logos/instagram.svg")}
+                src={require("assets/social-media-logos/instagram.svg")}
               />
             </a>
           </Flex>

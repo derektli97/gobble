@@ -12,7 +12,7 @@ class Clouds extends React.Component {
       <React.Fragment>
         <StaticCloud
           alt=''
-          src={require("../../../assets/cloud_03.svg")}
+          src={require("assets/cloud_03.svg")}
           style={{
             top: "20vh",
             left: "-7vw",
@@ -21,7 +21,7 @@ class Clouds extends React.Component {
         />
         <StaticCloud
           alt=''
-          src={require("../../../assets/cloud_01.svg")}
+          src={require("assets/cloud_01.svg")}
           style={{
             top: "80vh",
             height: "20vh"
@@ -29,7 +29,7 @@ class Clouds extends React.Component {
         />
         <CloudMoveRight
           alt=''
-          src={require("../../../assets/cloud_02.svg")}
+          src={require("assets/cloud_02.svg")}
           style={{
             top: "47vh",
             animationDuration: "60s",
@@ -38,7 +38,7 @@ class Clouds extends React.Component {
         />
         <CloudMoveLeft
           alt=''
-          src={require("../../../assets/cloud_04.svg")}
+          src={require("assets/cloud_04.svg")}
           style={{
             top: "10vh",
             animationDuration: "40s",

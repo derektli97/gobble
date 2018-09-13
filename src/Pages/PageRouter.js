@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Landing from "./Landing/Landing.js";
-import Events from "./Events/Events.js";
+import Landing from "Pages/Landing/Landing.js";
+import Events from "Pages/Events/Events.js";
 
 class AppRouter extends React.Component {
   render () {
