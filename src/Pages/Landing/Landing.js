@@ -43,9 +43,12 @@ class Landing extends React.Component {
         <Element name='SponsorPage'>
           <SponsorPage {...{ isWebView }} />
         </Element>
-        <Element name='FAQPage'>
-          <FAQPage {...{ isWebView }} />
-        </Element>
+        {
+          isWebView &&
+          <Element name='FAQPage'>
+            <FAQPage {...{ isWebView }} />
+          </Element>
+        }
         <Footer {...{ isWebView }} />
       </React.Fragment>
     );

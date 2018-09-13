@@ -13,15 +13,12 @@ import faqData from "./FAQQA.json";
 class FAQPage extends React.Component {
   state = { activeQuestionIndex: 0 };
   faqDataKeys = Object.keys(faqData);
-  componentDidMount () {
+  render () {
     this.questions = this.faqDataKeys.map((question, index) =>
       <Question key={index} onClick={() => { this.setState({ activeQuestionIndex: index }); }}>
         {question}
       </Question>
     );
-  }
-  render () {
-    console.log(this.state.activeQuestionIndex);
     return (
       <Background style={{ marginTop: "50px", justifyContent: "space-around", alignSelf: "center" }}>
         <QuestionContainer >
