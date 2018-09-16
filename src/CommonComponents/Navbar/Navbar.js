@@ -36,7 +36,7 @@ class NavBar extends React.Component {
     };
 
     // Logic for rendering links and the MLH Icon.
-    const renderMLHIcon = isWebView || !simple;
+    const renderMLHIcon = isWebView && !simple;
     const renderLinks = !simple;
 
     const { NavLinkStyle } = styles;
