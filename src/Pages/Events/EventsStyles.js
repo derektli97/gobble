@@ -25,10 +25,14 @@ export const EventSubtitle = styled.p`
   font-size: ${props => (props.isWebView === true) ? "25px" : "20px"};
   font-weight: 600;
 <<<<<<< HEAD
+<<<<<<< HEAD
   padding-bottom: 5px;
 =======
   padding-bottom: 20px;
 >>>>>>> 5623110... Added many things to event page
+=======
+  padding-bottom: 5px;
+>>>>>>> 4056658... Finished flex structure and styling for event page, added footer, just need to finish event cards div
   line-height: 1.25;
 `;
 
@@ -38,6 +42,7 @@ export const EventParagraph = styled.p`
   font-weight: regular;
   alignItems: center;
 <<<<<<< HEAD
+<<<<<<< HEAD
   max-width: 430px;
   font-size: ${props => (props.isWebView === true) ? "16px" : "13px"};
   padding-bottom: 7px;
@@ -46,4 +51,9 @@ export const EventParagraph = styled.p`
   font-size: ${props => (props.isWebView === true) ? "16px" : "13px"};
   padding-bottom: 10px;
 >>>>>>> 5623110... Added many things to event page
+=======
+  max-width: 430px;
+  font-size: ${props => (props.isWebView === true) ? "16px" : "13px"};
+  padding-bottom: 7px;
+>>>>>>> 4056658... Finished flex structure and styling for event page, added footer, just need to finish event cards div
 `;
