@@ -24,7 +24,7 @@ export const EventSubtitle = styled.p`
   max-width: 400px;
   font-size: ${props => (props.isWebView === true) ? "25px" : "20px"};
   font-weight: 600;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   line-height: 1.25;
 `;
 
@@ -33,7 +33,7 @@ export const EventParagraph = styled.p`
   display: flex;
   font-weight: regular;
   alignItems: center;
-  max-width: 450px;
+  max-width: 430px;
   font-size: ${props => (props.isWebView === true) ? "16px" : "13px"};
-  padding-bottom: 10px;
+  padding-bottom: 7px;
 `;
