@@ -24,7 +24,11 @@ export const EventSubtitle = styled.p`
   max-width: 400px;
   font-size: ${props => (props.isWebView === true) ? "25px" : "20px"};
   font-weight: 600;
+<<<<<<< HEAD
   padding-bottom: 5px;
+=======
+  padding-bottom: 20px;
+>>>>>>> 5623110... Added many things to event page
   line-height: 1.25;
 `;
 
@@ -33,7 +37,13 @@ export const EventParagraph = styled.p`
   display: flex;
   font-weight: regular;
   alignItems: center;
+<<<<<<< HEAD
   max-width: 430px;
   font-size: ${props => (props.isWebView === true) ? "16px" : "13px"};
   padding-bottom: 7px;
+=======
+  max-width: 450px;
+  font-size: ${props => (props.isWebView === true) ? "16px" : "13px"};
+  padding-bottom: 10px;
+>>>>>>> 5623110... Added many things to event page
 `;

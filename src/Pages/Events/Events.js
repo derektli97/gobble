@@ -5,7 +5,10 @@ import EventsCard from "Pages/Events/EventsCard/EventsCard";
 import NavBar from "CommonComponents/Navbar/Navbar";
 import { Background, EventTitle, EventSubtitle, EventParagraph } from "Pages/Events/EventsStyles";
 import SubmitField from "../Landing/HomePage/Content/SubmitField/SubmitField";
+<<<<<<< HEAD
 import Footer from "CommonComponents/Footer/Footer";
+=======
+>>>>>>> 5623110... Added many things to event page
 
 class Events extends React.Component {
   // Tamuhack events are stored in a js object.
@@ -55,12 +58,19 @@ class Events extends React.Component {
             <div style={{ maxWidth: "550px", alignItems: "center" }}>
               <EventTitle {...{ isWebView }} >Events on Campus</EventTitle>
               <EventSubtitle {...{ isWebView }} >Subscribe</EventSubtitle>
+<<<<<<< HEAD
               <EventParagraph {...{ isWebView }} >This year, we're upping our workshop game and bringing you MLH Localhost, company events, and new swag. Check out all our events here and subscribe so you don't miss out!</EventParagraph>
               <EventParagraph>Email notifications</EventParagraph>
               <SubmitField fontSize='13px' {...{ isWebView }} />
             </div>
             <div>
               {/* This div is for the event cards */}
+=======
+              <EventParagraph {...{ isWebView }} >This year, we're upping our workshop game and bringing you MLH Localhost, company events, and new swag. Check out all our events here and subscribe so you don't miss out.</EventParagraph>
+              <SubmitField fontSize='13px' {...{ isWebView }} />
+            </div>
+            <div>
+>>>>>>> 5623110... Added many things to event page
               { isLoaded
                 ? this.state.events
                   .filter(this.isValidEvent)
@@ -72,7 +82,11 @@ class Events extends React.Component {
           <img
             alt=''
             src={require("assets/coffee-graphic.png")}
+<<<<<<< HEAD
             style={{ width: (isWebView) ? "400px" : "300px", maxWidth: (isWebView) ? "500px" : "300px", height: "650px", marginTop: "70px", marginBottom: "30px" }}
+=======
+            style={{ margin: "100px", maxHeight: "900px", height: "40vw" }}
+>>>>>>> 5623110... Added many things to event page
           />
 
         </Flex>
