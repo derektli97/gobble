@@ -3,8 +3,7 @@ import { Flex } from "grid-styled";
 
 import EventsCard from "Pages/Events/EventsCard/EventsCard";
 import NavBar from "CommonComponents/Navbar/Navbar";
-import { Background, EventTitle, EventSubtitle, EventParagraph } from "Pages/Events/EventsStyles";
-import SubmitField from "../Landing/HomePage/Content/SubmitField/SubmitField";
+import { Background } from "Pages/Events/EventsStyles";
 
 class Events extends React.Component {
   // Tamuhack events are stored in a js object.
@@ -35,43 +34,24 @@ class Events extends React.Component {
 
   render () {
     const { isLoaded } = this.state;
-    const { isWebView } = this.props;
     return (
       <Background>
-        <NavBar simple='true' />
         <Flex
-          flexDirection='row'
-          justifyContent='center'
-          flexWrap='wrap'
           css={{
-            width: "100%",
-            height: "100%",
+            position: "relative",
+            width: "100vw",
+            height: "100vh",
             overflow: "hidden",
             zIndex: "1"
           }}
         >
-          <div style={{ paddingTop: "80px" }}>
-            <div style={{ maxWidth: "550px", alignItems: "center" }}>
-              <EventTitle {...{ isWebView }} >Events on Campus</EventTitle>
-              <EventSubtitle {...{ isWebView }} >Subscribe</EventSubtitle>
-              <EventParagraph {...{ isWebView }} >This year, we're upping our workshop game and bringing you MLH Localhost, company events, and new swag. Check out all our events here and subscribe so you don't miss out.</EventParagraph>
-              <SubmitField fontSize='13px' {...{ isWebView }} />
-            </div>
-            <div>
-              { isLoaded
-                ? this.state.events
-                  .filter(this.isValidEvent)
-                  .map(this.parseEventCard)
-                : <p style={{ margin: "100px" }}> Loading ...</p>
-              }
-            </div>
-          </div>
-          <img
-            alt=''
-            src={require("assets/coffee-graphic.png")}
-            style={{ margin: "100px", maxHeight: "900px", height: "40vw" }}
-          />
-
+          <NavBar simple='true' />
+          { isLoaded
+            ? this.state.events
+              .filter(this.isValidEvent)
+              .map(this.parseEventCard)
+            : <p style={{ margin: "100px" }}> Loading ...</p>
+          }
         </Flex>
       </Background>
     );
