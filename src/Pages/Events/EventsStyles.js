@@ -7,3 +7,32 @@ export const Background = styled.div`
   margin: 0px;
   padding: 0px;
 `;
+
+export const EventTitle = styled.p`
+  margin: 10px;
+  display: flex;
+  alignItems: center;
+  font-size: ${props => (props.isWebView === true) ? "35px" : "30px"};
+  font-weight: 600;
+  padding-bottom: 20px;
+`;
+
+export const EventSubtitle = styled.p`
+  margin: 10px;
+  display: flex;
+  alignItems: center;
+  max-width: 400px;
+  font-size: ${props => (props.isWebView === true) ? "25px" : "20px"};
+  font-weight: 600;
+  padding-bottom: 5px;
+  line-height: 1.25;
+`;
+
+export const EventParagraph = styled.p`
+  margin: 10px;
+  display: flex;
+  font-weight: regular;
+  alignItems: center;
+  max-width: 430px;
+  font-size: ${props => (props.isWebView === true) ? "16px" : "13px"};
+`;
