@@ -5,6 +5,7 @@ import { EventCardTitle, EventCardDate } from "Pages/Events/EventsCard/EventsCar
 
 class EventsCard extends React.Component {
   render () {
+    // TODO(jaykhatri) this component should not be passed an event object, just the props it needs.
     const { event } = this.props;
     const eventDateTime = new Date(event.start.local);
     const localDateTime = new Date();
