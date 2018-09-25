@@ -18,6 +18,7 @@ class Events extends React.Component {
   }
 
   // Parses an event, and return an EventsCard component.
+  // TODO(jaykhatri) parse the events object here, don't pass the whole object.
   parseEventCard (event) {
     return (<EventsCard key={event.name.text} event={event} />);
   }
@@ -72,11 +73,13 @@ class Events extends React.Component {
               }
             </Flex>
           </Flex>
+          {isWebView &&
           <img
             alt=''
             src={require("assets/coffee-graphic.png")}
-            style={{ width: (isWebView) ? "400px" : "300px", maxWidth: (isWebView) ? "500px" : "300px", height: "650px", marginTop: "110px", marginBottom: "30px" }}
+            style={{ width: "300px", maxWidth: "300px", height: "650px", marginTop: "110px", marginBottom: "30px" }}
           />
+          }
         </Flex>
       </Background>
     );

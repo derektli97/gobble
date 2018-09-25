@@ -14,7 +14,7 @@ class EventsCard extends React.Component {
       return <React.Fragment />;
     }
     return (
-      <Card bordered={false} style={{ padding: "0px", width: 400, margin: "10px" }}>
+      <Card bordered={false} style={{ padding: "0px", maxWidth: 400, margin: "10px" }}>
         <Flex justifyContent='space-between'>
           <Flex flexDirection='column'>
             <EventCardTitle>{ event.name.text }</EventCardTitle>
