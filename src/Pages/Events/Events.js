@@ -19,9 +19,7 @@ class Events extends React.Component {
 
   // Parses an event, and return an EventsCard component.
   parseEventCard (event) {
-    // TODO(all) Add more fields for the events and style the events card.
-    const { name } = event;
-    return (<EventsCard key={name.text} name={name.text} />);
+    return (<EventsCard key={event.name.text} event={event} />);
   }
 
   // Checks for a valid event.
@@ -61,14 +59,10 @@ class Events extends React.Component {
             >
               <EventTitle {...{ isWebView }} >Events on Campus</EventTitle>
               <EventSubtitle {...{ isWebView }} >Subscribe</EventSubtitle>
-              <EventParagraph {...{ isWebView }} >This year, we're upping our workshop game and bringing you MLH Localhost, company events, and new swag. Check out all our events here and subscribe so you don't miss out!</EventParagraph>
+              <EventParagraph {...{ isWebView }} >This year, we're upping our workshop game and bringing you MLH Localhost,
+                company events, and new swag. Check out all our events here and subscribe so you don't miss out!</EventParagraph>
               <EventParagraph>Email notifications</EventParagraph>
               <SubmitField fontSize='13px' {...{ isWebView }} />
-            </Flex>
-            <Flex
-              flexDirection='column'
-              css={{ marginTop: "15px" }}
-            >
               <EventTitle {...{ isWebView }} >Upcoming</EventTitle>
               { isLoaded
                 ? this.state.events
