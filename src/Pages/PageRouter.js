@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Landing from "Pages/Landing/Landing";
-import Events from "Pages/Events/Events";
+import EventsWrapper from "Pages/Events/EventsWrapper";
 
 class PageRouter extends React.Component {
   render () {
@@ -9,7 +9,7 @@ class PageRouter extends React.Component {
       <BrowserRouter>
         <Switch>
           <Route exact path='/' component={Landing} />
-          <Route path='/events' component={Events} />
+          <Route path='/events' component={EventsWrapper} />
         </Switch>
       </BrowserRouter>
     );
