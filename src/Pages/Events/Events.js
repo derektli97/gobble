@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex } from "grid-styled";
 
-import EventsCard from "Pages/Events/EventsCard/EventsCard";
+import { EventsCard, EventsCardLoading } from "Pages/Events/EventsCard/EventsCard";
 import NavBar from "CommonComponents/Navbar/Navbar";
 import { Background, EventTitle, EventSubtitle, EventParagraph } from "Pages/Events/EventsStyles";
 import SubmitField from "Pages/Landing/HomePage/Content/SubmitField/SubmitField";
@@ -17,11 +17,17 @@ class Events extends React.Component {
       .then(events => this.setState({ events: events.events, isLoaded: true }));
   }
 
-  // Parses an event, and return an EventsCard component.
+  renderLoadingCard () {
+    return (
+      <React.Fragment>
+        <EventsCardLoading />
+      </React.Fragment>
+    );
+  }
+
   parseEventCard (event) {
-    // TODO(all) Add more fields for the events and style the events card.
-    const { name } = event;
-    return (<EventsCard key={name.text} name={name.text} />);
+    console.log(event);
+    return (<EventsCard key={event.name.text} title={event.name.text} time={event.start.local} url={event.url} />);
   }
 
   // Checks for a valid event.
@@ -34,8 +40,8 @@ class Events extends React.Component {
   }
 
   render () {
-    const { isLoaded } = this.state;
     const { isWebView } = this.props;
+    const { isLoaded } = this.state;
     return (
       <Background>
         <NavBar simple='true' />
@@ -61,28 +67,28 @@ class Events extends React.Component {
             >
               <EventTitle {...{ isWebView }} >Events on Campus</EventTitle>
               <EventSubtitle {...{ isWebView }} >Subscribe</EventSubtitle>
-              <EventParagraph {...{ isWebView }} >This year, we're upping our workshop game and bringing you MLH Localhost, company events, and new swag. Check out all our events here and subscribe so you don't miss out!</EventParagraph>
+              <EventParagraph {...{ isWebView }} >
+                This year, we're upping our workshop game and bringing you MLH Localhost,
+                company events, and new swag. Check out all our events here and subscribe
+                so you don't miss out!
+              </EventParagraph>
               <EventParagraph>Email notifications</EventParagraph>
               <SubmitField fontSize='13px' {...{ isWebView }} />
-            </Flex>
-            <Flex
-              flexDirection='column'
-              css={{ marginTop: "15px" }}
-            >
               <EventTitle {...{ isWebView }} >Upcoming</EventTitle>
-              { isLoaded
-                ? this.state.events
-                  .filter(this.isValidEvent)
-                  .map(this.parseEventCard)
-                : <p style={{ margin: "100px" }}> Loading ...</p>
+              {isLoaded ? this.state.events
+                .filter(this.isValidEvent)
+                .map(this.parseEventCard)
+                : this.renderLoadingCard()
               }
             </Flex>
           </Flex>
+          {isWebView &&
           <img
             alt=''
             src={require("assets/coffee-graphic.png")}
-            style={{ width: (isWebView) ? "400px" : "300px", maxWidth: (isWebView) ? "500px" : "300px", height: "650px", marginTop: "110px", marginBottom: "30px" }}
+            style={{ width: "300px", maxWidth: "300px", height: "650px", marginTop: "110px", marginBottom: "30px" }}
           />
+          }
         </Flex>
       </Background>
     );

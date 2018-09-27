@@ -10,11 +10,11 @@ export const Background = styled.div`
 
 export const EventTitle = styled.p`
   margin: 10px;
+  margin-top: 30px;
   display: flex;
   alignItems: center;
   font-size: ${props => (props.isWebView === true) ? "35px" : "30px"};
   font-weight: 600;
-  padding-bottom: 20px;
 `;
 
 export const EventSubtitle = styled.p`
