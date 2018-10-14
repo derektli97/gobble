@@ -8,7 +8,6 @@ export class EventsCard extends React.Component {
     const { time, title, url } = this.props;
     const eventDateTime = new Date(time);
     const localDateTime = new Date();
-
     // If the event has already passed, return an empty element.
     if (eventDateTime < localDateTime) {
       return <React.Fragment />;

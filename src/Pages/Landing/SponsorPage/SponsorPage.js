@@ -42,9 +42,12 @@ class SponsorPage extends React.Component {
               <SponsorLogoBig {...{ isWebView }} src={require("assets/SponsorLogos/charles.png")} />
             </SponsorRow>
             <SponsorRow {...{ isWebView }}>
+              <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/JPMorgan.png")} />
               <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/exxonmobile.png")} />
-              <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/google.png")} />
               <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/facebook.png")} />
+            </SponsorRow>
+            <SponsorRow {...{ isWebView }}>
+              <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/google.png")} />
             </SponsorRow>
           </SponsorContainer>
           <Flex style={{ justifyContent: "center", fontSize: "14px", flexDirection: "column" }}>
