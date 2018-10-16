@@ -12,7 +12,7 @@ class HomePage extends React.Component {
     const { isWebView } = this.props;
     return (
       <Background>
-        <NavBar {...{ isWebView }} />
+        <NavBar {...{ isWebView }} simple={false} />
         <Flex
           justifyContent={isWebView ? "initial" : "center"}
           css={{
