@@ -56,7 +56,7 @@ class Content extends React.Component {
             January 26-27, 2019 • Texas A&M University
           </Subtitle>
           <Subtitle {...{ isWebView }}>
-            Registration opens October 24th, 2018
+            Registration opens October, 2018
           </Subtitle>
           <SubmitField fontSize='13px' {...{ isWebView }} />
           <Subtitle {...{ isWebView }} style={{ paddingTop: "3vh" }}>
