@@ -8,6 +8,7 @@ import BottomContent from "Pages/Landing/AboutPage/BottomContent/BottomContent";
 class AboutPage extends React.Component {
   render () {
     const { isWebView } = this.props;
+    console.log("cache test");
 
     return (
       <Background>
