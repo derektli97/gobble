@@ -18,7 +18,7 @@ export class EventsCard extends React.Component {
         <Flex justifyContent='space-between'>
           <Flex flexDirection='column'>
             <EventCardTitle>{ title }</EventCardTitle>
-            <EventCardDate>{ eventDateTime.toLocaleString("en-US", { hour12: true }) }</EventCardDate>
+            <EventCardDate>{ eventDateTime.toLocaleString() }</EventCardDate>
           </Flex>
           <Button target='_blank' href={url}>Sign Up</Button>
         </Flex>
