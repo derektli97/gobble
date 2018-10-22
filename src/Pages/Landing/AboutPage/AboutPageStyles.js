@@ -14,7 +14,7 @@ export const AboutTitle = styled.p`
   alignItems: center;
   font-size: ${props => (props.isWebView === true) ? "35px" : "30px"};
   font-weight: 600;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 `;
 
 export const AboutSubtitle = styled.p`
