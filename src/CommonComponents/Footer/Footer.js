@@ -22,25 +22,25 @@ class Footer extends React.Component {
           <a href='https://www.facebook.com/tamuhack' target='_blank'>
             <FooterIcon
               alt='Facebook Icon'
-              src={require("../../assets/social-media-logos/facebook-f.svg")}
+              src={require("assets/social-media-logos/facebook-f.svg")}
             />
           </a>
           <a href='https://www.twitter.com/tamuhack' target='_blank'>
             <FooterIcon
               alt='Facebook Icon'
-              src={require("../../assets/social-media-logos/twitter.svg")}
+              src={require("assets/social-media-logos/twitter.svg")}
             />
           </a>
           <a href='https://www.instagram.com/tamuhack' target='_blank'>
             <FooterIcon
               alt='Facebook Icon'
-              src={require("../../assets/social-media-logos/instagram.svg")}
+              src={require("assets/social-media-logos/instagram.svg")}
             />
           </a>
           <a href='mailto:hello@tamuhack.com'>
             <FooterIcon
               alt='Email Icon'
-              src={require("../../assets/envelope.svg")}
+              src={require("assets/envelope.svg")}
             />
           </a>
         </Flex>
