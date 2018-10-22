@@ -45,7 +45,7 @@ class Footer extends React.Component {
           </a>
         </Flex>
         <Copyright {...{ isWebView }} >
-        © Copyright 2019 TAMUhack – All Rights Reserved
+          Built with ❤️ from TAMUhack
         </Copyright>
       </Flex>
     );
