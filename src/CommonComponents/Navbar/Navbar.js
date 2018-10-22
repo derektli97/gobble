@@ -59,7 +59,7 @@ class NavBar extends React.Component {
             renderLinks && (
               <React.Fragment>
                 <NavbarToggler onClick={this.toggle} />
-                <Collapse isOpen={this.state.isOpen} navbar style={{ paddingLeft: 0, paddingTop: "15px" }}>
+                <Collapse isOpen={this.state.isOpen} navbar style={{ paddingLeft: 0 }}>
                   <Nav className='ml-auto' navbar>
                     <Link to='AboutPage' smooth duration={500} >
                       <NavItem>
@@ -87,18 +87,19 @@ class NavBar extends React.Component {
           {
             renderMLHIcon &&
             (
-              <img
-                alt=''
-                src={require("assets/MLHLogo.svg")}
-                style={{
-                  position: "fixed",
-                  zIndex: "2",
-                  width: "10vw",
-                  height: "27vh",
-                  left: "88vw",
-                  top: 0
-                }}
-              />
+              <a href='https://mlh.io/seasons/na-2019/events' target='_blank'>
+                <img
+                  alt=''
+                  src={require("assets/MLHLogo.svg")}
+                  style={{
+                    position: "fixed",
+                    zIndex: "1",
+                    width: "100px",
+                    left: "88vw",
+                    top: 0
+                  }}
+                />
+              </a>
             )
           }
         </Navbar>
