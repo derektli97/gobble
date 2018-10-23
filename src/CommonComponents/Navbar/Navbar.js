@@ -76,9 +76,6 @@ class NavBar extends React.Component {
                         <NavLink style={NavLinkStyle} onClick={this.toggle}>FAQ</NavLink>
                       </NavItem>
                     </Link>
-                    <NavItem>
-                      <NavLink style={NavLinkStyle} onClick={this.toggle}>Contact</NavLink>
-                    </NavItem>
                   </Nav>
                 </Collapse>
               </React.Fragment>

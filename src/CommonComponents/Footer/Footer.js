@@ -18,28 +18,34 @@ class Footer extends React.Component {
           paddingTop: (isWebView) ? "20px" : "5px"
         }}
       >
-        <Flex css={{ width: (isWebView) ? "300px" : "100px", paddingLeft: (isWebView) ? "100px" : "30px", justifyContent: "space-evenly" }}>
+        <Flex css={{ width: (isWebView) ? "350px" : "150px", paddingLeft: (isWebView) ? "100px" : "30px", justifyContent: "space-evenly" }}>
           <a href='https://www.facebook.com/tamuhack' target='_blank'>
             <FooterIcon
               alt='Facebook Icon'
-              src={require("../../assets/social-media-logos/facebook-f.svg")}
+              src={require("assets/social-media-logos/facebook-f.svg")}
             />
           </a>
           <a href='https://www.twitter.com/tamuhack' target='_blank'>
             <FooterIcon
               alt='Facebook Icon'
-              src={require("../../assets/social-media-logos/twitter.svg")}
+              src={require("assets/social-media-logos/twitter.svg")}
             />
           </a>
           <a href='https://www.instagram.com/tamuhack' target='_blank'>
             <FooterIcon
               alt='Facebook Icon'
-              src={require("../../assets/social-media-logos/instagram.svg")}
+              src={require("assets/social-media-logos/instagram.svg")}
+            />
+          </a>
+          <a href='mailto:hello@tamuhack.com'>
+            <FooterIcon
+              alt='Email Icon'
+              src={require("assets/envelope.svg")}
             />
           </a>
         </Flex>
         <Copyright {...{ isWebView }} >
-        © Copyright 2019 TAMUhack – All Rights Reserved
+          Built with ❤️ from TAMUhack
         </Copyright>
       </Flex>
     );

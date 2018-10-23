@@ -15,7 +15,7 @@ export const FooterIcon = styled.img`
 `;
 
 export const Copyright = styled.p`
-  font-size: ${props => (props.isWebView) ? "12px" : "7px"};
-  padding-Top: ${props => (props.isWebView) ? "5px" : "9px"};
+  font-size: ${props => (props.isWebView) ? "14px" : "9px"};
+  padding-Top: ${props => (props.isWebView) ? "0px" : "9px"};
   padding-Right: ${props => (props.isWebView) ? "100px" : "30px"}}
 `;
