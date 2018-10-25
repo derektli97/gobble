@@ -83,6 +83,12 @@ class Content extends React.Component {
                 src={require("assets/social-media-logos/instagram.svg")}
               />
             </a>
+            <a href='mailto:hello@tamuhack.com'>
+              <Icon
+                alt='Email Icon'
+                src={require("assets/envelope.svg")}
+              />
+            </a>
           </Flex>
         </Flex>
       </React.Fragment>
