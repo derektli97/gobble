@@ -8,6 +8,7 @@ import {
   NavItem,
   NavLink } from "reactstrap";
 import { Link } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class NavBar extends React.Component {
@@ -27,7 +28,12 @@ class NavBar extends React.Component {
   }
   render () {
     const { isWebView, simple } = this.props;
-    const styles = {
+
+    // Logic for rendering links and the MLH Icon.
+    const renderMLHIcon = isWebView && !simple;
+    const renderLinks = !simple;
+
+    const { NavLinkStyle } = {
       NavLinkStyle: {
         fontSize: "18px",
         paddingLeft: isWebView ? "2vw" : "7vw",
@@ -35,11 +41,12 @@ class NavBar extends React.Component {
       }
     };
 
-    // Logic for rendering links and the MLH Icon.
-    const renderMLHIcon = isWebView && !simple;
-    const renderLinks = !simple;
+    const { RouterLinkStyle } = {
+      RouterLinkStyle: {
+        textDecoration: "none"
+      }
+    };
 
-    const { NavLinkStyle } = styles;
     return (
       <React.Fragment>
         <Navbar fixed='top' light color='light' expand='md' style={{ paddingRight: isWebView ? "14vw" : "20px", zIndex: 2 }}>
@@ -76,6 +83,11 @@ class NavBar extends React.Component {
                         <NavLink style={NavLinkStyle} onClick={this.toggle}>FAQ</NavLink>
                       </NavItem>
                     </Link>
+                    <RouterLink to='/events/' style={RouterLinkStyle}>
+                      <NavItem>
+                        <NavLink style={NavLinkStyle} onClick={this.toggle}>Events</NavLink>
+                      </NavItem>
+                    </RouterLink>
                   </Nav>
                 </Collapse>
               </React.Fragment>
