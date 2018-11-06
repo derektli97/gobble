@@ -78,11 +78,14 @@ class NavBar extends React.Component {
                         <NavLink style={NavLinkStyle} onClick={this.toggle}>Sponsors</NavLink>
                       </NavItem>
                     </Link>
-                    <Link to='FAQPage' smooth duration={500}>
-                      <NavItem>
-                        <NavLink style={NavLinkStyle} onClick={this.toggle}>FAQ</NavLink>
-                      </NavItem>
-                    </Link>
+                    {
+                      isWebView &&
+                      <Link to='FAQPage' smooth duration={500}>
+                        <NavItem>
+                          <NavLink style={NavLinkStyle} onClick={this.toggle}>FAQ</NavLink>
+                        </NavItem>
+                      </Link>
+                    }
                     <RouterLink to='/events/' style={RouterLinkStyle}>
                       <NavItem>
                         <NavLink style={NavLinkStyle} onClick={this.toggle}>Events</NavLink>
