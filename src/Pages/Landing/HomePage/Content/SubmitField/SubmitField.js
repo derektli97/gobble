@@ -1,11 +1,14 @@
 import React from "react";
-import { Icon, Form, Input, Button } from "antd";
-
+import { Icon, Form, Button } from "antd";
 const FormItem = Form.Item;
 
 class SubmitField extends React.Component {
   state = { loadingState: "neutral" };
 
+  constructor (props) {
+    super(props);
+    this.typeformEmbed = React.createRef();
+  }
   handleSubmit = e => {
     // Prevent a redirect.
     e.preventDefault();
@@ -31,68 +34,43 @@ class SubmitField extends React.Component {
   };
 
   render () {
-    const {
-      isWebView,
-      fontSize,
-      form: { getFieldDecorator }
-    } = this.props;
     const { loadingState } = this.state;
 
     return (
-      <Form layout='inline' onSubmit={this.handleSubmit}>
-        <FormItem style={{ marginLeft: "10px" }}>
-          {getFieldDecorator("email", {
-            validateFirst: true,
-            rules: [
-              {
-                type: "email",
-                message: "Not a valid '.edu' email"
-              },
-              {
-                required: true,
-                message: "Please input your email"
-              },
-              {
-                pattern: "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.+-]+\\.edu$",
-                message: "Not a valid '.edu' email"
-              }
-            ]
-          })(
-            <Input
-              disabled={loadingState === "done"}
-              style={{
-                fontSize,
-                width: isWebView ? "300px" : "200px"
-              }}
-              placeholder='Sign up for email updates!'
-            />
-          )}
-        </FormItem>
-        <FormItem>
-          <Button
-            type='primary'
-            htmlType='submit'
-            disabled={loadingState === "done"}
-            loading={loadingState === "loading"}
-            style={{
-              height: "31px",
-              marginRight: "10px",
-              backgroundColor:
-                loadingState === "done" ? "transparent" : "#FF7C93",
-              borderColor: "#FF7C93",
-              borderWidth: loadingState === "loading" ? "0" : "2px"
-            }}
-          >
-            {loadingState === "neutral" ? (
-              "Submit"
-            ) : loadingState === "loading" ? (
-              ""
-            ) : (
-              <Icon type='check' style={{ color: "#FF7C93" }} />
-            )}
-          </Button>
-        </FormItem>
-      </Form>
+
+      <React.Fragment>
+        <Form layout='inline' onSubmit={this.handleSubmit}>
+          <FormItem>
+            <a href='https://tamuhack.typeform.com/to/UpEv1l'>
+              <Button
+                type='primary'
+                disabled={loadingState === "done"}
+                loading={loadingState === "loading"}
+                style={{
+                  marginTop: "5px",
+                  marginLeft: "10px",
+                  boxShadow: "0px 4px #E2768D",
+                  height: "42px",
+                  marginRight: "10px",
+                  fontSize: "18px",
+                  backgroundColor:
+                    loadingState === "done" ? "transparent" : "#FF7C93",
+                  borderColor: "#FF7C93",
+                  borderWidth: loadingState === "loading" ? "0" : "2px"
+                }}
+              >
+                {loadingState === "neutral" ? (
+                  "Apply Now"
+                ) : loadingState === "loading" ? (
+                  ""
+                ) : (
+                  <Icon type='check' style={{ color: "#FF7C93" }} />
+                )}
+              </Button>
+            </a>
+          </FormItem>
+        </Form>
+      </React.Fragment>
     );
   }
 }

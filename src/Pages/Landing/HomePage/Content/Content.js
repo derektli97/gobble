@@ -1,6 +1,5 @@
 import React from "react";
 import { Flex } from "grid-styled";
-
 import { JayMoveRight, Subtitle, Icon } from "Pages/Landing/HomePage/Content/ContentStyles";
 import SubmitField from "./SubmitField/SubmitField";
 
@@ -56,7 +55,7 @@ class Content extends React.Component {
             January 26-27, 2019 • Texas A&M University
           </Subtitle>
           <Subtitle {...{ isWebView }}>
-            Registration opens October, 2018
+            Applications are open until January 6th, 2019
           </Subtitle>
           <SubmitField fontSize='13px' {...{ isWebView }} />
           <Subtitle {...{ isWebView }} style={{ paddingTop: "3vh" }}>

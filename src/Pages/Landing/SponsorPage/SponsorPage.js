@@ -22,7 +22,8 @@ class SponsorPage extends React.Component {
           css={{
             width: "80vw",
             overflow: "hidden",
-            flexDirection: "column"
+            flexDirection: "column",
+            paddingBottom: "20px"
           }}
         >
           <Flex style={{ justifyContent: "center", fontSize: "14px", flexDirection: "column" }}>
@@ -52,7 +53,7 @@ class SponsorPage extends React.Component {
               <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/bridgeway.jpg")} />
             </SponsorRow>
             <SponsorRow style={{ marginTop: "40px" }} {...{ isWebView }}>
-              <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/google.png")} />
+              <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/jumpstart.png")} />
               <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/smartcar.png")} />
               <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/facebook.png")} />
             </SponsorRow>

@@ -21,7 +21,7 @@ class FAQPage extends React.Component {
       </Question>
     );
     return (
-      <Background style={{ marginTop: "50px", justifyContent: "space-around", alignSelf: "center" }}>
+      <Background style={{ marginTop: "10px", justifyContent: "space-around", alignSelf: "center" }}>
         <QuestionContainer >
           {this.questions}
         </QuestionContainer>
