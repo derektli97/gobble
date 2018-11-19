@@ -39,23 +39,45 @@ class SponsorPage extends React.Component {
           </Flex>
           <SponsorContainer>
             <SponsorRow {...{ isWebView }} >
-              <SponsorLogoBig {...{ isWebView }} src={require("assets/SponsorLogos/AA.png")} />
-              <SponsorLogoBig {...{ isWebView }} src={require("assets/SponsorLogos/charles.png")} />
+              <a href='https://jobs.aa.com/content/college/' target='_blank'>
+                <SponsorLogoBig {...{ isWebView }} src={require("assets/SponsorLogos/AA.png")} />
+              </a>
+              <a href='https://www.aboutschwab.com/work-at-schwab' target='_blank'>
+                <SponsorLogoBig {...{ isWebView }} src={require("assets/SponsorLogos/charles.png")} />
+              </a>
             </SponsorRow>
             <SponsorRow {...{ isWebView }}>
-              <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/JPMorgan.png")} />
-              <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/exxonmobile.png")} />
-              <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/microsoft.png")} />
+              <a href='https://careers.jpmorgan.com/careers/US/en/home' target='_blank'>
+                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/JPMorgan.png")} />
+              </a>
+              <a href='https://jobs.exxonmobil.com/go/Engineering/3845600/' target='_blank'>
+                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/exxonmobile.png")} />
+              </a>
+              <a href='https://careers.microsoft.com/us/en/' target='_blank'>
+                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/microsoft.png")} />
+              </a>
             </SponsorRow>
             <SponsorRow {...{ isWebView }}>
-              <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/pariveda.png")} />
-              <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/jumpstart.png")} />
-              <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/bridgeway.jpg")} />
+              <a href='https://www.parivedasolutions.com/privacy/careers-overview' target='_blank'>
+                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/pariveda.png")} />
+              </a>
+              <a href='https://jumpstart.me/r/TAMUhack' target='_blank'>
+                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/jumpstart.png")} />
+              </a>
+              <a href='https://www.bridgewaycapital.org/company/careers/' target='_blank'>
+                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/bridgeway.jpg")} />
+              </a>
             </SponsorRow>
             <SponsorRow style={{ marginTop: "40px" }} {...{ isWebView }}>
-              <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/google.png")} />
-              <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/smartcar.png")} />
-              <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/facebook.png")} />
+              <a href='https://www.google.com/' target='_blank'>
+                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/google.png")} />
+              </a>
+              <a href='https://smartcar.com/careers/' target='_blank'>
+                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/smartcar.png")} />
+              </a>
+              <a href='https://www.facebook.com/careers/' target='_blank'>
+                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/facebook.png")} />
+              </a>
             </SponsorRow>
           </SponsorContainer>
         </Flex>
