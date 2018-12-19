@@ -33,9 +33,6 @@ class SponsorPage extends React.Component {
               </SponsorTitle>
             </SponsorTitleRow>
             <hr style={{ width: isWebView ? "180px" : "100px", border: "solid 2px #3F688D" }} />
-            <Flex style={{ justifyContent: "center", color: "#3F688D" }}>
-            (And more to come soon 😀)
-            </Flex>
           </Flex>
           <SponsorContainer>
             <SponsorRow {...{ isWebView }} >

@@ -11,8 +11,7 @@ class Content extends React.Component {
   }
 
   render () {
-    const { isWebView } = this.props;
-
+    const { isWebView, description, submitLink, buttonText } = this.props;
     return (
       <React.Fragment>
         {this.state.fun && (
@@ -55,9 +54,9 @@ class Content extends React.Component {
             January 26-27, 2019 • Texas A&M University
           </Subtitle>
           <Subtitle {...{ isWebView }}>
-            Applications are open until January 6th, 2019
+            {description}
           </Subtitle>
-          <SubmitField fontSize='13px' {...{ isWebView }} />
+          <SubmitField fontSize='13px' {...{ isWebView, submitLink, buttonText }} />
           <Subtitle {...{ isWebView }} style={{ paddingTop: "3vh" }}>
             Interested in
             <span>&nbsp;</span>

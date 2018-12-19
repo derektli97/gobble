@@ -7,6 +7,11 @@ import { Background, EventTitle, EventSubtitle, EventParagraph } from "Pages/Eve
 import SubmitField from "Pages/Landing/HomePage/Content/SubmitField/SubmitField";
 
 class Events extends React.Component {
+  constructor (props) {
+    super(props);
+    this.submitLink = "https://tamuhack.typeform.com/to/UpEv1l";
+    this.buttonText = "Apply Now";
+  }
   // Tamuhack events are stored in a js object.
   state = { events: null, isLoaded: false };
 
@@ -42,9 +47,11 @@ class Events extends React.Component {
   render () {
     const { isWebView } = this.props;
     const { isLoaded } = this.state;
+    const submitLink = this.submitLink;
+    const buttonText = this.buttonText;
     return (
       <Background>
-        <NavBar simple='true' />
+        <NavBar simple />
         <Flex
           flexDirection='row'
           justifyContent='center'
@@ -68,12 +75,12 @@ class Events extends React.Component {
               <EventTitle {...{ isWebView }} >Events on Campus</EventTitle>
               <EventSubtitle {...{ isWebView }} >Subscribe</EventSubtitle>
               <EventParagraph {...{ isWebView }} >
-                This year, we're upping our workshop game and bringing you MLH Localhost,
+                This year, were upping our workshop game and bringing you MLH Localhost,
                 company events, and new swag. Check out all our events here and subscribe
-                so you don't miss out!
+                so you dont miss out!
               </EventParagraph>
               <EventParagraph>Email notifications</EventParagraph>
-              <SubmitField fontSize='13px' {...{ isWebView }} />
+              <SubmitField fontSize='13px' {...{ isWebView, submitLink, buttonText }} />
               <EventTitle {...{ isWebView }} >Upcoming</EventTitle>
               {isLoaded ? this.state.events
                 .filter(this.isValidEvent)

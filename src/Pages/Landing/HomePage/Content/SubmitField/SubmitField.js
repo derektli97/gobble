@@ -35,13 +35,13 @@ class SubmitField extends React.Component {
 
   render () {
     const { loadingState } = this.state;
-
+    const { submitLink, buttonText } = this.props;
+    console.log(buttonText);
     return (
-
       <React.Fragment>
         <Form layout='inline' onSubmit={this.handleSubmit}>
           <FormItem>
-            <a href='https://tamuhack.typeform.com/to/UpEv1l'>
+            <a href={submitLink}>
               <Button
                 type='primary'
                 disabled={loadingState === "done"}
@@ -59,13 +59,13 @@ class SubmitField extends React.Component {
                   borderWidth: loadingState === "loading" ? "0" : "2px"
                 }}
               >
-                {loadingState === "neutral" ? (
-                  "Apply Now"
-                ) : loadingState === "loading" ? (
-                  ""
-                ) : (
-                  <Icon type='check' style={{ color: "#FF7C93" }} />
-                )}
+                {loadingState === "neutral"
+                  ? buttonText
+                  : loadingState === "loading" ? (
+                    ""
+                  ) : (
+                    <Icon type='check' style={{ color: "#FF7C93" }} />
+                  )}
               </Button>
             </a>
           </FormItem>
