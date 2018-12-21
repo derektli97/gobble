@@ -61,8 +61,8 @@ class SponsorPage extends React.Component {
               <a href='https://www.parivedasolutions.com/privacy/careers-overview' target='_blank'>
                 <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/pariveda.png")} />
               </a>
-              <a href='https://jumpstart.me/r/TAMUhack' target='_blank'>
-                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/jumpstart.png")} />
+              <a href='https://www.cbre.us/about/careers' target='_blank'>
+                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/cbre.png")} />
               </a>
               <a href='https://www.bridgewaycapital.org/company/careers/' target='_blank'>
                 <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/bridgeway.jpg")} />
@@ -77,6 +77,22 @@ class SponsorPage extends React.Component {
               </a>
               <a href='https://www.facebook.com/careers/' target='_blank'>
                 <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/facebook.png")} />
+              </a>
+            </SponsorRow>
+            <SponsorRow style={{ marginTop: "40px" }} {...{ isWebView }}>
+              <a href='https://jumpstart.me/r/TAMUhack' target='_blank'>
+                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/jumpstart.png")} />
+              </a>
+              <a href='https://jobs.chevron.com/' target='_blank'>
+                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/chevron.png")} />
+              </a>
+              <a href='https://careers.southwestair.com/' target='_blank'>
+                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/southwest.png")} />
+              </a>
+            </SponsorRow>
+            <SponsorRow style={{ marginTop: "40px" }} {...{ isWebView }}>
+              <a href='http://hackp.ac/mlh-stickermule-hackathons' target='_blank'>
+                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/stickermule.png")} />
               </a>
             </SponsorRow>
           </SponsorContainer>
