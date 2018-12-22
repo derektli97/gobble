@@ -75,9 +75,9 @@ class Events extends React.Component {
               <EventTitle {...{ isWebView }} >Events on Campus</EventTitle>
               <EventSubtitle {...{ isWebView }} >Subscribe</EventSubtitle>
               <EventParagraph {...{ isWebView }} >
-                This year, were upping our workshop game and bringing you MLH Localhost,
+                This year, we're upping our workshop game and bringing you MLH Localhost,
                 company events, and new swag. Check out all our events here and subscribe
-                so you dont miss out!
+                so you don't miss out!
               </EventParagraph>
               <EventParagraph>Email notifications</EventParagraph>
               <SubmitField fontSize='13px' {...{ isWebView, submitLink, buttonText }} />
