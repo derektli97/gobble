@@ -9,12 +9,20 @@ import {
   QuestionTitle,
   QuestionBody
 } from "Pages/Landing/FAQPage/FAQPageStyles.js";
-import faqData from "./FAQQA.json";
 
 class FAQPage extends React.Component {
   state = { activeQuestionIndex: 0 };
-  faqDataKeys = Object.keys(faqData);
+
+  constructor (props) {
+    super(props);
+    this.faqData = props.faqData;
+    this.simple = props.simple;
+    this.faqDataKeys = Object.keys(props.faqData);
+  }
+
   render () {
+    const faqData = this.faqData;
+    const simple = this.simple;
     this.questions = this.faqDataKeys.map((question, index) =>
       <Question key={index} onClick={() => { this.setState({ activeQuestionIndex: index }); }}>
         {question}
@@ -34,7 +42,7 @@ class FAQPage extends React.Component {
           </QuestionTitle>
           <QuestionBody>
             {faqData[this.faqDataKeys[this.state.activeQuestionIndex]].split("\n").map((item, key) => {
-              if (this.state.activeQuestionIndex === 0) {
+              if (this.state.activeQuestionIndex === 0 && !simple) {
                 return (
                   <p key={key}>{item} <br /> <br />
                     <Linkify style={{ borderLeft: "12px solid #ddd", paddingLeft: "25px", maxWidth: "480px", fontSize: "16px" }}>

@@ -1,20 +1,21 @@
 import styled from "styled-components";
 
 export const Background = styled.div`
-  height: 100vh;
+  display: flex;
+  flex-direction: row;
   width: 100vw;
   margin: 0px;
-  padding-bottom: 250px;
-  max-height: 100vh;
+  height: 100%;
+  justify-content: space-around;
 `;
 
 export const QuestionContainer = styled.div`
   display: flex;
-  position: absolute;
   flex-direction: column;
-  height: 100vh;
-  padding-left: 15vw;
-  justify-content: center;
+  padding-left: 10vw;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 5vw;
 `;
 
 export const Question = styled.p`
@@ -30,17 +31,18 @@ export const Question = styled.p`
 `;
 
 export const Title = styled.p`
+  display: flex;
+  position: relative;
   font-size: 40px;
-  padding-top: 21%;
   font-weight: 600;
+  top: 0px;
 `;
 
 export const QuestionTitle = styled.p`
   flex-wrap: wrap;
   width: 40vw;
-  margin-top: 30px;
   font-size: 26px;
-  font-weight: 600;
+  font-weight: 500;
 `;
 
 export const QuestionBody = styled.p`

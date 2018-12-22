@@ -50,18 +50,37 @@ class NavBar extends React.Component {
     return (
       <React.Fragment>
         <Navbar fixed='top' light color='light' expand='md' style={{ paddingRight: isWebView ? "14vw" : "20px", zIndex: 2 }}>
-          <Link to='HomePage' smooth duration={500} >
-            <NavbarBrand>
-              <img
-                alt=''
-                src={require("assets/th.svg")}
-                style={{
-                  height: "30px",
-                  paddingLeft: "7vw"
-                }}
-              />
-            </NavbarBrand>
-          </Link>
+          {
+            !simple
+              ? (
+                <Link to='HomePage' smooth duration={500} >
+                  <NavbarBrand>
+                    <img
+                      alt=''
+                      src={require("assets/th.svg")}
+                      style={{
+                        height: "30px",
+                        paddingLeft: "7vw"
+                      }}
+                    />
+                  </NavbarBrand>
+                </Link>
+              )
+              : (
+                <a href='https://www.tamuhack.com'>
+                  <NavbarBrand>
+                    <img
+                      alt=''
+                      src={require("assets/th.svg")}
+                      style={{
+                        height: "30px",
+                        paddingLeft: "7vw"
+                      }}
+                    />
+                  </NavbarBrand>
+                </a>
+              )
+          }
           {
             renderLinks && (
               <React.Fragment>
@@ -89,6 +108,11 @@ class NavBar extends React.Component {
                     <RouterLink to='/events/' style={RouterLinkStyle}>
                       <NavItem>
                         <NavLink style={NavLinkStyle} onClick={this.toggle}>Events</NavLink>
+                      </NavItem>
+                    </RouterLink>
+                    <RouterLink to='/volunteer/' style={RouterLinkStyle}>
+                      <NavItem>
+                        <NavLink style={NavLinkStyle} onClick={this.toggle}>Volunteer</NavLink>
                       </NavItem>
                     </RouterLink>
                   </Nav>

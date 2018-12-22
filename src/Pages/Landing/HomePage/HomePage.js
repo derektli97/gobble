@@ -12,7 +12,9 @@ class HomePage extends React.Component {
   constructor (props) {
     super(props);
     this.openForm = this.openForm.bind(this);
-
+    this.description = "Applications are open until January 6th, 2019";
+    this.submitLink = "https://tamuhack.typeform.com/to/UpEv1l";
+    this.buttonText = "Apply Now";
     this.embed = null;
     this.setEmbedRef = element => {
       this.embed = element;
@@ -25,6 +27,9 @@ class HomePage extends React.Component {
   }
   render () {
     const { isWebView } = this.props;
+    const description = this.description;
+    const submitLink = this.submitLink;
+    const buttonText = this.buttonText;
     return (
       <Background>
         <NavBar {...{ isWebView }} simple={false} />
@@ -38,7 +43,7 @@ class HomePage extends React.Component {
             zIndex: "1"
           }}
         >
-          <Content {...{ isWebView }} />
+          <Content {...{ isWebView, description, submitLink, buttonText }} />
           <Building {...{ isWebView }} />
           <Clouds {...{ isWebView }} />
         </Flex>

@@ -32,7 +32,6 @@ export const EventParagraph = styled.p`
   margin: 10px;
   display: flex;
   font-weight: regular;
-  alignItems: center;
   max-width: 430px;
   font-size: ${props => (props.isWebView === true) ? "16px" : "13px"};
 `;
