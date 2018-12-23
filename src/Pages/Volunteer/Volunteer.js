@@ -54,7 +54,8 @@ class Events extends React.Component {
             width: "100vw",
             overflow: "hidden",
             zIndex: "1",
-            height: "100vh"
+            minHeight: "100vh",
+            height: "100%"
           }}
         >
           <Flex
