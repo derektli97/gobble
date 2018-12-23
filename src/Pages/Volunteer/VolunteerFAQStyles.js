@@ -5,7 +5,6 @@ export const Background = styled.div`
   flex-direction: row;
   width: 100vw;
   margin: 0px;
-  height: 100%;
   justify-content: space-around;
 `;
 
