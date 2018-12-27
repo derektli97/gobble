@@ -1,0 +1,19 @@
+{
+	"Saturday January 26th": {
+		"Doors open, registration starts": "9:00 am",
+		"Opening ceremony": "11:00 am - 12:00 pm",
+		"Hacking starts": "12:00 pm",
+		"Lunch": "1:00 pm",
+		"Snack": "5:00 pm",
+		"Dinner": "7:00 pm"
+	},
+	"Sunday January 27th": {
+		"Midnight Snack": "12:00 am",
+		"Snack": "3:00 am",
+		"Breakfast": "8:00 am",
+		"Hacking ends, submissions due, lunch": "12:00 pm",
+		"Judging expo": "1:30 pm",
+		"Final presentations, closing ceremony": "3:30 pm",
+		"TAMUhack ends, buses depart": "5:00 pm"
+	}
+}
