@@ -39,9 +39,8 @@ export const DayRow = styled.div`
   width: 85%;
   justify-content: space-between;
   padding: 10px;
-  margin-top: 15px;
   margin-bottom: 15px;
-  border-bottom: 1px solid #999999;
+  border-bottom: 1px solid #bbbbbb;
 `;
 
 export const EventName = styled.div`
