@@ -6,6 +6,7 @@ import HomePage from "Pages/Landing/HomePage/HomePage";
 import SponsorPage from "Pages/Landing/SponsorPage/SponsorPage";
 import AboutPage from "Pages/Landing/AboutPage/AboutPage";
 import FAQPage from "Pages/Landing/FAQPage/FAQPage";
+import SchedulePage from "Pages/Landing/SchedulePage/SchedulePage";
 import Footer from "CommonComponents/Footer/Footer";
 import homePageFAQ from "Pages/Landing/FAQPage/FAQQA.json";
 const mobileThreshold = 900;
@@ -43,6 +44,12 @@ class Landing extends React.Component {
         <Element name='SponsorPage'>
           <SponsorPage {...{ isWebView }} />
         </Element>
+        {
+          isWebView &&
+          <Element name='SchedulePage'>
+            <SchedulePage {...{ isWebView }} />
+          </Element>
+        }
         {
           isWebView &&
           <Element name='FAQPage'>

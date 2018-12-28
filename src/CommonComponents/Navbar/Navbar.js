@@ -99,6 +99,14 @@ class NavBar extends React.Component {
                     </Link>
                     {
                       isWebView &&
+                      <Link to='SchedulePage' smooth duration={500} offset={-50} >
+                        <NavItem>
+                          <NavLink style={NavLinkStyle} onClick={this.toggle}>Schedule</NavLink>
+                        </NavItem>
+                      </Link>
+                    }
+                    {
+                      isWebView &&
                       <Link to='FAQPage' smooth duration={500}>
                         <NavItem>
                           <NavLink style={NavLinkStyle} onClick={this.toggle}>FAQ</NavLink>
