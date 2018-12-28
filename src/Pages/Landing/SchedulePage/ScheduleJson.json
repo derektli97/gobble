@@ -1,7 +1,7 @@
 {
 	"schedule": {
 		"saturday": {
-			"name": "Saturday January 26th",
+			"name": "Saturday, January 26th",
 			"events": [
 				{
 					"name": "Doors open, registration starts",
@@ -30,7 +30,7 @@
 			]
 		},
 		"sunday": {
-			"name": "Sunday January 27th",
+			"name": "Sunday, January 27th",
 			"events": [
 				{
 					"name": "Midnight snack",

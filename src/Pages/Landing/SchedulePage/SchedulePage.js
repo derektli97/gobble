@@ -6,7 +6,8 @@ import {
   DayLabel,
   DayRow,
   EventName,
-  EventDate } from "./SchedulePageStyles.js";
+  EventDate,
+  ScheduleTitle } from "./SchedulePageStyles.js";
 import ScheduleJson from "./ScheduleJson.json";
 
 class SchedulePage extends React.Component {
@@ -25,13 +26,17 @@ class SchedulePage extends React.Component {
 
     return (
       <Background>
+        <ScheduleTitle>
+          Schedule
+        </ScheduleTitle>
+        <hr style={{ width: "180px", border: "solid 2px #3F688D" }} />
         <ScheduleContainer>
           <DayContainer>
-            <DayLabel>{saturday[0]}</DayLabel>
+            <DayLabel>{saturday["name"]}</DayLabel>
             {this.getSchedule(saturday["events"])}
           </DayContainer>
           <DayContainer>
-            <DayLabel>{sunday[0]}</DayLabel>
+            <DayLabel>{sunday["name"]}</DayLabel>
             {this.getSchedule(sunday["events"])}
           </DayContainer>
         </ScheduleContainer>

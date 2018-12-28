@@ -8,12 +8,13 @@ export const Background = styled.div`
   margin: 0px;
   padding-top: 10vh;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
 `;
 
 export const ScheduleContainer = styled.div`
   display: flex;
-  flex-direction: ${props => (props.isWebView) ? "column" : "row"};
+  flex-direction: row;
   width: 100%;
   justify-content: center;
 `;
@@ -29,7 +30,8 @@ export const DayLabel = styled.div`
   display: flex;
   font-size: 25px;
   font-weight: 600;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  margin-top: 25px;
 `;
 
 export const DayRow = styled.div`
@@ -50,4 +52,12 @@ export const EventName = styled.div`
 export const EventDate = styled.div`
   display: flex;
   font-size: 20px;
+`;
+
+export const ScheduleTitle = styled.div`
+  font-size: 40px;
+  font-weight: 600;
+  color: #3F688D;
+  margin: 40px;
+  margin-bottom: 0px;
 `;
