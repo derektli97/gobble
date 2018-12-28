@@ -8,45 +8,31 @@ import {
   EventName,
   EventDate } from "./SchedulePageStyles.js";
 import ScheduleJson from "./ScheduleJson.json";
+
 class SchedulePage extends React.Component {
-  state = {};
-
-  constructor (props) {
-    super(props);
-    this.saturdayInfo = Object.entries(ScheduleJson)[0];
-    this.sundayInfo = Object.entries(ScheduleJson)[1];
-    var satItinerary = Object.entries(this.saturdayInfo[1]);
-    var sunItinerary = Object.entries(this.sundayInfo[1]);
-
-    this.satComp = satItinerary.map((item) =>
+  getSchedule (events) {
+    return events.map((event) =>
       <DayRow>
-        <EventName>{item[0]}</EventName>
-        <EventDate>{item[1]}</EventDate>
-      </DayRow>
-    );
-
-    this.sunComp = sunItinerary.map((item) =>
-      <DayRow>
-        <EventName>{item[0]}</EventName>
-        <EventDate>{item[1]}</EventDate>
+        <EventName>{event["name"]}</EventName>
+        <EventDate>{event["time"]}</EventDate>
       </DayRow>
     );
   }
+
   render () {
-    var saturday = this.saturdayInfo;
-    var sunday = this.sundayInfo;
-    const satItin = this.satComp;
-    const sunItin = this.sunComp;
+    var saturday = ScheduleJson["schedule"]["saturday"];
+    var sunday = ScheduleJson["schedule"]["sunday"];
+
     return (
       <Background>
         <ScheduleContainer>
           <DayContainer>
             <DayLabel>{saturday[0]}</DayLabel>
-            {satItin}
+            {this.getSchedule(saturday["events"])}
           </DayContainer>
           <DayContainer>
             <DayLabel>{sunday[0]}</DayLabel>
-            {sunItin}
+            {this.getSchedule(sunday["events"])}
           </DayContainer>
         </ScheduleContainer>
       </Background>

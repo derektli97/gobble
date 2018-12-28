@@ -1,19 +1,66 @@
 {
-	"Saturday January 26th": {
-		"Doors open, registration starts": "9:00 am",
-		"Opening ceremony": "11:00 am - 12:00 pm",
-		"Hacking starts": "12:00 pm",
-		"Lunch": "1:00 pm",
-		"Snack": "5:00 pm",
-		"Dinner": "7:00 pm"
-	},
-	"Sunday January 27th": {
-		"Midnight Snack": "12:00 am",
-		"Snack": "3:00 am",
-		"Breakfast": "8:00 am",
-		"Hacking ends, submissions due, lunch": "12:00 pm",
-		"Judging expo": "1:30 pm",
-		"Final presentations, closing ceremony": "3:30 pm",
-		"TAMUhack ends, buses depart": "5:00 pm"
+	"schedule": {
+		"saturday": {
+			"name": "Saturday January 26th",
+			"events": [
+				{
+					"name": "Doors open, registration starts",
+					"time": "9:00 am"
+				},
+				{
+					"name": "Opening ceremony",
+					"time": "11:00 am - 12:00 pm"
+				},
+				{
+					"name": "Hacking starts",
+					"time": "12:00 pm"
+				},
+				{
+					"name": "Lunch",
+					"time": "1:00 pm"
+				},
+				{
+					"name": "Snack",
+					"time": "5:00 pm"
+				},
+				{
+					"name": "Dinner",
+					"time": "7:00 pm"
+				}
+			]
+		},
+		"sunday": {
+			"name": "Sunday January 27th",
+			"events": [
+				{
+					"name": "Midnight snack",
+					"time": "12:00 am"
+				},
+				{
+					"name": "Snack",
+					"time": "3:00 am"
+				},
+				{
+					"name": "Breakfast",
+					"time": "8:00 am"
+				},
+				{
+					"name": "Hacking ends, submissions due, lunch",
+					"time": "12:00 pm"
+				},
+				{
+					"name": "Judging expo",
+					"time": "1:30 pm"
+				},
+				{
+					"name": "Final presentations, closing ceremony",
+					"time": "3:30 pm"
+				},
+				{
+					"name": "TAMUhack ends, buses depart",
+					"time": "5:00 pm"
+				}
+			]
+		}
 	}
 }
