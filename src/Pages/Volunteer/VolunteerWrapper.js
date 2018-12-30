@@ -4,7 +4,7 @@ import Volunteer from "Pages/Volunteer/Volunteer";
 
 const mobileThreshold = 900;
 
-class Landing extends React.Component {
+class VolunteerWrapper extends React.Component {
   constructor (props) {
     super(props);
     this.state = { width: 0 };
@@ -34,4 +34,4 @@ class Landing extends React.Component {
   }
 }
 
-export default Landing;
+export default VolunteerWrapper;
