@@ -1,48 +1,20 @@
 import React from "react";
 import { Flex } from "grid-styled";
 
-import { EventsCard, EventsCardLoading } from "Pages/Events/EventsCard/EventsCard";
 import NavBar from "CommonComponents/Navbar/Navbar";
 import { Background, EventTitle, EventParagraph } from "Pages/Events/EventsStyles";
 import SubmitField from "Pages/Landing/HomePage/Content/SubmitField/SubmitField";
 import VolunteerFAQ from "Pages/Volunteer/VolunteerFAQ/VolunteerFAQ";
 import FAQData from "Pages/Volunteer/VolunteerFAQ/VolunteerFAQData.json";
-class Events extends React.Component {
+
+class Volunteer extends React.Component {
   // Tamuhack events are stored in a js object.
   state = { events: null, isLoaded: false };
 
-  constructor (props) {
-    super(props);
-    this.submitLink = "https://www.signupgenius.com/go/60b0c48abab22a5fa7-tamuhack1";
-    this.buttonText = "Volunteer Now";
-  }
-
-  renderLoadingCard () {
-    return (
-      <React.Fragment>
-        <EventsCardLoading />
-      </React.Fragment>
-    );
-  }
-
-  parseEventCard (event) {
-    console.log(event);
-    return (<EventsCard key={event.name.text} title={event.name.text} time={event.start.local} url={event.url} />);
-  }
-
-  // Checks for a valid event.
-  isValidEvent (event) {
-    const { name: { text } } = event;
-    if (text == null || text.length === 0) {
-      return false;
-    }
-    return true;
-  }
-
   render () {
     const { isWebView } = this.props;
-    const submitLink = this.submitLink;
-    const buttonText = this.buttonText;
+    const submitLink = "https://www.signupgenius.com/go/60b0c48abab22a5fa7-tamuhack1";
+    const buttonText = "Volunteer Now";
     return (
       <Background>
         <NavBar simple />
@@ -87,4 +59,4 @@ class Events extends React.Component {
   }
 }
 
-export default Events;
+export default Volunteer;

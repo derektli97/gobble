@@ -60,7 +60,9 @@ class Content extends React.Component {
           <Subtitle {...{ isWebView }} style={{ paddingTop: "3vh" }}>
             Interested in
             <span>&nbsp;</span>
-            <a href={"mailto:sponsor@tamuhack.com"} target='_blank'>sponsoring</a>?
+            <a href={"mailto:sponsor@tamuhack.com"} target='_blank'>sponsoring&nbsp;</a> or
+            <span>&nbsp;</span>
+            <a href={"https://www.signupgenius.com/go/60b0c48abab22a5fa7-tamuhack1"} target='_blank'>volunteering</a>?
           </Subtitle>
           <Flex style={{ marginTop: "10vh", marginLeft: "5px", marginRight: "5px", justifyContent: "space-between", width: "180px" }}>
             <a href='https://www.facebook.com/tamuhack'>
