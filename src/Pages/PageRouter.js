@@ -18,6 +18,12 @@ class PageRouter extends React.Component {
               return null;
             }
             } />
+          <Route path='/schedule'
+            component={() => {
+              window.location = "https://drive.google.com/open?id=1lSdYikRQmFsjvJpWbS1bSFEwg1n3vh3_";
+              return null;
+            }
+            } />
         </Switch>
       </BrowserRouter>
     );
