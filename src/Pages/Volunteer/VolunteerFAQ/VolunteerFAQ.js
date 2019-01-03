@@ -8,7 +8,7 @@ import {
   Title,
   QuestionTitle,
   QuestionBody
-} from "Pages/Volunteer/VolunteerFAQStyles.js";
+} from "Pages/Volunteer/VolunteerStyles.js";
 
 class VolunteerFAQ extends React.Component {
   constructor (props) {
