@@ -50,37 +50,18 @@ class NavBar extends React.Component {
     return (
       <React.Fragment>
         <Navbar fixed='top' light color='light' expand='md' style={{ paddingRight: isWebView ? "14vw" : "20px", zIndex: 2 }}>
-          {
-            !simple
-              ? (
-                <Link to='HomePage' smooth duration={500} >
-                  <NavbarBrand>
-                    <img
-                      alt=''
-                      src={require("assets/th.svg")}
-                      style={{
-                        height: "30px",
-                        paddingLeft: "7vw"
-                      }}
-                    />
-                  </NavbarBrand>
-                </Link>
-              )
-              : (
-                <a href='https://www.tamuhack.com'>
-                  <NavbarBrand>
-                    <img
-                      alt=''
-                      src={require("assets/th.svg")}
-                      style={{
-                        height: "30px",
-                        paddingLeft: "7vw"
-                      }}
-                    />
-                  </NavbarBrand>
-                </a>
-              )
-          }
+          <RouterLink to='/' smooth duration={500} >
+            <NavbarBrand>
+              <img
+                alt=''
+                src={require("assets/th.svg")}
+                style={{
+                  height: "30px",
+                  paddingLeft: "7vw"
+                }}
+              />
+            </NavbarBrand>
+          </RouterLink>
           {
             renderLinks && (
               <React.Fragment>
