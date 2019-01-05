@@ -24,11 +24,11 @@ class PageRouter extends React.Component {
               return null;
             }
             } />
-            <Route path='/slack'
-              component={() => {
-                window.location = "https://join.slack.com/t/tamuhack2019/shared_invite/enQtNTE4NTM1NDkwMzc0LTg2ODE0YjJlNTRiN2M5YmRmNWUwY2Y5YjJhY2M0NTdlNjgyMmNjNzhkNmNiMDYxNjViOTQxNTVhZDU2YzhiYzA";
-                return null;
-              }
+          <Route path='/slack'
+            component={() => {
+              window.location = "https://join.slack.com/t/tamuhack2019/shared_invite/enQtNTE4NTM1NDkwMzc0LTg2ODE0YjJlNTRiN2M5YmRmNWUwY2Y5YjJhY2M0NTdlNjgyMmNjNzhkNmNiMDYxNjViOTQxNTVhZDU2YzhiYzA";
+              return null;
+            }
             } />
         </Switch>
       </BrowserRouter>
