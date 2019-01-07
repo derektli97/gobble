@@ -4,7 +4,8 @@ const FormItem = Form.Item;
 
 class SubmitField extends React.Component {
   state = { loadingState: "neutral" };
-
+  // #3E678C
+  // #FF7C93
   constructor (props) {
     super(props);
     this.typeformEmbed = React.createRef();
@@ -35,13 +36,14 @@ class SubmitField extends React.Component {
 
   render () {
     const { loadingState } = this.state;
-    const { submitLink, buttonText } = this.props;
-    console.log(buttonText);
+    const { submitLink, buttonText, disabled } = this.props;
     return (
       <React.Fragment>
         <Form layout='inline' onSubmit={this.handleSubmit}>
           <FormItem>
-            <a href={submitLink}>
+            <a
+              {...(!disabled && { href: submitLink })}
+            >
               <Button
                 type='primary'
                 disabled={loadingState === "done"}
@@ -49,13 +51,14 @@ class SubmitField extends React.Component {
                 style={{
                   marginTop: "5px",
                   marginLeft: "10px",
-                  boxShadow: "0px 4px #E2768D",
+                  boxShadow:
+                    disabled ? "0px 4px #273954" : "0px 4px #E2768D",
                   height: "42px",
                   marginRight: "10px",
                   fontSize: "18px",
                   backgroundColor:
-                    loadingState === "done" ? "transparent" : "#FF7C93",
-                  borderColor: "#FF7C93",
+                    loadingState === "done" ? "transparent" : disabled ? "#3E678C" : "#FF7C93",
+                  borderColor: disabled ? "#3E678C" : "#FF7C93",
                   borderWidth: loadingState === "loading" ? "0" : "2px"
                 }}
               >

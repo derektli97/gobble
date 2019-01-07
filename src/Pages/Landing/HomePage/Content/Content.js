@@ -56,7 +56,7 @@ class Content extends React.Component {
           <Subtitle {...{ isWebView }}>
             {description}
           </Subtitle>
-          <SubmitField fontSize='13px' {...{ isWebView, submitLink, buttonText }} />
+          <SubmitField fontSize='13px' disabled {...{ isWebView, submitLink, buttonText }} />
           <Subtitle {...{ isWebView }} style={{ paddingTop: "3vh" }}>
             Interested in
             <span>&nbsp;</span>
