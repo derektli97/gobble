@@ -12,9 +12,9 @@ class HomePage extends React.Component {
   constructor (props) {
     super(props);
     this.openForm = this.openForm.bind(this);
-    this.description = "Applications close today!";
-    this.submitLink = "https://tamuhack.typeform.com/to/UpEv1l";
-    this.buttonText = "Apply Now";
+    this.description = "Applications are now closed!";
+    this.submitLink = "";
+    this.buttonText = "Applications Closed";
     this.embed = null;
     this.setEmbedRef = element => {
       this.embed = element;

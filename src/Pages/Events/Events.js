@@ -9,8 +9,8 @@ import SubmitField from "Pages/Landing/HomePage/Content/SubmitField/SubmitField"
 class Events extends React.Component {
   constructor (props) {
     super(props);
-    this.submitLink = "https://tamuhack.typeform.com/to/UpEv1l";
-    this.buttonText = "Apply Now";
+    this.submitLink = "";
+    this.buttonText = "Applications Closed";
   }
   // Tamuhack events are stored in a js object.
   state = { events: null, isLoaded: false };
@@ -80,7 +80,7 @@ class Events extends React.Component {
                 so you don't miss out!
               </EventParagraph>
               <EventParagraph>Email notifications</EventParagraph>
-              <SubmitField fontSize='13px' {...{ isWebView, submitLink, buttonText }} />
+              <SubmitField fontSize='13px' disabled {...{ isWebView, submitLink, buttonText }} />
               <EventTitle {...{ isWebView }} >Upcoming</EventTitle>
               {isLoaded ? this.state.events
                 .filter(this.isValidEvent)
