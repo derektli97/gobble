@@ -1,7 +1,6 @@
 import React from "react";
 import { Flex } from "grid-styled";
 import { JayMoveRight, Subtitle, Icon } from "Pages/Landing/HomePage/Content/ContentStyles";
-import SubmitField from "./SubmitField/SubmitField";
 
 class Content extends React.Component {
   state = { fun: false };
@@ -11,7 +10,7 @@ class Content extends React.Component {
   }
 
   render () {
-    const { isWebView, description, submitLink, buttonText } = this.props;
+    const { isWebView, description } = this.props;
     return (
       <React.Fragment>
         {this.state.fun && (
@@ -53,19 +52,23 @@ class Content extends React.Component {
           <Subtitle {...{ isWebView }} style={{ paddingBottom: "2vh" }}>
             January 26-27, 2019 • Texas A&M University
           </Subtitle>
-          <Subtitle {...{ isWebView }}>
+          <Subtitle {...{ isWebView }} style={{ fontSize: "23px", fontWeight: "600" }}>
             {description}
           </Subtitle>
-          <Subtitle {...{ isWebView }} style={{ fontSize: "13px", textAlign: "center" }}>
-            We will be accepting walk-ins, subject to availability. Walk-ins not guaranteed!
+          <Subtitle {...{ isWebView }} style={{ textAlign: "center" }}>
+            Still want to participate?
           </Subtitle>
-          <SubmitField fontSize='13px' disabled {...{ isWebView, submitLink, buttonText }} />
+          <Subtitle {...{ isWebView }} style={{ marginTop: "0px", textAlign: "center" }}>
+            <span>
+              We will be accepting walk-ins (subject to availability) or you can
+              <span>&nbsp;</span>
+              <a href={"https://www.signupgenius.com/go/60b0c48abab22a5fa7-tamuhack1"} target='_blank'>volunteer</a>.
+            </span>
+          </Subtitle>
           <Subtitle {...{ isWebView }} style={{ paddingTop: "3vh" }}>
             Interested in
             <span>&nbsp;</span>
-            <a href={"mailto:sponsor@tamuhack.com"} target='_blank'>sponsoring&nbsp;</a> or
-            <span>&nbsp;</span>
-            <a href={"https://www.signupgenius.com/go/60b0c48abab22a5fa7-tamuhack1"} target='_blank'>volunteering</a>?
+            <a href={"mailto:sponsor@tamuhack.com"} target='_blank'>sponsoring</a>?
           </Subtitle>
           <Flex style={{ marginTop: "10vh", marginLeft: "5px", marginRight: "5px", justifyContent: "space-between", width: "180px" }}>
             <a href='https://www.facebook.com/tamuhack'>
