@@ -10,7 +10,12 @@ class PageRouter extends React.Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path='/' component={Landing} />
+          <Route path='/' exact render={props => {
+            const subdomain = window.location.hostname;
+            console.log(subdomain);
+            return <Landing />;
+          }
+          } />
           <Route path='/events' component={EventsWrapper} />
           <Route path='/volunteer' component={VolunteerWrapper} />
           <Route path='/live' component={LiveWrapper} />
