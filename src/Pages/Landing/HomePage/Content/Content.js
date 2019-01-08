@@ -56,6 +56,9 @@ class Content extends React.Component {
           <Subtitle {...{ isWebView }}>
             {description}
           </Subtitle>
+          <Subtitle {...{ isWebView }} style={{ fontSize: "13px", textAlign: "center" }}>
+            We will be accepting walk-ins, subject to availability. Walk-ins not guaranteed!
+          </Subtitle>
           <SubmitField fontSize='13px' disabled {...{ isWebView, submitLink, buttonText }} />
           <Subtitle {...{ isWebView }} style={{ paddingTop: "3vh" }}>
             Interested in
