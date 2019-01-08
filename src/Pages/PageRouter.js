@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Landing from "Pages/Landing/Landing";
 import EventsWrapper from "Pages/Events/EventsWrapper";
 import VolunteerWrapper from "Pages/Volunteer/VolunteerWrapper";
+import LiveWrapper from "Pages/Live/LiveWrapper";
 
 class PageRouter extends React.Component {
   render () {
@@ -12,6 +13,8 @@ class PageRouter extends React.Component {
           <Route exact path='/' component={Landing} />
           <Route path='/events' component={EventsWrapper} />
           <Route path='/volunteer' component={VolunteerWrapper} />
+          <Route path='/live' component={LiveWrapper} />
+          {/* Note: get rid of these pages after live is finalized ... */}
           <Route path='/map'
             component={() => {
               window.location = "https://www.google.com/maps/d/viewer?mid=1uHUnhyxuEpqkkhdfYoi32nB3wXm_iT-E&ll=30.610587263762287%2C-96.34334377494662&z=16";

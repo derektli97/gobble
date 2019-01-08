@@ -46,7 +46,7 @@ class SubmitField extends React.Component {
             >
               <Button
                 type='primary'
-                disabled={loadingState === "done"}
+                disabled
                 loading={loadingState === "loading"}
                 style={{
                   marginTop: "5px",
