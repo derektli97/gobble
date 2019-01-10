@@ -17,6 +17,7 @@ class LiveSchedule extends React.Component {
   constructor (props) {
     super(props);
     const { saturday, sunday } = LiveScheduleJson["schedule"];
+    // Potentially add into render instead for mobile rendering
     this.saturdayRender = saturday["events"].map((event, index) => {
       return (
         <ScheduleRow style={{

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Background = styled.div`
   background: white;
-  margin-top: 10%;
+  margin-top: 70px;
   margin-bottom: 5%;
   width: 100%;
   display: flex;

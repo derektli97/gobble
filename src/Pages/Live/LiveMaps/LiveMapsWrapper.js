@@ -1,7 +1,7 @@
 import React from "react";
 
 import LiveMaps from "Pages/Live/LiveMaps/LiveMaps";
-
+import Navbar from "Pages/Live/LiveNavbar/LiveNavbar";
 const mobileThreshold = 900;
 
 class LiveScheduleWrapper extends React.Component {
@@ -28,6 +28,7 @@ class LiveScheduleWrapper extends React.Component {
     const isWebView = this.state.width > mobileThreshold;
     return (
       <React.Fragment>
+        <Navbar {...{ isWebView }} />
         <LiveMaps isWebView={isWebView} />
       </React.Fragment>
     );
