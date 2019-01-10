@@ -6,11 +6,16 @@ import VolunteerWrapper from "Pages/Volunteer/VolunteerWrapper";
 import LiveWrapper from "Pages/Live/LiveWrapper";
 
 class PageRouter extends React.Component {
+  handleLiveSubdomain () {
+    const [subdomain] = window.location.hostname.split(".");
+    if (subdomain === "live") return <LiveWrapper />;
+    return <Landing />;
+  }
   render () {
     return (
       <BrowserRouter>
         <Switch>
-          <Route path='/' exact component={Landing} />
+          <Route path='/' exact render={this.handleLiveSubdomain} />
           <Route path='/events' component={EventsWrapper} />
           <Route path='/volunteer' component={VolunteerWrapper} />
           <Route path='/live' component={LiveWrapper} />
