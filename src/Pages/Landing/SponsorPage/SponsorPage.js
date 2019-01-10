@@ -40,7 +40,10 @@ class SponsorPage extends React.Component {
                 <SponsorLogoBig {...{ isWebView }} src={require("assets/SponsorLogos/AA.png")} />
               </a>
               <a href='https://www.aboutschwab.com/work-at-schwab' target='_blank'>
-                <SponsorLogoBig {...{ isWebView }} src={require("assets/SponsorLogos/charles.png")} />
+                <SponsorLogoBig
+                  {...{ isWebView }}
+                  style={{ width: isWebView ? "290px" : "140px" }}
+                  src={require("assets/SponsorLogos/charles.png")} />
               </a>
             </SponsorRow>
             <SponsorRow {...{ isWebView }}>
@@ -50,8 +53,8 @@ class SponsorPage extends React.Component {
               <a href='https://jobs.exxonmobil.com/go/Engineering/3845600/' target='_blank'>
                 <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/exxonmobile.png")} />
               </a>
-              <a href='https://careers.microsoft.com/us/en/' target='_blank'>
-                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/microsoft.png")} />
+              <a href='https://www.hpe.com/us/en/about/jobs.html' target='_blank'>
+                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/hpe.png")} />
               </a>
             </SponsorRow>
             <SponsorRow {...{ isWebView }}>
@@ -61,8 +64,30 @@ class SponsorPage extends React.Component {
               <a href='https://www.cbre.us/about/careers' target='_blank'>
                 <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/cbre.png")} />
               </a>
+              <a href='https://careers.americanexpress.com/' target='_blank'>
+                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/amex.png")} />
+              </a>
+            </SponsorRow>
+            <SponsorRow style={{ marginTop: "40px" }} {...{ isWebView }}>
               <a href='https://www.bridgewaycapital.org/company/careers/' target='_blank'>
                 <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/bridgeway.jpg")} />
+              </a>
+              <a href='https://campus.capitalone.com/' target='_blank'>
+                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/capital_one.png")} />
+              </a>
+              <a href='https://jobs.chevron.com/' target='_blank'>
+                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/chevron.png")} />
+              </a>
+            </SponsorRow>
+            <SponsorRow style={{ marginTop: "40px" }} {...{ isWebView }}>
+              <a href='https://careers.microsoft.com/us/en/' target='_blank'>
+                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/microsoft.png")} />
+              </a>
+              <a href='https://careers.southwestair.com/' target='_blank'>
+                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/southwest.png")} />
+              </a>
+              <a href='https://www.facebook.com/careers/' target='_blank'>
+                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/facebook.png")} />
               </a>
             </SponsorRow>
             <SponsorRow style={{ marginTop: "40px" }} {...{ isWebView }}>
@@ -72,27 +97,16 @@ class SponsorPage extends React.Component {
               <a href='https://smartcar.com/careers/' target='_blank'>
                 <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/smartcar.png")} />
               </a>
-              <a href='https://www.facebook.com/careers/' target='_blank'>
-                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/facebook.png")} />
-              </a>
-            </SponsorRow>
-            <SponsorRow style={{ marginTop: "40px" }} {...{ isWebView }}>
               <a href='https://jumpstart.me/r/TAMUhack' target='_blank'>
                 <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/jumpstart.png")} />
               </a>
-              <a href='https://jobs.chevron.com/' target='_blank'>
-                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/chevron.png")} />
-              </a>
-              <a href='https://careers.southwestair.com/' target='_blank'>
-                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/southwest.png")} />
-              </a>
             </SponsorRow>
             <SponsorRow style={{ marginTop: "40px" }} {...{ isWebView }}>
-              <a href='http://hackp.ac/mlh-stickermule-hackathons' target='_blank'>
-                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/stickermule.png")} />
-              </a>
               <a href='http://www.gogosqueez.com/' target='_blank'>
                 <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/gogo.png")} />
+              </a>
+              <a href='http://hackp.ac/mlh-stickermule-hackathons' target='_blank'>
+                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/stickermule.png")} />
               </a>
             </SponsorRow>
           </SponsorContainer>
