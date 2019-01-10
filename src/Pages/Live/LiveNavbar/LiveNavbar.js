@@ -30,7 +30,7 @@ class NavBar extends React.Component {
     const { isWebView, simple } = this.props;
 
     // Logic for rendering links and the MLH Icon.
-    const renderMLHIcon = isWebView && !simple;
+    const renderMLHIcon = false;
     const renderLinks = !simple;
 
     const { NavLinkStyle } = {
@@ -49,7 +49,7 @@ class NavBar extends React.Component {
 
     return (
       <React.Fragment>
-        <Navbar fixed='top' light color='light' expand='md' style={{ paddingRight: isWebView ? "14vw" : "20px", zIndex: 2 }}>
+        <Navbar fixed='top' light color='light' expand='md' style={{ paddingRight: isWebView ? "2vw" : "20px", zIndex: 2 }}>
           <RouterLink to='/' smooth duration={500} >
             <NavbarBrand>
               <img
@@ -67,7 +67,7 @@ class NavBar extends React.Component {
               <React.Fragment>
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={this.state.isOpen} navbar style={{ paddingLeft: 0 }}>
-                  <Nav className='ml-auto' navbar>
+                  <Nav className='ml-auto' navbar style={{ marginRight: 0 }}>
                     <Link to='AboutPage' smooth duration={500} >
                       <NavItem>
                         <NavLink style={NavLinkStyle} onClick={this.toggle}>Welcome</NavLink>
