@@ -58,9 +58,11 @@ class Content extends React.Component {
           <Subtitle {...{ isWebView }} style={{ textAlign: "center" }}>
             Still want to participate?
           </Subtitle>
-          <Subtitle {...{ isWebView }} style={{ marginTop: "0px", textAlign: "center" }}>
+          <Subtitle {...{ isWebView }} style={{ marginTop: "0px", textAlign: isWebView ? "left" : "center" }}>
             <span>
-              We will be accepting walk-ins (subject to availability) or you can
+              We will be accepting walk-ins (subject to availability)
+              <br />
+              or you can
               <span>&nbsp;</span>
               <a href={"https://www.signupgenius.com/go/60b0c48abab22a5fa7-tamuhack1"} target='_blank'>volunteer</a>.
             </span>
