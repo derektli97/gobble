@@ -2,10 +2,13 @@ import React from "react";
 import Navbar from "Pages/Live/LiveNavbar/LiveNavbar";
 import {
   Background,
-  PrizeRow,
+  TamuPrizeRow,
+  SponsorPrizeRow,
   TAMUPrizeContainer,
+  SponsorPrizeContainer,
   PrizeTitle,
   TabContainer,
+  SponsorTextTab,
   TextTab } from "Pages/Live/LivePrizes/LivePrizesStyles";
 import PrizeJson from "Pages/Live/LivePrizes/LivePrizes.json";
 class LivePrizes extends React.Component {
@@ -27,25 +30,61 @@ class LivePrizes extends React.Component {
             </TextTab>
             <hr style={{ width: "90%", color: "black", padding: 0, margin: 0 }} />
             <TextTab>
-              {prize.prize}
+              Prize: {prize.prize}
             </TextTab>
           </TabContainer>
         </TAMUPrizeContainer>
       );
     });
-    console.log(this.tamuhackPrizes);
+
+    this.sponsorRender = this.sponsorPrizes.map((prize, index) => {
+      return (
+        <SponsorPrizeContainer>
+          <PrizeTitle style={{
+            backgroundColor: index % 3 === 0 ? "#E8678B" : "#9791B5",
+            height: "50px"
+          }}>{prize.company}</PrizeTitle>
+          <TabContainer>
+            <SponsorTextTab style={{ paddingTop: "20px" }}>
+              {prize.description}
+            </SponsorTextTab>
+            <hr style={{ width: "90%", color: "black", padding: 0, margin: 0 }} />
+            <SponsorTextTab>
+              Challenge: {prize.challenge}
+            </SponsorTextTab>
+            <hr style={{ width: "90%", color: "black", padding: 0, margin: 0 }} />
+            {
+              prize.api.length !== 0 &&
+              (
+                <SponsorTextTab>
+                  API: {prize.api}
+                </SponsorTextTab>
+              )
+            }
+            <hr style={{ width: "90%", color: "black", padding: 0, margin: 0 }} />
+            <SponsorTextTab>
+              Prize: {prize.prize}
+            </SponsorTextTab>
+          </TabContainer>
+        </SponsorPrizeContainer>
+      );
+    });
   }
 
   render () {
     const { isWebView } = this.props;
     const tamuRender = this.tamuRender;
+    const sponsorRender = this.sponsorRender;
     return (
       <React.Fragment>
         <Navbar {...{ isWebView }} />
         <Background>
-          <PrizeRow>
+          <TamuPrizeRow>
             {tamuRender}
-          </PrizeRow>
+          </TamuPrizeRow>
+          <SponsorPrizeRow>
+            {sponsorRender}
+          </SponsorPrizeRow>
         </Background>
       </React.Fragment>
     );
