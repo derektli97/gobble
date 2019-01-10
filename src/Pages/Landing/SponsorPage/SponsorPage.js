@@ -108,6 +108,9 @@ class SponsorPage extends React.Component {
               <a href='http://hackp.ac/mlh-stickermule-hackathons' target='_blank'>
                 <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/stickermule.png")} />
               </a>
+              <a href='https://whatsthebuzzcoffee.com/' target='_blank'>
+                <SponsorLogo {...{ isWebView }} src={require("assets/SponsorLogos/buzz.png")} />
+              </a>
             </SponsorRow>
           </SponsorContainer>
         </Flex>
