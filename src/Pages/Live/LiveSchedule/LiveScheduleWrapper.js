@@ -1,5 +1,4 @@
 import React from "react";
-
 import LiveSchedule from "Pages/Live/LiveSchedule/LiveSchedule";
 
 const mobileThreshold = 900;

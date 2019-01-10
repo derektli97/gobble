@@ -1,0 +1,55 @@
+{
+	"prizes": {
+		"tamuhack": {
+			"prizes": [
+				{
+          "title": "TAMUhack 1st Place",
+          "description":"Best hack at TAMUhack 2018. Hacks will be judged on technical difficulty, design, the problem addressed, and the X-factor.",
+          "prize":"Choice between a 4K Monitor OR a Nintentdo Switch for each team member + Goldman goodie bags."
+				},
+        {
+          "title": "TAMUhack 2nd Place",
+          "description":"Second best hack at TAMUhack 2018. Hacks will be judged on technical difficulty, design, the problem addressed, and the X-factor.",
+          "prize":"4K Monitor OR a Nintendo Switch for each team member based on what the 1st place team chooses."
+				},
+        {
+          "title": "TAMUhack 3rd Place",
+          "description":"Third best hack at TAMUhack 2018. Hacks will be judged on technical difficulty, design, the problem addressed, and the X-factor.",
+          "prize":"Amazon Echo Plus and a Philips Hue bulb for building a smart home for each team member."
+				}
+			]
+		},
+		"sponsor": {
+			"prizes": [
+        {
+          "company": "American Airlines",
+          "description": "American Airlines and American Eagle offer an average of nearly 6,700 flights per day to nearly 350 destinations in more than 50 countries. American has hubs in Charlotte, Chicago, Dallas/Fort Worth, Los Angeles, Miami, New York, Philadelphia, Phoenix, and Washington, D.C. American is a founding member of the oneworld® alliance, whose members serve more than 1,000 destinations with about 14,250 daily flights to over 150 countries.",
+          "challenge": "Build something to enhance customer experience or help our employees.",
+          "api": "github.com/AmericanAirlines/TAMUHack-AA",
+          "prize": "Flight tickets and an invitation to the AA hackathon! \n 1st Place: 2 international tickets per team member. \n 2nd Place: 2 domestic tickets per team member. \n 3rd Place: 1 domestic ticket per team member."
+			  },
+        {
+          "company": "Capital One",
+          "description": "Capital One is a diversified bank that offers a broad array of financial products and services to consumers, small business and commercial clients. Capital One is one of the nation’s top 10 banks and has one of the most widely recognized brands in America. Capital One is filled with bright, creative, forward-thinking (people/individuals) who share an entrepreneurial spirit and a passion for what they do every day.",
+          "challenge": "Best financial hack.",
+          "api": "api.reimaginebanking.com (Available for use, but it is not a requirement for the prize)",
+          "prize": "$250 Amazon gift card for each team member."
+			  },
+        {
+          "company": "JPMorgan Chase",
+          "description": "JPMorgan Chase (NYSE: JPM) is one of the oldest financial institutions in the United States. With a history dating back over 200 years, here's where we stand today: We are a leading global financial services firm with assets of $2.6 trillion. We operate in more than 60 countries. We have over 240,000 employees. We serve millions of consumers, small businesses and many of the world's most prominent corporate, institutional and government clients. We are a leader in investment banking, financial services for consumers and small businesses, commercial banking, financial transaction processing and asset management. Our stock is a component of the Dow Jones Industrial Average.",
+          "challenge": "Best hack for social good.",
+          "api": "",
+          "prize": "Beats Solo3 Wireless On-Ear headphones for each team member."
+			  },
+        {
+          "company": "Accenture",
+          "description": "Accenture is a leading global professional services company, providing a broad range of services and solutions in strategy, consulting, digital, technology and operations. Combining unmatched experience and specialized skills across more than 40 industries and all business functions – underpinned by the world’s largest delivery network – Accenture works at the intersection of business and technology to help clients improve their performance and create sustainable value for their stakeholders. With more than 435,000 people serving clients in more than 120 countries, Accenture drives innovation to improve the way the world works and lives.",
+          "challenge": "“Best Hack for Secure Data” with a focus on cybersecurity. A solution that best demonstrates a method to keep the data secure. The judging criteria is technical difficulty and problem addressed.",
+          "api": "",
+          "prize": "$250 Amazon gift card for each team member."
+			  }
+			]
+		}
+	}
+}

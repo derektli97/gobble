@@ -1,5 +1,4 @@
 import React from "react";
-
 import LivePrizes from "Pages/Live/LivePrizes/LivePrizes";
 
 const mobileThreshold = 900;
