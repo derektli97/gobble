@@ -1,0 +1,159 @@
+{
+	"schedule": {
+		"saturday": {
+			"events": [
+				{
+          "start": "8 am",
+          "end":"",
+          "label":"",
+					"event": "Sponsors and volunteers start arriving. Sponsors can start setting up.",
+          "location": ""
+				},
+        {
+          "start": "9 am",
+          "end":"",
+          "label":"",
+					"event": "Doors open, registration starts",
+          "location": ""
+				},
+        {
+          "start": "11 am",
+          "end":"",
+          "label":"",
+					"event": "Registration ends",
+          "location": ""
+				},
+        {
+          "start": "11 am",
+          "end":"12 pm",
+          "label":"",
+					"event": "Opening ceremony",
+          "location": ""
+				},
+        {
+          "start": "12pm",
+          "end":"",
+          "label":"",
+					"event": "Hacking starts",
+          "location": ""
+				},
+        {
+          "start": "1pm",
+          "end":"",
+          "label":"",
+					"event": "Lunch",
+          "location": ""
+				},
+        {
+          "start": "2pm",
+          "end":"",
+          "label":"",
+					"event": "[Intro to hackathons / Git workshop]",
+          "location": ""
+				},
+        {
+          "start": "TBD",
+          "end":"",
+          "label":"",
+					"event": "Sponsor Event/Workshop",
+          "location": ""
+				},
+        {
+          "start": "5pm",
+          "end":"",
+          "label":"",
+					"event": "Snack",
+          "location": ""
+				},
+        {
+          "start": "TBD",
+          "end":"",
+          "label":"",
+					"event": "[sponsor event/workshop]",
+          "location": ""
+				},
+        {
+          "start": "7pm",
+          "end":"",
+          "label":"",
+					"event": "Dinner",
+          "location": ""
+				},
+        {
+          "start": "TBD",
+          "end":"",
+          "label":"",
+					"event": "[sponsor event/workshop]",
+          "location": ""
+				},
+        {
+          "start": "9pm",
+          "end":"",
+          "label":"",
+					"event": "MLH Cup Stacking",
+          "location": ""
+				},
+        {
+          "start": "TBD",
+          "end":"",
+          "label":"",
+					"event": "[sponsor event/workshop]",
+          "location": ""
+				}
+			]
+		},
+		"sunday": {
+			"events": [
+        {
+          "start": "12am",
+          "end":"",
+          "label":"",
+					"event": "Midnight Snack",
+          "location": ""
+				},
+        {
+          "start": "3am",
+          "end":"",
+          "label":"",
+					"event": "Snack",
+          "location": ""
+				},
+        {
+          "start": "8am",
+          "end":"",
+          "label":"",
+					"event": "Breakfast",
+          "location": ""
+				},
+        {
+          "start": "12pm",
+          "end":"",
+          "label":"",
+					"event": "Hacking ends, submissions due, lunch",
+          "location": ""
+				},
+        {
+          "start": "1:30pm",
+          "end":"",
+          "label":"",
+					"event": "Judging expo",
+          "location": ""
+				},
+        {
+          "start": "3:30pm",
+          "end":"",
+          "label":"",
+					"event": "Final presentations, closing ceremony",
+          "location": ""
+				},
+        {
+          "start": "5pm",
+          "end":"",
+          "label":"",
+					"event": "TAMUhack ends, buses depart",
+          "location": ""
+				}
+			]
+		}
+	}
+}

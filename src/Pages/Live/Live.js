@@ -1,6 +1,6 @@
 import React from "react";
 import { Background } from "Pages/Events/EventsStyles";
-import LiveNavBar from "Pages/Live/LiveNavbar";
+import LiveNavBar from "Pages/Live/LiveNavbar/LiveNavbar";
 
 class Live extends React.Component {
   state = { hello: "hello" };

@@ -73,17 +73,17 @@ class NavBar extends React.Component {
                         <NavLink style={NavLinkStyle} onClick={this.toggle}>Welcome</NavLink>
                       </NavItem>
                     </Link>
-                    <Link to='SponsorPage' smooth duration={500} offset={-50} >
+                    <RouterLink to='/schedule' style={RouterLinkStyle} >
                       <NavItem>
                         <NavLink style={NavLinkStyle} onClick={this.toggle}>Schedule</NavLink>
                       </NavItem>
-                    </Link>
-                    <RouterLink to='/hello/' style={RouterLinkStyle}>
+                    </RouterLink>
+                    <RouterLink to='/maps/' style={RouterLinkStyle}>
                       <NavItem>
                         <NavLink style={NavLinkStyle} onClick={this.toggle}>Maps</NavLink>
                       </NavItem>
                     </RouterLink>
-                    <RouterLink to='/volunteer/' style={RouterLinkStyle}>
+                    <RouterLink to='/prizes/' style={RouterLinkStyle}>
                       <NavItem>
                         <NavLink style={NavLinkStyle} onClick={this.toggle}>Prizes</NavLink>
                       </NavItem>
