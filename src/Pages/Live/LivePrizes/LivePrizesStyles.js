@@ -13,22 +13,47 @@ export const Background = styled.div`
 
 export const PrizeRow = styled.div`
   display: flex;
+  flex-wrap: wrap;
   width: 70vw;
   height: 100%;
   justify-content: space-evenly;
   align-items: center;
-  border: 2px solid black;
   margin-bottom: 30px;
 `;
 
 export const TAMUPrizeContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 280px;
-  height: 280px;
+  width: 350px;
+  height: 300px;
+  margin-top: 35px;
   box-shadow: 0px 0px 10px #888888;
   border-radius: 10px;
-  border: 2px solid red;
+`;
+
+export const PrizeTitle = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  font-size: 18px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  color: white;
+`;
+
+export const TabContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+`;
+
+export const TextTab = styled.div`
+  display: flex;
+  width: 90%;
 `;

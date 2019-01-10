@@ -1,8 +1,7 @@
 {
 	"prizes": {
-		"tamuhack": {
-			"prizes": [
-				{
+		"tamuhack": [
+        {
           "title": "TAMUhack 1st Place",
           "description":"Best hack at TAMUhack 2018. Hacks will be judged on technical difficulty, design, the problem addressed, and the X-factor.",
           "prize":"Choice between a 4K Monitor OR a Nintentdo Switch for each team member + Goldman goodie bags."
@@ -16,11 +15,19 @@
           "title": "TAMUhack 3rd Place",
           "description":"Third best hack at TAMUhack 2018. Hacks will be judged on technical difficulty, design, the problem addressed, and the X-factor.",
           "prize":"Amazon Echo Plus and a Philips Hue bulb for building a smart home for each team member."
+				},
+        {
+          "title": "TAMUhack Best First Time Hackers",
+          "description":"Best hack created by first time hackers at TAMUhack 2018. Hacks will be judged on technical difficulty, design, the problem addressed, and the X-factor.",
+          "prize":"Google Chromecast for each team member."
+				},
+        {
+          "title": "TAMUhack Best Hardware Hack",
+          "description":"Best hardware hack at TAMUhack 2018. Hacks will be judged on use of hardware, technical difficulty, design, the problem addressed, and the X-factor.",
+          "prize":"Insignia smart Wifi plug for each team member."
 				}
-			]
-		},
-		"sponsor": {
-			"prizes": [
+			],
+		"sponsor": [
         {
           "company": "American Airlines",
           "description": "American Airlines and American Eagle offer an average of nearly 6,700 flights per day to nearly 350 destinations in more than 50 countries. American has hubs in Charlotte, Chicago, Dallas/Fort Worth, Los Angeles, Miami, New York, Philadelphia, Phoenix, and Washington, D.C. American is a founding member of the oneworld® alliance, whose members serve more than 1,000 destinations with about 14,250 daily flights to over 150 countries.",
@@ -50,6 +57,5 @@
           "prize": "$250 Amazon gift card for each team member."
 			  }
 			]
-		}
+    }
 	}
-}
