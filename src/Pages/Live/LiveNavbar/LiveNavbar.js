@@ -7,7 +7,6 @@ import {
   Nav,
   NavItem,
   NavLink } from "reactstrap";
-import { Link } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -68,11 +67,11 @@ class NavBar extends React.Component {
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={this.state.isOpen} navbar style={{ paddingLeft: 0 }}>
                   <Nav className='ml-auto' navbar style={{ marginRight: 0 }}>
-                    <Link to='AboutPage' smooth duration={500} >
+                    <RouterLink to='/welcome' style={RouterLinkStyle}>
                       <NavItem>
                         <NavLink style={NavLinkStyle} onClick={this.toggle}>Welcome</NavLink>
                       </NavItem>
-                    </Link>
+                    </RouterLink>
                     <RouterLink to='/schedule' style={RouterLinkStyle} >
                       <NavItem>
                         <NavLink style={NavLinkStyle} onClick={this.toggle}>Schedule</NavLink>
