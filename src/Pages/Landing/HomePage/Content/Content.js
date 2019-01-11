@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex } from "grid-styled";
 import { JayMoveRight, Subtitle, Icon } from "Pages/Landing/HomePage/Content/ContentStyles";
-
+import { Link as RouterLink } from "react-router-dom";
 class Content extends React.Component {
   state = { fun: false };
 
@@ -64,7 +64,7 @@ class Content extends React.Component {
               <br />
               or you can
               <span>&nbsp;</span>
-              <a href={"https://www.signupgenius.com/go/60b0c48abab22a5fa7-tamuhack1"} target='_blank'>volunteer</a>.
+              <RouterLink to='/volunteer'>volunteer</RouterLink>.
             </span>
           </Subtitle>
           <Subtitle {...{ isWebView }} style={{ paddingTop: "3vh" }}>
