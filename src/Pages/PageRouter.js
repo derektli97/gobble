@@ -5,8 +5,6 @@ import EventsWrapper from "Pages/Events/EventsWrapper";
 import VolunteerWrapper from "Pages/Volunteer/VolunteerWrapper";
 import LiveWrapper from "Pages/Live/LiveWrapper";
 import LiveScheduleWrapper from "Pages/Live/LiveSchedule/LiveScheduleWrapper";
-import LiveMaps from "Pages/Live/LiveMaps/LiveMaps";
-import LivePrizes from "Pages/Live/LivePrizes/LivePrizes";
 
 class PageRouter extends React.Component {
   handleLiveSubdomain () {
@@ -21,10 +19,8 @@ class PageRouter extends React.Component {
           return <LiveWrapper />;
         case "/schedule":
           return <LiveScheduleWrapper />;
-        case "/maps":
-          return <LiveMaps />;
-        case "/prizes":
-          return <LivePrizes />;
+        default:
+          return <Landing />;
       }
     }
     return <Landing />;
