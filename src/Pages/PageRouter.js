@@ -4,21 +4,35 @@ import Landing from "Pages/Landing/Landing";
 import EventsWrapper from "Pages/Events/EventsWrapper";
 import VolunteerWrapper from "Pages/Volunteer/VolunteerWrapper";
 import LiveWrapper from "Pages/Live/LiveWrapper";
+import LiveScheduleWrapper from "Pages/Live/LiveSchedule/LiveScheduleWrapper";
 
 class PageRouter extends React.Component {
   handleLiveSubdomain () {
     const [subdomain] = window.location.hostname.split(".");
-    if (subdomain === "live") return <LiveWrapper />;
+    let pathName = window.location.pathname;
+    if (pathName[pathName.length - 1] === "/") {
+      pathName = pathName.substring(0, pathName.length - 1);
+    }
+    if (subdomain === "live") {
+      switch (pathName) {
+        case "":
+          return <LiveWrapper />;
+        case "/schedule":
+          return <LiveScheduleWrapper />;
+        default:
+          return <Landing />;
+      }
+    }
     return <Landing />;
   }
   render () {
     return (
       <BrowserRouter>
         <Switch>
-          <Route path='/' exact render={this.handleLiveSubdomain} />
           <Route path='/events' component={EventsWrapper} />
           <Route path='/volunteer' component={VolunteerWrapper} />
           <Route path='/live' component={LiveWrapper} />
+          <Route path='/' render={this.handleLiveSubdomain} />
           {/* Note: get rid of these pages after live is finalized ... */}
           <Route path='/map'
             component={() => {
