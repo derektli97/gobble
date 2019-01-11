@@ -15,19 +15,19 @@ export const Background = styled.div`
 
 export const BoxRow = styled.div`
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  width: 80vw;
-  border: 2px solid black;
-  justify-content: space-evenly;
+  flex-direction: ${props => (props.isWebView) ? "row" : "column"}
+  width: 60vw;
+  justify-content: space-between;
 `;
 
 export const DetailBox = styled.div`
   display: flex;
   flex-direction: column;
-  width: 45%;
+  width: 450px;
   box-shadow: 0px 0px 10px #888888;
   border-radius: 10px;
+  margin-bottom: 40px;
 `;
 
 export const DetailTitle = styled.div`
@@ -38,5 +38,38 @@ export const DetailTitle = styled.div`
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   height: 35px;
-  font-size: 20px;
+  font-size: 17px;
+  color: white;
+`;
+
+export const InfoBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  min-height: 150px;
+  height: 100%;
+  padding: 25px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+`;
+
+export const InfoRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 25px;
+`;
+
+export const Label = styled.div`
+  display: flex;
+  background-color: #e8e8e8;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  padding: 10px 15px 10px 15px;
+  border-radius: 10px;
 `;
