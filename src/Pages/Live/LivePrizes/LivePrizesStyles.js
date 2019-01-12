@@ -7,8 +7,9 @@ export const Background = styled.div`
   min-height: 100vh;
   width: 100vw;
   flex-direction: column;
-  padding-top: 10%;
+  padding-top: ${props => (props.isWebView) ? "5%" : "10%"};
   align-items: center;
+  overflow: auto;
 `;
 
 export const TamuPrizeRow = styled.div`

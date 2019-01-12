@@ -12,13 +12,12 @@ import {
   TextTab } from "Pages/Live/LivePrizes/LivePrizesStyles";
 import PrizeJson from "Pages/Live/LivePrizes/LivePrizes.json";
 class LivePrizes extends React.Component {
-  state = {};
-
   constructor (props) {
     super(props);
     this.tamuhackPrizes = PrizeJson["prizes"]["tamuhack"];
     this.sponsorPrizes = PrizeJson["prizes"]["sponsor"];
     this.tamuRender = this.tamuhackPrizes.map((prize, index) => {
+      console.log(props.isWebView);
       return (
         <TAMUPrizeContainer>
           <PrizeTitle style={{
@@ -28,7 +27,7 @@ class LivePrizes extends React.Component {
             <TextTab style={{ paddingTop: "5px" }}>
               {prize.description}
             </TextTab>
-            <hr style={{ width: "90%", color: "black", padding: 0, margin: 0 }} />
+            <hr style={{ width: "90%", color: "black" }} />
             <TextTab>
               Prize: {prize.prize}
             </TextTab>
@@ -78,7 +77,7 @@ class LivePrizes extends React.Component {
     return (
       <React.Fragment>
         <Navbar {...{ isWebView }} />
-        <Background>
+        <Background {...{ isWebView }}>
           <TamuPrizeRow>
             {tamuRender}
           </TamuPrizeRow>
