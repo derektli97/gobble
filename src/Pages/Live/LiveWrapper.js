@@ -2,7 +2,7 @@ import React from "react";
 
 import Live from "Pages/Live/Live";
 
-const mobileThreshold = 900;
+const mobileThreshold = 1500;
 
 class VolunteerWrapper extends React.Component {
   constructor (props) {

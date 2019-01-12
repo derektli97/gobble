@@ -15,16 +15,16 @@ class Live extends React.Component {
   render () {
     const { isWebView } = this.props;
     return (
-      <Background>
+      <Background {...{ isWebView }}>
         <LiveNavBar {...{ isWebView }} />
         <BoxRow {...{ isWebView }}>
-          <DetailBox>
+          <DetailBox {...{ isWebView }}>
             <DetailTitle>Venue Details</DetailTitle>
             <InfoBox>Please be respectful of our traditions by not wearing
             hats inside the MSC or walking on the grass surrounding the building.
             </InfoBox>
           </DetailBox>
-          <DetailBox>
+          <DetailBox {...{ isWebView }}>
             <DetailTitle>Network Info</DetailTitle>
             <InfoBox style={{ padding: 0, paddingLeft: "20px" }}>
               <InfoRow>
@@ -37,7 +37,7 @@ class Live extends React.Component {
               </InfoRow>
             </InfoBox>
           </DetailBox>
-          <DetailBox>
+          <DetailBox {...{ isWebView }}>
             <DetailTitle>Contact</DetailTitle>
             <InfoBox>
               <InfoRow>

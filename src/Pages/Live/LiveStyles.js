@@ -4,27 +4,26 @@ export const Background = styled.div`
   background: linear-gradient(0deg, #F9ECEE 0%, #F9DFE5 36.34%, #F9DEE4 38.4%, #E2DCEB 60.31%, #BAD9F7 99.44%);
   width: 100%;
   min-height: 100vh;
-  padding-top: 10%;
+  padding-top: ${props => (props.isWebView === true) ? "10%" : "20%"};
   height: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  border: 2px solid black;
 `;
 
 export const BoxRow = styled.div`
   display: flex;
   flex-wrap: wrap;
-  flex-direction: ${props => (props.isWebView) ? "row" : "column"}
-  width: 60vw;
-  justify-content: space-between;
+  flex-direction: ${props => (props.isWebView) ? "row" : "column"};
+  width: ${props => (props.isWebView) ? "60vw" : "80vw"};
+  justify-content: ${props => (props.isWebView) ? "space-between" : "center"};
 `;
 
 export const DetailBox = styled.div`
   display: flex;
   flex-direction: column;
-  width: 450px;
+  width: ${props => (props.isWebView === true) ? "450px" : "100%"};
   box-shadow: 0px 0px 10px #888888;
   border-radius: 10px;
   margin-bottom: 40px;
@@ -37,8 +36,8 @@ export const DetailTitle = styled.div`
   background-color: #E8678B;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  height: 35px;
-  font-size: 17px;
+  height: 60px;
+  font-size: 20px;
   color: white;
 `;
 
