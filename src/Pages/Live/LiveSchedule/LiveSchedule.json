@@ -7,98 +7,98 @@
           "end":"",
           "label":"",
 					"event": "Sponsors and volunteers start arriving. Sponsors can start setting up.",
-          "location": ""
+          "location": "MSC"
 				},
         {
           "start": "9 am",
           "end":"",
           "label":"",
 					"event": "Doors open, registration starts",
-          "location": ""
+          "location": "MSC"
 				},
         {
           "start": "11 am",
           "end":"",
           "label":"",
 					"event": "Registration ends",
-          "location": ""
+          "location": "MSC"
 				},
         {
           "start": "11 am",
           "end":"12 pm",
           "label":"",
 					"event": "Opening ceremony",
-          "location": ""
+          "location": "MSC"
 				},
         {
           "start": "12pm",
           "end":"",
           "label":"",
 					"event": "Hacking starts",
-          "location": ""
+          "location": "MSC"
 				},
         {
           "start": "1pm",
           "end":"",
-          "label":"",
+          "label":"Food",
 					"event": "Lunch",
-          "location": ""
+          "location": "MSC"
 				},
         {
           "start": "2pm",
           "end":"",
-          "label":"",
+          "label":"Workshop",
 					"event": "[Intro to hackathons / Git workshop]",
-          "location": ""
+          "location": "MSC"
 				},
         {
           "start": "TBD",
           "end":"",
-          "label":"",
+          "label":"Workshop",
 					"event": "Sponsor Event/Workshop",
-          "location": ""
+          "location": "MSC"
 				},
         {
           "start": "5pm",
           "end":"",
-          "label":"",
+          "label":"Food",
 					"event": "Snack",
-          "location": ""
+          "location": "MSC"
 				},
         {
           "start": "TBD",
           "end":"",
-          "label":"",
+          "label":"Workshop",
 					"event": "[sponsor event/workshop]",
-          "location": ""
+          "location": "MSC"
 				},
         {
           "start": "7pm",
           "end":"",
-          "label":"",
+          "label":"Food",
 					"event": "Dinner",
-          "location": ""
+          "location": "MSC"
 				},
         {
           "start": "TBD",
           "end":"",
-          "label":"",
+          "label":"Workshop",
 					"event": "[sponsor event/workshop]",
-          "location": ""
+          "location": "MSC"
 				},
         {
           "start": "9pm",
           "end":"",
-          "label":"",
+          "label":"Event",
 					"event": "MLH Cup Stacking",
-          "location": ""
+          "location": "MSC"
 				},
         {
           "start": "TBD",
           "end":"",
-          "label":"",
+          "label":"Workshop",
 					"event": "[sponsor event/workshop]",
-          "location": ""
+          "location": "MSC"
 				}
 			]
 		},
@@ -107,51 +107,51 @@
         {
           "start": "12am",
           "end":"",
-          "label":"",
+          "label":"Food",
 					"event": "Midnight Snack",
-          "location": ""
+          "location": "MSC"
 				},
         {
           "start": "3am",
           "end":"",
-          "label":"",
+          "label":"Food",
 					"event": "Snack",
-          "location": ""
+          "location": "MSC"
 				},
         {
           "start": "8am",
           "end":"",
-          "label":"",
+          "label":"Food",
 					"event": "Breakfast",
-          "location": ""
+          "location": "MSC"
 				},
         {
           "start": "12pm",
           "end":"",
           "label":"",
 					"event": "Hacking ends, submissions due, lunch",
-          "location": ""
+          "location": "MSC"
 				},
         {
           "start": "1:30pm",
           "end":"",
           "label":"",
 					"event": "Judging expo",
-          "location": ""
+          "location": "MSC"
 				},
         {
           "start": "3:30pm",
           "end":"",
           "label":"",
 					"event": "Final presentations, closing ceremony",
-          "location": ""
+          "location": "MSC"
 				},
         {
           "start": "5pm",
           "end":"",
           "label":"",
 					"event": "TAMUhack ends, buses depart",
-          "location": ""
+          "location": "MSC"
 				}
 			]
 		}

@@ -8,6 +8,7 @@ import {
   StartTab,
   EndTab,
   LabelTab,
+  Label,
   EventTab,
   LocationTab } from "Pages/Live/LiveSchedule/LiveScheduleStyles";
 import LiveScheduleJson from "Pages/Live/LiveSchedule/LiveSchedule.json";
@@ -18,6 +19,21 @@ class LiveSchedule extends React.Component {
     super(props);
     const { saturday, sunday } = LiveScheduleJson["schedule"];
     this.saturdayRender = saturday["events"].map((event, index) => {
+      let labelColor = "";
+      console.log(event.label);
+      switch (event.label) {
+        case "Food":
+          labelColor = "#7ed2e7";
+          break;
+        case "Event":
+          labelColor = "#fea569";
+          break;
+        case "Workshop":
+          labelColor = "#c1d98e";
+          break;
+        default:
+          labelColor = "";
+      }
       return (
         <ScheduleRow style={{
           backgroundColor: index % 2 === 0 ? "white" : "#efefef",
@@ -30,7 +46,13 @@ class LiveSchedule extends React.Component {
             {event.end}
           </EndTab>
           <LabelTab>
-            {event.label}
+            {labelColor !== "" &&
+            (
+              <Label style={{ backgroundColor: labelColor }}>
+                {event.label}
+              </Label>
+            )
+            }
           </LabelTab>
           <EventTab>
             {event.event}
@@ -42,7 +64,21 @@ class LiveSchedule extends React.Component {
       );
     });
     this.sundayRender = sunday["events"].map((event, index) => {
-      console.log(sunday["events"].length);
+      let labelColor = "";
+      console.log(event.label);
+      switch (event.label) {
+        case "Food":
+          labelColor = "#7ed2e7";
+          break;
+        case "Event":
+          labelColor = "#fea569";
+          break;
+        case "Workshop":
+          labelColor = "#c1d98e";
+          break;
+        default:
+          labelColor = "";
+      }
       return (
         <ScheduleRow style={{
           backgroundColor: index % 2 === 0 ? "white" : "#efefef",
@@ -57,7 +93,13 @@ class LiveSchedule extends React.Component {
             {event.end}
           </EndTab>
           <LabelTab>
-            {event.label}
+            {labelColor !== "" &&
+            (
+              <Label style={{ backgroundColor: labelColor }}>
+                {event.label}
+              </Label>
+            )
+            }
           </LabelTab>
           <EventTab>
             {event.event}
@@ -80,10 +122,40 @@ class LiveSchedule extends React.Component {
         <Background>
           <ScheduleContainer>
             <DayTitle>Saturday</DayTitle>
+            <ScheduleRow style={{ backgroundColor: "#efefef" }}>
+              <StartTab>Start</StartTab>
+              <EndTab>
+                <span style={{ fontWeight: 600 }}>End</span>
+              </EndTab>
+              <LabelTab style={{ fontWeight: 600 }}>
+                Label
+              </LabelTab>
+              <EventTab>
+                <span style={{ fontWeight: 600 }}>Event</span>
+              </EventTab>
+              <LocationTab>
+                <span style={{ fontWeight: 600 }}>Location</span>
+              </LocationTab>
+            </ScheduleRow>
             {satRender}
           </ScheduleContainer>
           <ScheduleContainer>
             <DayTitle>Sunday</DayTitle>
+            <ScheduleRow style={{ backgroundColor: "#efefef" }}>
+              <StartTab>Start</StartTab>
+              <EndTab>
+                <span style={{ fontWeight: 600 }}>End</span>
+              </EndTab>
+              <LabelTab style={{ fontWeight: 600 }}>
+                Label
+              </LabelTab>
+              <EventTab>
+                <span style={{ fontWeight: 600 }}>Event</span>
+              </EventTab>
+              <LocationTab>
+                <span style={{ fontWeight: 600 }}>Location</span>
+              </LocationTab>
+            </ScheduleRow>
             {sunRender}
           </ScheduleContainer>
         </Background>

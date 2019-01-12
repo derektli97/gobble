@@ -45,6 +45,7 @@ export const ScheduleRow = styled.div`
   align-content: center;
   justify-content: space-evenly;
   &:hover {
+   font-weight: 600;
    background-color: #FFF8F9;
   }
 `;
@@ -64,8 +65,20 @@ export const EndTab = styled.div`
 
 export const LabelTab = styled.div`
   display: flex;
+  justify-content: center;
   align-items: center;
   width: 15%;
+`;
+
+export const Label = styled.div`
+  display: flex;
+  font-weight: 400;
+  border-radius: 10px;
+  background-color: #7ed2e7;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 100%
 `;
 
 export const EventTab = styled.div`
@@ -77,5 +90,9 @@ export const EventTab = styled.div`
 export const LocationTab = styled.div`
   display: flex;
   align-items: center;
-  width: 15%;
+  width: 10%;
+`;
+
+export const TitleTab = styled.div`
+  font-weight: 600;
 `;
