@@ -14,7 +14,7 @@ export const Background = styled.div`
 export const ScheduleContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 67vw;
+  width: 60vw;
   height: 100%;
   align-items: center;
   border-radius: 30px;
@@ -42,7 +42,7 @@ export const ScheduleRow = styled.div`
   padding-bottom: 10px;
   padding-top: 10px;
   padding-left: 15px;
-  align-content: center;
+  align-items: center;
   justify-content: space-evenly;
   &:hover {
    font-weight: 600;

@@ -20,7 +20,6 @@ class LiveSchedule extends React.Component {
     const { saturday, sunday } = LiveScheduleJson["schedule"];
     this.saturdayRender = saturday["events"].map((event, index) => {
       let labelColor = "";
-      console.log(event.label);
       switch (event.label) {
         case "Food":
           labelColor = "#7ed2e7";
