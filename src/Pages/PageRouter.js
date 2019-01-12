@@ -32,7 +32,6 @@ class PageRouter extends React.Component {
           <Route path='/events' component={EventsWrapper} />
           <Route path='/volunteer' component={VolunteerWrapper} />
           <Route path='/live' component={LiveWrapper} />
-          <Route path='/' render={this.handleLiveSubdomain} />
           {/* Note: get rid of these pages after live is finalized ... */}
           <Route path='/map'
             component={() => {
@@ -52,6 +51,7 @@ class PageRouter extends React.Component {
               return null;
             }
             } />
+          <Route path='/' render={this.handleLiveSubdomain} />
         </Switch>
       </BrowserRouter>
     );
