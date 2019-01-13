@@ -58,6 +58,7 @@ class PageRouter extends React.Component {
               return null;
             }
             } />
+          <Route path='/' render={this.handleLiveSubdomain} />
         </Switch>
       </BrowserRouter>
     );

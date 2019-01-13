@@ -46,7 +46,6 @@ export const ScheduleRow = styled.div`
   justify-content: space-evenly;
   &:hover {
    font-weight: 600;
-   background-color: #FFF8F9;
   }
 `;
 
