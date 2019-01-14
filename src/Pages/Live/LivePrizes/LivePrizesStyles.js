@@ -85,3 +85,4 @@ export const SponsorTextTab = styled.div`
   width: 90%;
   padding-top: 20px;
   padding-bottom: 20px;
+`;
